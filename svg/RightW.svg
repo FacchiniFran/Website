@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="63" height="101" viewBox="0 0 63 101">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #fff;
+        fill-rule: evenodd;
+      }
+    </style>
+  </defs>
+  <path id="Relleno_de_color_1" data-name="Relleno de color 1" class="cls-1" d="M83,48l51,51L85,149H82L71,138l37-39L71,60Z" transform="translate(-71 -48)"/>
+</svg>
