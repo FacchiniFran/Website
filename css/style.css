@@ -208,7 +208,7 @@ body {
     text-align: center;
     border-radius: 20px;
     border-color: black;
-    background-color: gray;
+    background-color: silver;
     font-family: "Lucida Console", Monaco, monospace;
 }
 
@@ -235,7 +235,7 @@ body {
 }
 
 .footer {
-    bottom: 0%;
+    bottom: -51%;
     height: 5%;
     width: 100%;
     position: absolute;
@@ -325,4 +325,303 @@ body {
 
 #envioC:hover {
     cursor: pointer;
+}
+
+.nosotros {
+    top: 40%;
+    display: flex;
+    color: white;
+    position: absolute;
+    align-items: center;
+    flex-direction: column;
+    font-family: "Lucida Console", Monaco, monospace;
+}
+
+.nosotros img {
+    border-style: inset;
+    border-radius: 15px;
+    border-color: silver;
+}
+
+.nosotros h1 {
+    font-size: xx-large;
+    text-decoration: underline;
+}
+
+.mainCont {
+    top: 40%;
+    width: 100%;
+    height: 40%;
+    color: white;
+    display: block;
+    position: absolute;
+    text-align: justify;
+    border-radius: 15px;
+    border-top: 5px solid silver;
+    border-bottom: 5px solid silver;
+    background-color: rgb(17, 17, 17);
+}
+
+.mainTitle {
+    width: 50%;
+    height: 20%;
+    display: block;
+    border-top-left-radius: 15px;
+    border-right: 5px solid silver;
+    border-bottom: 5px solid silver;
+    background-color: rgb(17, 17, 17);
+    font-family: "Lucida Console", Monaco, monospace;
+}
+
+.mainTitle h1 {
+    padding-top: 2%;
+    text-align: center;
+}
+
+.mainText {
+    width: 50%;
+    height: 78.5%;
+    display: block;
+    border-bottom-left-radius: 15px;
+    border-right: 5px solid silver;
+    border-bottom: 5px solid silver;
+    background-color: rgb(39, 39, 39);
+}
+
+.mainText p {
+    padding-top: 2%;
+    padding-left: 1%;
+    padding-right: 1%;
+    text-align: justify;
+}
+
+.mainCont img {
+    top: -1%;
+    right: 0%;
+    width: 49.6%;
+    height: 99.5%;
+    display: block;
+    position: absolute;
+    border-top-right-radius: 15px;
+    border-top: 5px solid silver;
+    border-left: 5px solid silver;
+    border-bottom-right-radius: 15px;
+    border-bottom: 5px solid silver;
+}
+
+.mainText a {
+    right: 50.5%;
+    bottom: 1.5%;
+    padding: 0.3%;
+    color: black;
+    display: block;
+    font-weight: bold;
+    position: absolute;
+    border-radius: 8px;
+    border: 2px solid silver;
+    background-color: #0050c1;
+}
+
+.secondSect {
+    top: 85%;
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    position: absolute;
+    flex-direction: row;
+    font-family: "Lucida Console", Monaco, monospace;
+}
+
+.secondCont {
+    color: white;
+    margin-top: 2%;
+    margin-left: 2%;
+    margin-right: 5%;
+    width: min-content;
+    text-align: center;
+    border-radius: 15px;
+    border: 5px solid silver;
+    background-color: #0050c1;
+}
+
+.secondCont:first-child {
+    margin-left: 6.5%;
+}
+
+.secondCont h2 {
+    margin-top: 2%;
+    margin-bottom: 2%;
+}
+
+.artic {
+    top: 40%;
+    width: 70%;
+    display: flex;
+    color: white;
+    margin-left: 1%;
+    position: absolute;
+    align-items: center;
+    border-radius: 15px;
+    flex-direction: column;
+    border: 5px solid silver;
+    background-color: #0050c1;
+    font-family: "Lucida Console", Monaco, monospace;
+}
+
+.artic img {
+    width: 100%;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+
+.artic h1 {
+    margin-bottom: 1%;
+    text-decoration: underline;
+}
+
+.artic p {
+    margin-left: 1%;
+    margin-right: 1%;
+    margin-bottom: 1%;
+}
+
+.lateralBar {
+    top: 40%;
+    right: 0%;
+    width: 25%;
+    display: flex;
+    height: 103.5%;
+    position: absolute;
+    margin-right: 1.8%;
+    flex-direction: column;
+}
+
+.recent {
+    width: 98%;
+    height: 55%;
+    display: flex;
+    border-radius: 10px;
+    flex-direction: column;
+    background-color: gray;
+    border: 5px solid silver;
+}
+
+.recent h1 {
+    color: black;
+    text-align: center;
+    text-decoration: underline;
+    text-shadow: 0 0 4px #0050c1;
+}
+
+.recentPost {
+    width: 96%;
+    display: flex;
+    color: white;
+    margin-left: 1%;
+    border-radius: 10px;
+    background-color: black;
+    border: 5px solid #0050c1;
+}
+
+.recentPost a {
+    height: 130px;
+    color: white;
+}
+
+.recentPost a:hover {
+    cursor: pointer;
+    color: #0050c1;
+    text-shadow: 0 0 5px white;
+}
+
+.recentPost img{
+    height: 130px;
+    border-radius: 5px;
+}
+
+.recentPost h3 {
+    padding-top: 20%;
+    text-align: center;
+    text-shadow: 0 0 4px #0050c1;
+}
+
+.publi {
+    bottom: 0%;
+    width: 98%;
+    height: 40%;
+    display: block;
+    position: absolute;
+    border-radius: 10px;
+    border: 5px solid silver;
+    background-color: rgb(39, 39, 39);
+}
+
+.publi a {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    border-radius: 8px;
+    align-content: center;
+}
+
+.publi a img {
+    width: 100%;
+}
+
+.posts {
+    top: 40%;
+    width: 70%;
+    display: flex;
+    color: white;
+    margin-left: 1%;
+    position: absolute;
+    align-items: center;
+    flex-direction: column;
+    font-family: "Lucida Console", Monaco, monospace;
+}
+
+.post {
+    width: 97%;
+    display: flex;
+    color: white;
+    margin-top: 0.5%;
+    margin-left: 0.5%;
+    margin-bottom: 0.5;
+    border-radius: 10px;
+    border: 5px solid silver;
+    background-color: #0050c1;
+}
+
+.post img{
+    height: 285px;
+    border-radius: 5px;
+}
+
+.post a:hover {
+    cursor: pointer;
+    color: black;
+    text-shadow: 0 0 5px white;
+}
+
+.postCont {
+    display: flex;
+    flex-direction: column;
+}
+
+.postTitle {
+    width: 100%;
+    color: white;
+    margin-bottom: 5%;
+    padding-top: 1.5%;
+    text-align: center;
+    height: fit-content;
+    text-decoration: underline;
+    text-shadow: 0 0 4px black;
+}
+
+.postText {
+    display: block;
+    margin-left: 2%;
+    margin-right: 2%;
+    text-align: justify;
 }
