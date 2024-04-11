@@ -13,44 +13,64 @@ body {
     background: url('../images/Background2.png') repeat;
 }
 
-.header {
+header {
     width: 100%;
     height: 38%;
+    gap: 0px 0px;
+    display: grid;
+    grid-area: header;
+    position: relative;
+    grid-template-areas:
+        "logo title media1"
+        "menu menu menu";
+    grid-template-rows: 100%;
+    grid-template-columns: 13.5% 73% 13.5%;
+}
+
+.logo {
+    top: 5%;
+    left: 2%;
+    height: 75%;
     position: absolute;
 }
 
-.banner {
+.title {
+    height: 50%;
+    display: flex;
+    padding-left: 4%;
+    align-self: center;
+    justify-self: center;
+}
+
+.logo img {
     width: 100%;
     height: 100%;
-    display: block;
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-image: url('../images/Header.png');
 }
 
 .media {
     top: 3%;
     right: 1%;
-    width: auto;
-    height: auto;
+    width: 11.5%;
     opacity: 0.5;
     display: block;
     position: absolute;
-    border-radius: 30px;
+    border-radius: 18px;
     background-color: black;
 }
 
 .iconM {
-    width: 19%;
-    height: 1%;
     margin-top: 2%;
-    margin-left: 2.75%;
+    margin-left: 1.5%;
     display: inline-flex;
 }
 
 .iconM img {
     width: 35px;
     height: 35px;
+}
+
+.iconM:first-child {
+    margin-left: 3%;
 }
 
 .media:hover {
@@ -62,14 +82,14 @@ body {
 }
 
 .menu {
+    bottom: 0%;
     width: 100%;
     height: 11%;
     opacity: 0.9;
-    bottom: -0.5%;
-    display: block;
+    display: flex;
     position: absolute;
     background-color: black;
-    
+    justify-content: space-around;
 }
 
 .menu ul {
@@ -90,6 +110,7 @@ body {
 .menu ul li a {
     color: white;
     font-size: 150%;
+    padding-top: 4%;
 }
 
 .menu ul li:first-child {
@@ -104,6 +125,7 @@ body {
 }
 
 .iconB {
+    width: 30%;
     margin-right: 10%;
 }
 
@@ -118,6 +140,8 @@ body {
 }
 
 .menu ul li:hover .sub_menu {
+    z-index: 2;
+    width: auto;
     display: block;
     margin-top: 1.5%;
     position: absolute;
@@ -125,6 +149,7 @@ body {
 
 .menu ul li:hover .sub_menu ul {
     display: flex;
+    margin-top: 5%;
     width: max-content;
     border-radius: 8px;
     flex-direction: column;
@@ -132,7 +157,6 @@ body {
 }
 
 .menu ul li:hover .sub_menu ul li {
-    margin-left: 0%;
     margin-top: 0.5%;
     align-self: center;
     margin-bottom: 0.5%;
@@ -154,13 +178,21 @@ body {
 }
 
 .menu ul li:hover .sub_menu ul li:hover .alt_menu {
+    z-index: 3;
     display: block;
     margin-left: 100%;
     position: absolute;
 }
 
+.sub_menu a,
+.alt_menu a {
+    display: flex;
+}
+
 .iconC {
-    margin-right: 10%;
+    padding-top: 3%;
+    padding-right: 5%;
+    min-width: 15%
 }
 
 .menu ul li:hover .sub_menu ul li:hover .alt_menu ul {
@@ -202,6 +234,8 @@ body {
     position: absolute;
 }
 
+.menu li:active
+
 .barra_busqueda {
     height: 30px;
     font-size: large;
@@ -232,396 +266,4 @@ body {
     color: white;
     cursor: pointer;
     background-color: #0050c1;
-}
-
-.footer {
-    bottom: -51%;
-    height: 5%;
-    width: 100%;
-    position: absolute;
-    overflow: hidden hidden;
-    background-color: rgb(43, 43, 43);
-}
-
-.disclaimer {
-    width: 35%;
-    height: 100%;
-}
-
-.disclaimer p {
-    opacity: 0.5;
-    color: white;
-    margin-left: 2%;
-    padding-top: 0.5%;
-}
-
-.contactanos {
-    left: 35%;
-    bottom: 0%;
-    width: 25%;
-    height: 100%;
-    text-align: center;
-    position: absolute;
-}
-
-.contactanos a {
-    opacity: 0.5;
-    color: white;
-    font-size: larger;
-    font-weight: bolder;
-    font-family: "Lucida Console", Monaco, monospace;
-}
-
-.contactanos a:hover {
-    opacity: 1;
-    cursor: pointer;
-    color: #0050c1;
-}
-
-.formulario {
-    top: 41%;
-    left: 37%;
-    width: 25%;
-    display: block;
-    position: absolute;
-    border-radius: 15px;
-    background-color: #0050c1;
-}
-
-.formulario p {
-    display: flex;
-    color: white;
-    margin-left: 2%;
-    margin-right: 2%;
-    font-weight: bolder;
-    flex-direction: column;
-    text-decoration: underline;
-    font-family: "Lucida Console", Monaco, monospace;
-}
-
-.formulario p:first-child {
-    margin-top: 5%;
-}
-
-.formulario p input {
-    margin-top: 1.5%;
-    margin-bottom: 5%;
-    border-radius: 8px;
-    text-align: center;
-}
-
-.formulario p textarea {
-    margin-top: 1.5%;
-    margin-bottom: 7%;
-    border-radius: 5px;
-}
-
-#envioC {
-    right: 2%;
-    bottom: 0.9%;
-    position: absolute;
-    font-weight: bolder;
-}
-
-#envioC:hover {
-    cursor: pointer;
-}
-
-.nosotros {
-    top: 40%;
-    display: flex;
-    color: white;
-    position: absolute;
-    align-items: center;
-    flex-direction: column;
-    font-family: "Lucida Console", Monaco, monospace;
-}
-
-.nosotros img {
-    border-style: inset;
-    border-radius: 15px;
-    border-color: silver;
-}
-
-.nosotros h1 {
-    font-size: xx-large;
-    text-decoration: underline;
-}
-
-.mainCont {
-    top: 40%;
-    width: 100%;
-    height: 40%;
-    color: white;
-    display: block;
-    position: absolute;
-    text-align: justify;
-    border-radius: 15px;
-    border-top: 5px solid silver;
-    border-bottom: 5px solid silver;
-    background-color: rgb(17, 17, 17);
-}
-
-.mainTitle {
-    width: 50%;
-    height: 20%;
-    display: block;
-    border-top-left-radius: 15px;
-    border-right: 5px solid silver;
-    border-bottom: 5px solid silver;
-    background-color: rgb(17, 17, 17);
-    font-family: "Lucida Console", Monaco, monospace;
-}
-
-.mainTitle h1 {
-    padding-top: 2%;
-    text-align: center;
-}
-
-.mainText {
-    width: 50%;
-    height: 78.5%;
-    display: block;
-    border-bottom-left-radius: 15px;
-    border-right: 5px solid silver;
-    border-bottom: 5px solid silver;
-    background-color: rgb(39, 39, 39);
-}
-
-.mainText p {
-    padding-top: 2%;
-    padding-left: 1%;
-    padding-right: 1%;
-    text-align: justify;
-}
-
-.mainCont img {
-    top: -1%;
-    right: 0%;
-    width: 49.6%;
-    height: 99.5%;
-    display: block;
-    position: absolute;
-    border-top-right-radius: 15px;
-    border-top: 5px solid silver;
-    border-left: 5px solid silver;
-    border-bottom-right-radius: 15px;
-    border-bottom: 5px solid silver;
-}
-
-.mainText a {
-    right: 50.5%;
-    bottom: 1.5%;
-    padding: 0.3%;
-    color: black;
-    display: block;
-    font-weight: bold;
-    position: absolute;
-    border-radius: 8px;
-    border: 2px solid silver;
-    background-color: #0050c1;
-}
-
-.secondSect {
-    top: 85%;
-    width: 100%;
-    display: flex;
-    flex-wrap: wrap;
-    position: absolute;
-    flex-direction: row;
-    font-family: "Lucida Console", Monaco, monospace;
-}
-
-.secondCont {
-    color: white;
-    margin-top: 2%;
-    margin-left: 2%;
-    margin-right: 5%;
-    width: min-content;
-    text-align: center;
-    border-radius: 15px;
-    border: 5px solid silver;
-    background-color: #0050c1;
-}
-
-.secondCont:first-child {
-    margin-left: 6.5%;
-}
-
-.secondCont h2 {
-    margin-top: 2%;
-    margin-bottom: 2%;
-}
-
-.artic {
-    top: 40%;
-    width: 70%;
-    display: flex;
-    color: white;
-    margin-left: 1%;
-    position: absolute;
-    align-items: center;
-    border-radius: 15px;
-    flex-direction: column;
-    border: 5px solid silver;
-    background-color: #0050c1;
-    font-family: "Lucida Console", Monaco, monospace;
-}
-
-.artic img {
-    width: 100%;
-    border-top-left-radius: 10px;
-    border-top-right-radius: 10px;
-}
-
-.artic h1 {
-    margin-bottom: 1%;
-    text-decoration: underline;
-}
-
-.artic p {
-    margin-left: 1%;
-    margin-right: 1%;
-    margin-bottom: 1%;
-}
-
-.lateralBar {
-    top: 40%;
-    right: 0%;
-    width: 25%;
-    display: flex;
-    height: 103.5%;
-    position: absolute;
-    margin-right: 1.8%;
-    flex-direction: column;
-}
-
-.recent {
-    width: 98%;
-    height: 55%;
-    display: flex;
-    border-radius: 10px;
-    flex-direction: column;
-    background-color: gray;
-    border: 5px solid silver;
-}
-
-.recent h1 {
-    color: black;
-    text-align: center;
-    text-decoration: underline;
-    text-shadow: 0 0 4px #0050c1;
-}
-
-.recentPost {
-    width: 96%;
-    display: flex;
-    color: white;
-    margin-left: 1%;
-    border-radius: 10px;
-    background-color: black;
-    border: 5px solid #0050c1;
-}
-
-.recentPost a {
-    height: 130px;
-    color: white;
-}
-
-.recentPost a:hover {
-    cursor: pointer;
-    color: #0050c1;
-    text-shadow: 0 0 5px white;
-}
-
-.recentPost img{
-    height: 130px;
-    border-radius: 5px;
-}
-
-.recentPost h3 {
-    padding-top: 20%;
-    text-align: center;
-    text-shadow: 0 0 4px #0050c1;
-}
-
-.publi {
-    bottom: 0%;
-    width: 98%;
-    height: 40%;
-    display: block;
-    position: absolute;
-    border-radius: 10px;
-    border: 5px solid silver;
-    background-color: rgb(39, 39, 39);
-}
-
-.publi a {
-    width: 100%;
-    height: 100%;
-    display: flex;
-    border-radius: 8px;
-    align-content: center;
-}
-
-.publi a img {
-    width: 100%;
-}
-
-.posts {
-    top: 40%;
-    width: 70%;
-    display: flex;
-    color: white;
-    margin-left: 1%;
-    position: absolute;
-    align-items: center;
-    flex-direction: column;
-    font-family: "Lucida Console", Monaco, monospace;
-}
-
-.post {
-    width: 97%;
-    display: flex;
-    color: white;
-    margin-top: 0.5%;
-    margin-left: 0.5%;
-    margin-bottom: 0.5;
-    border-radius: 10px;
-    border: 5px solid silver;
-    background-color: #0050c1;
-}
-
-.post img{
-    height: 285px;
-    border-radius: 5px;
-}
-
-.post a:hover {
-    cursor: pointer;
-    color: black;
-    text-shadow: 0 0 5px white;
-}
-
-.postCont {
-    display: flex;
-    flex-direction: column;
-}
-
-.postTitle {
-    width: 100%;
-    color: white;
-    margin-bottom: 5%;
-    padding-top: 1.5%;
-    text-align: center;
-    height: fit-content;
-    text-decoration: underline;
-    text-shadow: 0 0 4px black;
-}
-
-.postText {
-    display: block;
-    margin-left: 2%;
-    margin-right: 2%;
-    text-align: justify;
 }
