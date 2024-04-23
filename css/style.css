@@ -114,6 +114,10 @@ header {
     font-family: "Lucida Console", Monaco, monospace;
 }
 
+.menu_text_p {
+    margin-left: -6%;
+}
+
 .menu ul li:first-child {
     margin-left: 0.5%;
 }
@@ -125,13 +129,17 @@ header {
     vertical-align: bottom;
 }
 
+.menu ul li p {
+    margin-bottom: 0%;
+}
+
 .iconB {
     width: 30%;
     margin-right: 10%;
 }
 
 .mBurger {
-    display: none;       
+    display: none;
 }
 
 .svgM {
@@ -142,7 +150,7 @@ header {
     display: none;
 }
 
-.menu > ul > li:hover {
+.menu>ul>li:hover {
     cursor: pointer;
     border-radius: 5px;
     background-color: #0050c1;
@@ -156,19 +164,25 @@ header {
     z-index: 2;
     width: auto;
     display: block;
-    margin-top: 2%;
+    margin-top: 1.8%;
     position: absolute;
 }
 
 .menu ul li:hover .sub_menu ul {
+    width: 120%;
     display: flex;
     margin-top: 5%;
-    padding-left: 8%;
-    padding-right: 5%;
-    width: max-content;
     border-radius: 8px;
     flex-direction: column;
     background-color: black;
+}
+
+.cArrow {
+    display: none;
+}
+
+.iArrow {
+    display: none;
 }
 
 .menu ul li:hover .sub_menu ul li {
@@ -178,6 +192,14 @@ header {
     border-bottom: 1px dotted white;
 }
 
+.menu ul li:nth-child(2):hover .sub_menu ul li p {
+    padding-left: 5%;
+}
+
+.menu ul li:nth-child(2):hover .sub_menu ul li {
+    margin-left: -4%;
+}
+
 .menu ul li:hover .sub_menu ul li:last-child {
     border-bottom: none;
 }
@@ -185,7 +207,11 @@ header {
 .menu ul li:hover .sub_menu ul li a:hover {
     cursor: pointer;
     color: #0050c1;
-    background-color: black;
+}
+
+.menu ul li:hover .sub_menu ul li p:hover {
+    cursor: pointer;
+    color: #0050c1;
 }
 
 .alt_menu {
@@ -210,9 +236,10 @@ header {
     margin-right: 3%;
 }
 
-.menu ul li:hover .sub_menu ul li:hover .alt_menu ul {
-    width: min-content;
-    padding-right: 10%;
+.alt_menu ul {
+    width: 120%;
+    margin-left: 7%;
+    background-color: black;
 }
 
 .alt_menu ul li a:hover svg defs #colorMask1 feFlood {
@@ -245,12 +272,14 @@ header {
 
 .buscador {
     top: 12%;
+    width: 16%;
     right: 0.5%;
     position: absolute;
 }
 
 .barra_busqueda {
     height: 30px;
+    margin-right: 1%;
     font-size: large;
     text-align: center;
     border-radius: 20px;
@@ -298,19 +327,20 @@ header {
     }
 
     .media {
+        opacity: 1;
         width: 16.5%;
     }
 
     .iconM {
         margin-left: 0%;
     }
-    
+
     .iconM img {
         width: 18px;
         height: 18px;
         margin-top: 15%;
     }
-    
+
     .iconM:first-child {
         padding-left: 1.5%;
     }
@@ -319,21 +349,110 @@ header {
         display: none;
     }
 
-    .buscador {
+    .menu>ul>li:hover {
+        cursor: initial;
+        border-radius: initial;
+        background-color: initial;
+    }
+
+    .menu ul li:hover .sub_menu {
         display: none;
+    }
+
+    .menu ul li:hover .sub_menu ul {
+        display: none;
+    }
+
+    .menu ul li:hover .sub_menu ul li {
+        display: none;
+    }
+
+    .menu ul li:hover .sub_menu ul li:hover .alt_menu {
+        display: none;
+    }
+
+    .menu ul li:hover .sub_menu ul li:hover .alt_menu ul {
+        display: none;
+    }
+
+    .menu ul li:hover .sub_menu ul li:hover .alt_menu ul li {
+        display: none;
+    }
+
+    .alt_menu ul li a:hover svg defs #colorMask1 feFlood {
+        flood-color: initial;
+    }
+
+    .alt_menu ul li a:hover svg defs #colorMask2 feFlood {
+        flood-color: initial;
+    }
+
+    .alt_menu ul li a:hover svg defs #colorMask3 feFlood {
+        flood-color: initial;
+    }
+
+    .alt_menu ul li a:hover svg defs #colorMask4 feFlood {
+        flood-color: initial;
+    }
+
+    .alt_menu ul li a:hover svg defs #colorMask5 feFlood {
+        flood-color: initial;
+    }
+
+    .alt_menu ul li a:hover svg defs #colorMask6 feFlood {
+        flood-color: initial;
+    }
+
+    .alt_menu ul li a:hover svg defs #colorMask7 feFlood {
+        flood-color: initial;
+    }
+
+    .buscador {
+        top: 15%;
+        width: auto;
+        display: flex;
+    }
+
+    .barra_busqueda {
+        height: 20px;
+        font-size: medium;
+        text-align: center;
+        border-radius: 20px;
+        border-color: black;
+        background-color: silver;
+        font-family: "Lucida Console", Monaco, monospace;
+    }
+    
+    .barra_busqueda::placeholder {
+        opacity: 0.8;
+        color: rgb(9, 6, 46);
+    }
+    
+    .boton_busqueda {
+        width: 65px;
+        height: 20px;
+        color: black;
+        font-size: small;
+        border-radius: 20px;
+        font-weight: bolder;
+        background-color: gray;
+        font-family: "Lucida Console", Monaco, monospace;
+    }
+    
+    .boton_busqueda:hover {
+        color: black;
+        cursor: initial;
+        background-color: gray;
     }
 
     .mBurger {
         left: 0%;
         width: 4%;
         z-index: 1;
-        border: none;
         height: 100%;
         display: block;
-        position: absolute;
         appearance: none;
-        -webkit-appearance: none;
-        -moz-appearance: none;
+        position: absolute;
     }
 
     .svgM {
@@ -343,26 +462,22 @@ header {
         margin-bottom: 30%;
     }
 
-    .mBurger:hover  ~ .svgM{
-        background-color: #0050c1;
-    }
-
-    .mBurger:checked ~ .svgM {
+    .mBurger:checked~.svgM {
         opacity: 0;
     }
 
-    .mBurger:checked ~ .svgX {
+    .mBurger:checked~.svgX {
         left: 0%;
         display: block;
         position: absolute;
         margin-bottom: 30%;
         background-color: #0050c1;
     }
-    
-    .mBurger:checked ~ ul {
+
+    .mBurger:checked~ul {
         top: 90%;
         left: 0%;
-        width: 17%;
+        width: 19%;
         display: flex;
         color: white;
         padding-left: 0.5%;
@@ -370,21 +485,862 @@ header {
         flex-direction: column;
         background-color: #0050c1;
         border-top-right-radius: 10px;
+        border-top: 2px solid silver;
         border-bottom-right-radius: 10px;
+        border-right: 2px solid silver;
+        border-bottom: 2px solid silver;
     }
 
-    .mBurger:checked ~ ul li {
+    .mBurger:checked~ul li {
         margin-right: 5%;
         font-size: small;
         border-bottom: 1px dotted white;
     }
 
-    .mBurger:checked ~ ul li:last-child {
+    .mBurger:checked~ul li:last-child {
         border-bottom: none;
     }
 
-    .mBurger:checked ~ ul li .iconB {
+    .mBurger:checked~ul li .iconB {
         width: 17%;
         margin-right: 5%;
+    }
+
+    .cArrow,
+    .iArrow {
+        display: block;
+        position: absolute;
+    }
+
+    #cArr1 {
+        right: 1%;
+        top: 34.5%;
+        z-index: 4;
+        opacity: 0;
+    }
+
+    #cArr2 {
+        right: 5%;
+        top: 58.5%;
+        z-index: 4;
+        opacity: 0;
+    }
+
+    #cArr3 {
+        top: 45%;
+        z-index: 4;
+        opacity: 0;
+        right: -16%;
+    }
+
+    #cArr4 {
+        top: 78%;
+        z-index: 4;
+        opacity: 0;
+        right: -16%;
+    }
+
+    #cArr5 {
+        top: 45%;
+        z-index: 4;
+        opacity: 0;
+        right: -17%;
+    }
+
+    #cArr6 {
+        top: 77%;
+        z-index: 4;
+        opacity: 0;
+        right: -17%;
+    }
+
+    #iArr1 {
+        top: 34%;
+        right: 0%;
+    }
+
+    #iArr2 {
+        top: 58%;
+        right: 5%;
+    }
+
+    #iArr3 {
+        top: 43.5%;
+        right: -17%;
+    }
+
+    #iArr4 {
+        top: 77%;
+        right: -18%;
+    }
+
+    #iArr5 {
+        top: 45%;
+        right: -19%;
+    }
+
+    #iArr6 {
+        top: 76.5%;
+        right: -19%;
+    }
+
+    .iconC {
+        min-width: 15%;
+        margin-top: 3%;
+        margin-right: 3%;
+        padding-bottom: 2%;
+    }
+
+    #cArr1:checked+#iArr1 {
+        fill: black;
+    }
+
+    #cArr1:checked~.sub_menu {
+        top: 29%;
+        left: 102%;
+        width: auto;
+        margin-top: 0%;
+        display: block;
+        position: absolute;
+    }
+
+    #cArr1:checked~.sub_menu ul {
+        width: 120%;
+        display: flex;
+        margin-top: 0%;
+        border-radius: 8px;
+        flex-direction: column;
+        border: 2px solid silver;
+        background-color: #0050c1;
+    }
+
+    #cArr1:checked~.sub_menu ul li {
+        display: block;
+        margin-top: 0.5%;
+        align-self: center;
+        margin-bottom: 0.5%;
+    }
+
+    #cArr1:checked~.sub_menu ul li p {
+        padding-left: 5%;
+    }
+
+    #cArr1:checked~.sub_menu ul li a {
+        margin-left: -5%;
+    }
+
+    #cArr1:checked~.sub_menu ul li a:hover {
+        cursor: initial;
+        color: white;
+    }
+
+    #cArr1:checked~.sub_menu ul li p:hover {
+        cursor: initial;
+        color: white;
+    }
+
+    #cArr2:checked+#iArr2 {
+        fill: black;
+    }
+
+    #cArr2:checked~.sub_menu {
+        top: 51.5%;
+        left: 102%;
+        width: auto;
+        margin-top: 0%;
+        display: block;
+        position: absolute;
+    }
+
+    #cArr2:checked~.sub_menu ul {
+        width: 120%;
+        display: flex;
+        margin-top: 0%;
+        border-radius: 8px;
+        flex-direction: column;
+        border: 2px solid silver;
+        background-color: #0050c1;
+    }
+
+    #cArr2:checked~.sub_menu ul li {
+        display: block;
+        margin-top: 0.5%;
+        align-self: center;
+        margin-bottom: 0.5%;
+    }
+
+    #cArr2:checked~.sub_menu ul li a {
+        margin-left: -5%;
+    }
+
+    #cArr2:checked~.sub_menu ul li a:hover {
+        color: white;
+        cursor: initial;
+    }
+
+    #cArr2:checked~.sub_menu ul li p:hover {
+        color: white;
+        cursor: initial;
+    }
+
+    #cArr3:checked+#iArr3 {
+        fill: black;
+    }
+
+    #cArr3:checked~.alt_menu {
+        top: 35%;
+        left: 12%;
+        width: auto;
+        margin-top: 0%;
+        display: block;
+        margin-left: 102%;
+        position: absolute;
+    }
+
+    #cArr3:checked~.alt_menu ul {
+        width: 120%;
+        display: flex;
+        margin-top: 0%;
+        border-radius: 8px;
+        flex-direction: column;
+        border: 2px solid silver;
+        background-color: #0050c1;
+    }
+
+    #cArr3:checked~.alt_menu ul li {
+        display: block;
+        margin-top: 0.5%;
+        margin-left: 5.5%;
+        align-self: center;
+        margin-bottom: 0.5%;
+    }
+
+    #cArr3:checked~.alt_menu ul li a {
+        padding-left: 5%;
+    }
+
+    #cArr3:checked~.alt_menu ul li:first-child a,
+    #cArr3:checked~.alt_menu ul li:last-child a {
+        padding-left: 5%;
+    }
+
+    #cArr3:checked~.alt_menu ul li a {
+        margin-left: -5%;
+    }
+
+    #cArr3:checked~.alt_menu ul li a:hover {
+        cursor: initial;
+        color: white;
+    }
+
+    #cArr3:checked~.alt_menu ul li p:hover {
+        cursor: initial;
+        color: white;
+    }
+
+    #cArr4:checked+#iArr4 {
+        fill: black;
+    }
+
+    #cArr4:checked~.alt_menu {
+        top: 65%;
+        left: 12%;
+        width: auto;
+        margin-top: 0%;
+        display: block;
+        margin-left: 102%;
+        position: absolute;
+    }
+
+    #cArr4:checked~.alt_menu ul {
+        width: 120%;
+        display: flex;
+        margin-top: 0%;
+        border-radius: 8px;
+        flex-direction: column;
+        border: 2px solid silver;
+        background-color: #0050c1;
+    }
+
+    #cArr4:checked~.alt_menu ul li {
+        display: block;
+        margin-top: 0.5%;
+        margin-left: 5.5%;
+        align-self: center;
+        margin-bottom: 0.5%;
+    }
+
+    #cArr4:checked~.alt_menu ul li a {
+        padding-left: 5%;
+    }
+
+    #cArr4:checked~.alt_menu ul li:first-child a,
+    #cArr4:checked~.alt_menu ul li:last-child a {
+        padding-left: 5%;
+    }
+
+    #cArr4:checked~.alt_menu ul li a {
+        margin-left: -5%;
+    }
+
+    #cArr4:checked~.alt_menu ul li a:hover {
+        cursor: initial;
+        color: white;
+    }
+
+    #cArr4:checked~.alt_menu ul li p:hover {
+        cursor: initial;
+        color: white;
+    }
+
+    #cArr5:checked+#iArr5 {
+        fill: black;
+    }
+
+    #cArr5:checked~.alt_menu {
+        top: 30%;
+        left: 12%;
+        width: auto;
+        margin-top: 0%;
+        display: block;
+        margin-left: 102%;
+        position: absolute;
+    }
+
+    #cArr5:checked~.alt_menu ul {
+        width: 120%;
+        display: flex;
+        margin-top: 0%;
+        border-radius: 8px;
+        flex-direction: column;
+        border: 2px solid silver;
+        background-color: #0050c1;
+    }
+
+    #cArr5:checked~.alt_menu ul li {
+        display: block;
+        margin-top: 0.5%;
+        margin-left: 5.5%;
+        align-self: center;
+        margin-bottom: 0.5%;
+    }
+
+    #cArr5:checked~.alt_menu ul li a {
+        padding-left: 5%;
+    }
+
+    #cArr5:checked~.alt_menu ul li:first-child a,
+    #cArr5:checked~.alt_menu ul li:last-child a {
+        padding-left: 5%;
+    }
+
+    #cArr5:checked~.alt_menu ul li a {
+        margin-left: -5%;
+    }
+
+    #cArr5:checked~.alt_menu ul li a:hover {
+        cursor: initial;
+        color: white;
+    }
+
+    #cArr5:checked~.alt_menu ul li p:hover {
+        cursor: initial;
+        color: white;
+    }
+
+    #cArr6:checked+#iArr6 {
+        fill: black;
+    }
+
+    #cArr6:checked~.alt_menu {
+        top: 65%;
+        left: 12%;
+        width: auto;
+        margin-top: 0%;
+        display: block;
+        margin-left: 102%;
+        position: absolute;
+    }
+
+    #cArr6:checked~.alt_menu ul {
+        width: 120%;
+        display: flex;
+        margin-top: 0%;
+        border-radius: 8px;
+        flex-direction: column;
+        border: 2px solid silver;
+        background-color: #0050c1;
+    }
+
+    #cArr6:checked~.alt_menu ul li {
+        display: block;
+        margin-top: 0.5%;
+        margin-left: 5.5%;
+        align-self: center;
+        margin-bottom: 0.5%;
+    }
+
+    #cArr6:checked~.alt_menu ul li a {
+        padding-left: 5%;
+    }
+
+    #cArr6:checked~.alt_menu ul li:first-child a,
+    #cArr6:checked~.alt_menu ul li:last-child a {
+        padding-left: 5%;
+    }
+
+    #cArr6:checked~.alt_menu ul li a {
+        margin-left: -5%;
+    }
+
+    #cArr6:checked~.alt_menu ul li a:hover {
+        cursor: initial;
+        color: white;
+    }
+
+    #cArr6:checked~.alt_menu ul li p:hover {
+        cursor: initial;
+        color: white;
+    }
+}
+
+@media (max-width: 425px) {
+
+    header {
+        width: 100%;
+        height: 10%;
+        position: relative;
+        position: relative;
+        grid-template-areas:
+            "logo title"
+            "menu menu";
+        background-size: cover;
+        background-size: cover;
+        grid-template-rows: 75% 25%;
+        grid-template-columns: 15% 85%;
+    }
+
+    .logo {
+        width: 100%;
+    }
+
+    .logo img {
+        height: 100%;
+        margin-top: 20%;
+        margin-left: 10%;
+    }
+
+    .title {
+        width: 105%;
+        margin-top: 5%;
+        margin-right: 10%;
+    }
+
+    .media {
+        display: none;
+    }
+
+    .buscador {
+        top: 10%;
+        width: auto;
+        display: flex;
+    }
+
+    .barra_busqueda {
+        height: 10px;
+        font-size: 1px;
+        text-align: center;
+        border-radius: 20px;
+        border-color: black;
+        background-color: silver;
+        font-family: "Lucida Console", Monaco, monospace;
+    }
+    
+    .barra_busqueda::placeholder {
+        opacity: 0.8;
+        color: rgb(9, 6, 46);
+    }
+    
+    .boton_busqueda {
+        width: 25px;
+        height: 10px;
+        margin-top: 1%;
+        color: transparent;
+        border-radius: 20px;
+        font-weight: initial;
+        background-color: gray;
+        background-size: 100% 100%;
+        background-image: url('../svg/Search.svg');
+        font-family: "Lucida Console", Monaco, monospace;
+    }
+    
+    .boton_busqueda:hover {
+        color: black;
+        cursor: initial;
+        background-color: gray;
+    }
+
+    .mBurger {
+        left: 0%;
+        width: 4%;
+        z-index: 1;
+        height: 100%;
+        display: block;
+        appearance: none;
+        position: absolute;
+    }
+
+    .svgM {
+        left: 0%;
+        width: 10px;
+        height: 10px;
+        display: block;
+        position: absolute;
+        margin-bottom: 30%;
+    }
+
+    .mBurger:checked~.svgM {
+        opacity: 0;
+    }
+
+    .mBurger:checked~.svgX {
+        left: 0%;
+        width: 10px;
+        height: 10px;
+        display: block;
+        position: absolute;
+        margin-bottom: 30%;
+        background-color: #0050c1;
+    }
+
+    .menu_text {
+        color: white;
+        font-size: 75%;
+        padding-top: 4%;
+        font-family: "Lucida Console", Monaco, monospace;
+    }
+
+    .iconB {
+        width: 10%;
+        margin-right: 10%;
+    }
+
+    .mBurger:checked~ul {
+        top: 90%;
+        left: 0%;
+        width: 18%;
+        display: flex;
+        color: white;
+        padding-left: 0.5%;
+        position: absolute;
+        flex-direction: column;
+        background-color: #0050c1;
+        border-top-right-radius: 10px;
+        border-top: 2px solid silver;
+        border-bottom-right-radius: 10px;
+        border-right: 2px solid silver;
+        border-bottom: 2px solid silver;
+    }
+
+    #cArr1 {
+        right: 1%;
+        top: 32%;
+        width: 9px;
+        height: 9px;
+    }
+
+    #cArr2 {
+        right: 5%;
+        top: 58.5%;
+        width: 9px;
+        height: 9px;
+    }
+
+    #cArr3 {
+        top: 43%;
+        width: 9px;
+        right: -16%;
+        height: 9px;
+    }
+
+    #cArr4 {
+        top: 75%;
+        width: 9px;
+        right: -16%;
+        height: 9px;
+    }
+
+    #cArr5 {
+        top: 42.5%;
+        width: 9px;
+        right: -17%;
+        height: 9px;
+    }
+
+    #cArr6 {
+        top: 75.5%;
+        width: 9px;
+        right: -17%;
+        height: 9px;
+    }
+
+    #iArr1 {
+        top: 32%;
+        right: 0.5%;
+        width: 9px;
+        height: 9px;
+    }
+
+    #iArr2 {
+        top: 58%;
+        right: 5%;
+        width: 9px;
+        height: 9px;
+    }
+
+    #iArr3 {
+        top: 42%;
+        width: 9px;
+        right: -17%;
+        height: 9px;
+    }
+
+    #iArr4 {
+        top: 75%;
+        width: 9px;
+        right: -18%;
+        height: 9px;
+    }
+
+    #iArr5 {
+        top: 42.5%;
+        width: 9px;
+        right: -18%;
+        height: 9px;
+    }
+
+    #iArr6 {
+        top: 75.5%;
+        width: 9px;
+        right: -18%;
+        height: 9px;
+    }
+
+    .iconC {
+        width: 12px;
+        height: 12px;
+        margin-right: 4%;
+    }
+
+    #cArr1:checked~.sub_menu {
+        top: 23%;
+        left: 105%;
+    }
+
+    #cArr2:checked~.sub_menu {
+        top: 51.5%;
+        left: 105%;
+    }
+
+    #cArr2:checked~.sub_menu ul li a {
+        margin-left: -5%;
+    }
+
+    #cArr3:checked~.alt_menu {
+        top: 35%;
+        left: 12%;
+        width: auto;
+        margin-top: 0%;
+        display: block;
+        margin-left: 102%;
+        position: absolute;
+    }
+
+    #cArr3:checked~.alt_menu ul {
+        width: 120%;
+        display: flex;
+        margin-top: 0%;
+        border-radius: 8px;
+        flex-direction: column;
+        border: 2px solid silver;
+        background-color: #0050c1;
+    }
+
+    #cArr3:checked~.alt_menu ul li {
+        display: block;
+        margin-top: 0.5%;
+        margin-left: 5.5%;
+        align-self: center;
+        margin-bottom: 0.5%;
+    }
+
+    #cArr3:checked~.alt_menu ul li a {
+        padding-left: 5%;
+    }
+
+    #cArr3:checked~.alt_menu ul li:first-child a,
+    #cArr3:checked~.alt_menu ul li:last-child a {
+        padding-left: 5%;
+    }
+
+    #cArr3:checked~.alt_menu ul li a {
+        margin-left: -5%;
+    }
+
+    #cArr4:checked~.alt_menu {
+        top: 65%;
+        left: 12%;
+        width: auto;
+        margin-top: 0%;
+        display: block;
+        margin-left: 102%;
+        position: absolute;
+    }
+
+    #cArr4:checked~.alt_menu ul {
+        width: 120%;
+        display: flex;
+        margin-top: 0%;
+        border-radius: 8px;
+        flex-direction: column;
+        border: 2px solid silver;
+        background-color: #0050c1;
+    }
+
+    #cArr4:checked~.alt_menu ul li {
+        display: block;
+        margin-top: 0.5%;
+        margin-left: 5.5%;
+        align-self: center;
+        margin-bottom: 0.5%;
+    }
+
+    #cArr4:checked~.alt_menu ul li a {
+        padding-left: 5%;
+    }
+
+    #cArr4:checked~.alt_menu ul li:first-child a,
+    #cArr4:checked~.alt_menu ul li:last-child a {
+        padding-left: 5%;
+    }
+
+    #cArr4:checked~.alt_menu ul li a {
+        margin-left: -5%;
+    }
+
+    #cArr4:checked~.alt_menu ul li a:hover {
+        cursor: initial;
+        color: white;
+    }
+
+    #cArr4:checked~.alt_menu ul li p:hover {
+        cursor: initial;
+        color: white;
+    }
+
+    #cArr5:checked~.alt_menu {
+        top: 30%;
+        left: 14%;
+        width: auto;
+        margin-top: 0%;
+        display: block;
+        margin-left: 102%;
+        position: absolute;
+    }
+
+    #cArr5:checked~.alt_menu ul {
+        width: 120%;
+        display: flex;
+        margin-top: 0%;
+        border-radius: 8px;
+        flex-direction: column;
+        border: 2px solid silver;
+        background-color: #0050c1;
+    }
+
+    #cArr5:checked~.alt_menu ul li {
+        display: block;
+        margin-top: 0.5%;
+        margin-left: 5.5%;
+        align-self: center;
+        margin-bottom: 0.5%;
+    }
+
+    #cArr5:checked~.alt_menu ul li a {
+        padding-left: 5%;
+    }
+
+    #cArr5:checked~.alt_menu ul li:first-child a,
+    #cArr5:checked~.alt_menu ul li:last-child a {
+        padding-left: 5%;
+    }
+
+    #cArr5:checked~.alt_menu ul li a {
+        margin-left: -5%;
+    }
+
+    #cArr5:checked~.alt_menu ul li a:hover {
+        cursor: initial;
+        color: white;
+    }
+
+    #cArr5:checked~.alt_menu ul li p:hover {
+        cursor: initial;
+        color: white;
+    }
+
+    #cArr6:checked+#iArr6 {
+        fill: black;
+    }
+
+    #cArr6:checked~.alt_menu {
+        top: 65%;
+        left: 12%;
+        width: auto;
+        margin-top: 0%;
+        display: block;
+        margin-left: 102%;
+        position: absolute;
+    }
+
+    #cArr6:checked~.alt_menu ul {
+        width: 120%;
+        display: flex;
+        margin-top: 0%;
+        border-radius: 8px;
+        flex-direction: column;
+        border: 2px solid silver;
+        background-color: #0050c1;
+    }
+
+    #cArr6:checked~.alt_menu ul li {
+        display: block;
+        margin-top: 0.5%;
+        margin-left: 5.5%;
+        align-self: center;
+        margin-bottom: 0.5%;
+    }
+
+    #cArr6:checked~.alt_menu ul li a {
+        padding-left: 5%;
+    }
+
+    #cArr6:checked~.alt_menu ul li:first-child a,
+    #cArr6:checked~.alt_menu ul li:last-child a {
+        padding-left: 5%;
+    }
+
+    #cArr6:checked~.alt_menu ul li a {
+        margin-left: -5%;
+    }
+
+    #cArr6:checked~.alt_menu ul li a:hover {
+        cursor: initial;
+        color: white;
+    }
+
+    #cArr6:checked~.alt_menu ul li p:hover {
+        cursor: initial;
+        color: white;
     }
 }
