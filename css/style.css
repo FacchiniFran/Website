@@ -982,9 +982,10 @@ header {
     }
 
     .title {
-        width: 105%;
+        width: 95%;
         margin-top: 5%;
-        margin-right: 10%;
+        padding-left: 0%;
+        margin-right: 11%;
     }
 
     .media {
@@ -999,8 +1000,9 @@ header {
 
     .searchBar {
         height: 10px;
-        font-size: 1px;
+        width: 100px;
         text-align: center;
+        font-size: xx-small;
         border-radius: 20px;
         border-color: black;
         background-color: silver;
