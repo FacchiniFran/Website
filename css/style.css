@@ -16,9 +16,7 @@ body {
 header {
     width: 100%;
     height: 38%;
-    gap: 0px 0px;
     display: grid;
-    grid-area: header;
     position: relative;
     grid-template-areas:
         "logo title media1"
@@ -111,6 +109,15 @@ header {
     color: white;
     font-size: 150%;
     padding-top: 4%;
+    font-family: "Lucida Console", Monaco, monospace;
+}
+
+#menuTitle {
+    display: none;
+    color: white;
+    font-size: 120%;
+    padding-top: 0%;
+    position: absolute;
     font-family: "Lucida Console", Monaco, monospace;
 }
 
@@ -270,14 +277,14 @@ header {
     flood-color: #0050c1;
 }
 
-.buscador {
+.search {
     top: 12%;
-    width: 16%;
+    width: 16.2%;
     right: 0.5%;
     position: absolute;
 }
 
-.barra_busqueda {
+.searchBar {
     height: 30px;
     margin-right: 1%;
     font-size: large;
@@ -288,12 +295,12 @@ header {
     font-family: "Lucida Console", Monaco, monospace;
 }
 
-.barra_busqueda::placeholder {
+.searchBar::placeholder {
     opacity: 0.8;
     color: rgb(9, 6, 46);
 }
 
-.boton_busqueda {
+.searchButton {
     width: 75px;
     height: 30px;
     color: black;
@@ -304,10 +311,41 @@ header {
     font-family: "Lucida Console", Monaco, monospace;
 }
 
-.boton_busqueda:hover {
+.searchButton:hover {
     color: white;
     cursor: pointer;
     background-color: #0050c1;
+}
+
+@media (max-width: 1440px) {
+
+    .media {
+        width: 15.5%;
+    }
+
+    .search {
+        width: 21.5%;
+    }
+}
+
+@media (max-width: 1024px) {
+
+    .logo {
+        width: 100%;
+    }
+
+    .title {
+        height: 45%;
+        margin-left: 15%;
+    }
+
+    .media {
+        width: 21.5%;
+    }
+
+    .search {
+        width: 30%;
+    }
 }
 
 @media (max-width: 768px) {
@@ -328,7 +366,7 @@ header {
 
     .media {
         opacity: 1;
-        width: 16.5%;
+        width: 16%;
     }
 
     .iconM {
@@ -347,6 +385,15 @@ header {
 
     .menu ul {
         display: none;
+    }
+
+    #menuTitle {
+        left: 3.1%;
+        display: block;
+        padding-left: 1%;
+        padding-right: 0.5%;
+        border-top-right-radius: 5px;
+        border-bottom-right-radius: 5px;
     }
 
     .menu>ul>li:hover {
@@ -407,13 +454,13 @@ header {
         flood-color: initial;
     }
 
-    .buscador {
+    .search {
         top: 15%;
         width: auto;
         display: flex;
     }
 
-    .barra_busqueda {
+    .searchBar {
         height: 20px;
         font-size: medium;
         text-align: center;
@@ -422,13 +469,13 @@ header {
         background-color: silver;
         font-family: "Lucida Console", Monaco, monospace;
     }
-    
-    .barra_busqueda::placeholder {
+
+    .searchBar::placeholder {
         opacity: 0.8;
         color: rgb(9, 6, 46);
     }
-    
-    .boton_busqueda {
+
+    .searchButton {
         width: 65px;
         height: 20px;
         color: black;
@@ -438,8 +485,8 @@ header {
         background-color: gray;
         font-family: "Lucida Console", Monaco, monospace;
     }
-    
-    .boton_busqueda:hover {
+
+    .searchButton:hover {
         color: black;
         cursor: initial;
         background-color: gray;
@@ -471,6 +518,10 @@ header {
         display: block;
         position: absolute;
         margin-bottom: 30%;
+        background-color: #0050c1;
+    }
+
+    .mBurger:checked~#menuTitle {
         background-color: #0050c1;
     }
 
@@ -940,13 +991,13 @@ header {
         display: none;
     }
 
-    .buscador {
+    .search {
         top: 10%;
         width: auto;
         display: flex;
     }
 
-    .barra_busqueda {
+    .searchBar {
         height: 10px;
         font-size: 1px;
         text-align: center;
@@ -955,13 +1006,13 @@ header {
         background-color: silver;
         font-family: "Lucida Console", Monaco, monospace;
     }
-    
-    .barra_busqueda::placeholder {
+
+    .searchBar::placeholder {
         opacity: 0.8;
         color: rgb(9, 6, 46);
     }
-    
-    .boton_busqueda {
+
+    .searchButton {
         width: 25px;
         height: 10px;
         margin-top: 1%;
@@ -973,8 +1024,8 @@ header {
         background-image: url('../svg/Search.svg');
         font-family: "Lucida Console", Monaco, monospace;
     }
-    
-    .boton_busqueda:hover {
+
+    .searchButton:hover {
         color: black;
         cursor: initial;
         background-color: gray;
@@ -1018,6 +1069,12 @@ header {
         font-size: 75%;
         padding-top: 4%;
         font-family: "Lucida Console", Monaco, monospace;
+    }
+
+    #menuTitle {
+        left: 2.2%;
+        font-size: 50%;
+        padding-left: 1%;
     }
 
     .iconB {
@@ -1142,205 +1199,35 @@ header {
         left: 105%;
     }
 
-    #cArr2:checked~.sub_menu ul li a {
-        margin-left: -5%;
-    }
-
-    #cArr3:checked~.alt_menu {
-        top: 35%;
-        left: 12%;
-        width: auto;
-        margin-top: 0%;
-        display: block;
-        margin-left: 102%;
-        position: absolute;
-    }
-
-    #cArr3:checked~.alt_menu ul {
-        width: 120%;
-        display: flex;
-        margin-top: 0%;
-        border-radius: 8px;
-        flex-direction: column;
-        border: 2px solid silver;
-        background-color: #0050c1;
-    }
-
-    #cArr3:checked~.alt_menu ul li {
-        display: block;
-        margin-top: 0.5%;
-        margin-left: 5.5%;
-        align-self: center;
-        margin-bottom: 0.5%;
-    }
-
-    #cArr3:checked~.alt_menu ul li a {
-        padding-left: 5%;
-    }
-
-    #cArr3:checked~.alt_menu ul li:first-child a,
-    #cArr3:checked~.alt_menu ul li:last-child a {
-        padding-left: 5%;
-    }
-
-    #cArr3:checked~.alt_menu ul li a {
-        margin-left: -5%;
-    }
-
-    #cArr4:checked~.alt_menu {
-        top: 65%;
-        left: 12%;
-        width: auto;
-        margin-top: 0%;
-        display: block;
-        margin-left: 102%;
-        position: absolute;
-    }
-
-    #cArr4:checked~.alt_menu ul {
-        width: 120%;
-        display: flex;
-        margin-top: 0%;
-        border-radius: 8px;
-        flex-direction: column;
-        border: 2px solid silver;
-        background-color: #0050c1;
-    }
-
-    #cArr4:checked~.alt_menu ul li {
-        display: block;
-        margin-top: 0.5%;
-        margin-left: 5.5%;
-        align-self: center;
-        margin-bottom: 0.5%;
-    }
-
-    #cArr4:checked~.alt_menu ul li a {
-        padding-left: 5%;
-    }
-
-    #cArr4:checked~.alt_menu ul li:first-child a,
-    #cArr4:checked~.alt_menu ul li:last-child a {
-        padding-left: 5%;
-    }
-
-    #cArr4:checked~.alt_menu ul li a {
-        margin-left: -5%;
-    }
-
-    #cArr4:checked~.alt_menu ul li a:hover {
-        cursor: initial;
-        color: white;
-    }
-
-    #cArr4:checked~.alt_menu ul li p:hover {
-        cursor: initial;
-        color: white;
-    }
-
     #cArr5:checked~.alt_menu {
-        top: 30%;
         left: 14%;
-        width: auto;
-        margin-top: 0%;
-        display: block;
-        margin-left: 102%;
-        position: absolute;
     }
 
-    #cArr5:checked~.alt_menu ul {
-        width: 120%;
-        display: flex;
-        margin-top: 0%;
-        border-radius: 8px;
-        flex-direction: column;
-        border: 2px solid silver;
-        background-color: #0050c1;
+    .content {
+        display: grid;
+        grid-template-areas:
+            ". cenCont ."
+            ". cenCont .";
+        grid-template-rows: 45% 55%;
+        grid-template-columns: 15% 70% 15%;
     }
 
-    #cArr5:checked~.alt_menu ul li {
-        display: block;
-        margin-top: 0.5%;
-        margin-left: 5.5%;
-        align-self: center;
-        margin-bottom: 0.5%;
+    .cenCont {
+        display: grid;
+        grid-template-areas:
+            "mArticles mArticles"
+            "recentCont otherCont";
+        grid-template-rows: 45% 55%;
+        grid-template-columns: 65% 35%;
     }
-
-    #cArr5:checked~.alt_menu ul li a {
-        padding-left: 5%;
-    }
-
-    #cArr5:checked~.alt_menu ul li:first-child a,
-    #cArr5:checked~.alt_menu ul li:last-child a {
-        padding-left: 5%;
-    }
-
-    #cArr5:checked~.alt_menu ul li a {
-        margin-left: -5%;
-    }
-
-    #cArr5:checked~.alt_menu ul li a:hover {
-        cursor: initial;
-        color: white;
-    }
-
-    #cArr5:checked~.alt_menu ul li p:hover {
-        cursor: initial;
-        color: white;
-    }
-
-    #cArr6:checked+#iArr6 {
-        fill: black;
-    }
-
-    #cArr6:checked~.alt_menu {
-        top: 65%;
-        left: 12%;
-        width: auto;
-        margin-top: 0%;
-        display: block;
-        margin-left: 102%;
-        position: absolute;
-    }
-
-    #cArr6:checked~.alt_menu ul {
-        width: 120%;
-        display: flex;
-        margin-top: 0%;
-        border-radius: 8px;
-        flex-direction: column;
-        border: 2px solid silver;
-        background-color: #0050c1;
-    }
-
-    #cArr6:checked~.alt_menu ul li {
-        display: block;
-        margin-top: 0.5%;
-        margin-left: 5.5%;
-        align-self: center;
-        margin-bottom: 0.5%;
-    }
-
-    #cArr6:checked~.alt_menu ul li a {
-        padding-left: 5%;
-    }
-
-    #cArr6:checked~.alt_menu ul li:first-child a,
-    #cArr6:checked~.alt_menu ul li:last-child a {
-        padding-left: 5%;
-    }
-
-    #cArr6:checked~.alt_menu ul li a {
-        margin-left: -5%;
-    }
-
-    #cArr6:checked~.alt_menu ul li a:hover {
-        cursor: initial;
-        color: white;
-    }
-
-    #cArr6:checked~.alt_menu ul li p:hover {
-        cursor: initial;
-        color: white;
+    
+    .otherCont {
+        display: grid;
+        grid-template-areas:
+            "rNewsCont"
+            "rReviewsCont"
+            "adCont";
+        grid-template-columns: 100%;
+        grid-template-rows: 35% 35% 30%;
     }
 }
