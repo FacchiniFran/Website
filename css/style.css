@@ -459,6 +459,14 @@ content {
 .slideTextData a:hover {
     color: black;
     cursor: pointer;
+    text-shadow:
+        0 0 10px #fff,
+        0 0 21px #fff,
+        0 0 42px #0050c1,
+        0 0 82px #0050c1,
+        0 0 92px #0050c1,
+        0 0 102px #0050c1,
+        0 0 151px #0050c1;
 }
 
 .slideImg {
@@ -494,6 +502,7 @@ content {
 .rArtTitle {
     color: white;
     padding-top: 2%;
+    font-size: 260%;
     text-align: center;
     text-decoration: underline;
     text-shadow:
@@ -569,15 +578,107 @@ content {
 }
 
 .rNewsCont {
+    display: flex;
+    margin-top: 58%;
     grid-area: rNewsCont;
+    flex-direction: column;
+}
+
+.rNewsCont .rArtTitle {
+    margin-left: 14%;
+}
+
+.newsList {
+    width: 85%;
+    margin-top: 4%;
+    margin-left: 15%;
+    border-radius: 10px;
+    border: 3px solid #0050c1;
+    background-image: linear-gradient(silver, silver, #0050c1);
+}
+
+.newsList ul li {
+    margin-top: 2%;
+    list-style-type: disc;
+}
+
+.newsList ul li::marker {
+    color: darkblue;
+}
+
+.newsList ul li a{
+    color: black;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.newsList ul li a:hover {
+    text-shadow:
+        0 0 7px #fff,
+        0 0 10px #fff,
+        0 0 21px #fff,
+        0 0 42px #0050c1,
+        0 0 82px #0050c1,
+        0 0 92px #0050c1,
+        0 0 102px #0050c1,
+        0 0 151px #0050c1;
 }
 
 .rReviewsCont {
+    display: flex;
+    margin-top: 15%;
+    flex-direction: column;
     grid-area: rReviewsCont;
 }
 
+.rReviewsCont .rArtTitle {
+    margin-left: 12%;
+}
+
+.revList {
+    width: 85%;
+    margin-top: 4%;
+    margin-left: 15%;
+    border-radius: 10px;
+    border: 3px solid #0050c1;
+    background-image: linear-gradient(silver, silver, #0050c1);
+}
+
+.revList ul li {
+    margin-top: 2%;
+    list-style-type: disc;
+}
+
+.revList ul li::marker {
+    color: darkblue;
+}
+
+.revList ul li a{
+    color: black;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.revList ul li a:hover {
+    text-shadow:
+        0 0 7px #fff,
+        0 0 10px #fff,
+        0 0 21px #fff,
+        0 0 42px #0050c1,
+        0 0 82px #0050c1,
+        0 0 92px #0050c1,
+        0 0 102px #0050c1,
+        0 0 151px #0050c1;
+}
+
 .adCont {
+    margin-top: -15%;
+    margin-left: 11%;
     grid-area: adCont;
+}
+
+.adCont a img{
+    height: 55%;
 }
 
 /*Sección de Nosotros.*/
