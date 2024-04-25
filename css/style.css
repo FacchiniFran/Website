@@ -1,3 +1,5 @@
+/*Sección general del CSS.*/
+/*Eliminando todos los efectos y espaciados.*/
 * {
     margin: 0;
     padding: 0;
@@ -5,6 +7,7 @@
     text-decoration: none;
 }
 
+/*Estructura base del cuerpo del sitio.*/
 body {
     background-size: cover;
     background-color: black;
@@ -13,6 +16,7 @@ body {
     background: url('../images/Background2.png') repeat;
 }
 
+/*Se crea el Header que estará en todo el sitio.*/
 header {
     z-index: 96;
     width: 100%;
@@ -251,7 +255,7 @@ header {
 
 .alt_menu ul {
     width: 120%;
-    margin-left: 7%;
+    margin-left: 6%;
     background-color: black;
 }
 
@@ -324,6 +328,60 @@ header {
     background-color: #0050c1;
 }
 
+/*Se crea el Footer que estará en todo el sitio*/
+footer {
+    display: grid;
+    grid-area: footer;
+    grid-template-areas:
+        "disclaimer" "contactUs" "mediaF";
+    grid-template-rows: 50%;
+    background-color: #2c2c2c;
+    border-top: 5px solid #414141;
+    grid-template-columns: 30% 40% 30%;
+}
+
+.disclaimer {
+    opacity: 0.3;
+    font-size: 85%;
+    margin-top: 1%;
+    margin-left: 2%;
+    color: silver;
+    text-align: justify;
+    font-family: "Lucida Console", Monaco, monospace;
+}
+
+.contactUs {
+    margin-top: 1%;
+    font-size: 150%;
+    text-align: center;
+    font-family: "Lucida Console", Monaco, monospace;
+}
+
+.contactUs a {
+    opacity: 0.7;
+    color: silver;
+    text-decoration: none;
+}
+
+.contactUs a:hover {
+    color: white;
+    opacity: 1;
+}
+
+.mediaF {
+    opacity: 0.5;
+    display: flex;
+    margin-top: 1.5%;
+    margin-left: 53%;
+    flex-direction: row;
+    border-radius: 18px;
+}
+
+.mediaF a {
+    padding-right: 5%;
+}
+
+/*Generando la estructura de la página principal.*/
 content {
     display: grid;
     grid-area: content;
@@ -340,12 +398,12 @@ content {
     grid-template-areas:
         "carousel carousel"
         "recentCont otherCont";
-    grid-template-rows: 30% 70%;
+    grid-template-rows: 15% 85%;
     grid-template-columns: 65% 35%;
 }
 
 .carousel {
-    top: 10%;
+    top: 5%;
     width: 153.8%;
 }
 
@@ -412,17 +470,91 @@ content {
 
 .carousel-control-prev {
     width: 10%;
-    height: 332%;
+    height: 160%;
+    margin-top: 0.2%;
     margin-left: 30%;
 }
 
 .carousel-control-next {
     width: 10%;
-    height: 332%;
+    height: 160%;
+    margin-top: 0.2%;
+    margin-right: 0.2%;
 }
 
 .recentCont {
+    display: flex;
+    margin-top: 30%;
+    border-radius: 15px;
+    height: fit-content;
     grid-area: recentCont;
+    flex-direction: column;
+}
+
+.rArtTitle {
+    color: white;
+    padding-top: 2%;
+    text-align: center;
+    text-decoration: underline;
+    text-shadow:
+        0 0 7px #fff,
+        0 0 10px #fff,
+        0 0 21px #fff,
+        0 0 42px #0050c1,
+        0 0 82px #0050c1,
+        0 0 92px #0050c1,
+        0 0 102px #0050c1,
+        0 0 151px #0050c1;
+    font-family: "Lucida Console", Monaco, monospace;
+}
+
+.rArt {
+    width: 98%;
+    display: flex;
+    margin-top: 2%;
+    margin-left: 1%;
+    border-radius: 8px;
+    flex-direction: row;
+    border: 3px solid white;
+    background-color: #0050c1;
+}
+
+.rArt:last-child {
+    margin-bottom: 2%;
+}
+
+.rArtImg {
+    height: 300px;
+}
+
+.rArtTxt {
+    display: flex;
+    flex-direction: column;
+    border-left: 2px solid white;
+    font-family: "Lucida Console", Monaco, monospace;
+}
+
+.rArtTxt a {
+    color: white;
+    font-size: 160%;
+    padding-top: 2%;
+    padding-bottom: 2%;
+    text-align: center;
+    text-decoration: underline;
+    border-bottom: 2px solid white;
+}
+
+.rArtTxt a:hover {
+    color: black;
+}
+
+.rArtTxt p {
+    color: white;
+    font-size: 85%;
+    padding-top: 2%;
+    padding-left: 2%;
+    padding-right: 2%;
+    text-align: justify;
 }
 
 .otherCont {
@@ -448,6 +580,84 @@ content {
     grid-area: adCont;
 }
 
+/*Sección de Nosotros.*/
+.usPage {
+    display: flex;
+    margin-top: 2%;
+    color: white;
+    align-items: center;
+    flex-direction: column;
+    font-family: "Lucida Console", Monaco, monospace;
+}
+
+.usPage img {
+    border-style: inset;
+    border-radius: 15px;
+    border-color: silver;
+}
+
+.usPage h1 {
+    font-size: xx-large;
+    text-decoration: underline;
+}
+
+.usPage p {
+    padding-left: 1%;
+    font-size: large;
+    padding-right: 1%;
+    text-align: justify;
+}
+
+
+/*Formulario de sección de Contacto.*/
+.form {
+    width: 25%;
+    display: block;
+    margin-left: 38%;
+    margin-bottom: 2%;
+    border-radius: 15px;
+    background-color: #0050c1;
+}
+
+.form p {
+    display: flex;
+    color: white;
+    margin-left: 2%;
+    margin-right: 2%;
+    font-weight: bolder;
+    flex-direction: column;
+    text-decoration: underline;
+    font-family: "Lucida Console", Monaco, monospace;
+}
+
+.form p:first-child {
+    margin-top: 5%;
+}
+
+.form p input {
+    margin-top: 1.5%;
+    margin-bottom: 2%;
+    border-radius: 8px;
+    text-align: center;
+}
+
+.form p textarea {
+    margin-top: 1.5%;
+    margin-bottom: 2%;
+    border-radius: 5px;
+}
+
+#sendForm {
+    margin-left: 87%;
+    margin-bottom: 3%;
+    font-weight: bolder;
+}
+
+#sendForm:hover {
+    cursor: pointer;
+}
+
+/*Media Queries*/
 @media (max-width: 1440px) {
 
     header {
@@ -488,7 +698,7 @@ content {
     header {
         grid-template-rows: 90% 10%;
     }
-    
+
     .logo {
         width: 100%;
     }
@@ -1096,7 +1306,7 @@ content {
 
 @media (max-width: 425px) {
 
-    header{
+    header {
         grid-template-rows: 85% 15%;
     }
 
