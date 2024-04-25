@@ -22,87 +22,136 @@
 </head>
 
 <body>  
-    <div class="header">
-        <div class="banner"></div>
+    <header>
+        <a class="logo" href="../index.html"><img src="../images/Logo MG.png" alt="Logo"></a>
+        <img class="title" src="../images/Mana_Gamers_Title.png" alt="Title">
         <div class="media">
             <a class="iconM" href="https://www.facebook.com/"><img src="../images/Facebook.png" alt="Facebook"></a>
             <a class="iconM" href="https://www.instagram.com/"><img src="../images/Instagram.png" alt="Instagram"></a>
             <a class="iconM" href="https://twitter.com/"><img src="../images/Twitter.png" alt="Twitter"></a>
             <a class="iconM" href="https://www.youtube.com/"><img src="../images/Youtube.png" alt="Youtube"></a>
+            <a class="iconM" href="https://www.twitch.tv/"><img src="../images/Twitch.png" alt="Twitch"></a>
         </div>
         <nav class="menu">
+            <input type="checkbox" class="mBurger"></input>
+            <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="white" class="svgM"
+                viewBox="0 0 16 16">
+                <path fill-rule="evenodd"
+                    d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5" />
+            </svg>
+            <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="white" class="svgX"
+                viewBox="0 0 16 16">
+                <path
+                    d="M2.146 2.854a.5.5 0 1 1 .708-.708L8 7.293l5.146-5.147a.5.5 0 0 1 .708.708L8.707 8l5.147 5.146a.5.5 0 0 1-.708.708L8 8.707l-5.146 5.147a.5.5 0 0 1-.708-.708L7.293 8z" />
+            </svg>
+            <p id="menuTitle">Menú</p>
             <ul>
                 <li>
-                    <img class="iconB" src="../svg/Home.svg" alt="Home"><a href="../index.html">Inicio</a>
+                    <img class="iconB" src="../svg/Home.svg" alt="Home"><a class="menu_text"
+                        href="../index.html">Inicio</a>
                 </li>
                 <li>
-                    <img class="iconB" src="../svg/News.svg" alt="News"><a href="../pages/articulos.html">Noticias</a>
+                    <img class="iconB" src="../svg/News.svg" alt="News">
+                    <p class="menu_text">Noticias</p>
+                    <input type="checkbox" class="cArrow" id="cArr1">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" fill="white" class="iArrow"
+                        id="iArr1" viewBox="0 0 16 16">
+                        <path fill-rule="evenodd"
+                            d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708" />
+                    </svg>
                     <nav class="sub_menu">
                         <ul>
-                            <li><a href="../pages/articulos.html">Recientes</a></li>
-                            <li><a href="../pages/articulos.html">Categorías</a>
+                            <li><a class="menu_text" href="./articulos.html">Recientes</a></li>
+                            <li>
+                                <p class="menu_text menu_text_p">Categorías</p>
+                                <input type="checkbox" class="cArrow" id="cArr3">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" fill="white"
+                                    class="iArrow" id="iArr3" viewBox="0 0 16 16">
+                                    <path fill-rule="evenodd"
+                                        d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708" />
+                                </svg>
                                 <nav class="alt_menu">
                                     <ul>
-                                        <li><a href="../pages/articulos.html">Lanzamientos</a></li>
-                                        <li><a href="../pages/articulos.html">Industria</a></li>
-                                        <li><a href="../pages/articulos.html">E-Sports</a></li>
-                                        <li><a href="../pages/articulos.html">Personas del Medio</a></li>
+                                        <li><a class="menu_text" href="./articulos.html">Lanzamientos</a></li>
+                                        <li><a class="menu_text" href="./articulos.html">Industria</a></li>
+                                        <li><a class="menu_text" href="./articulos.html">E-Sports</a></li>
+                                        <li><a class="menu_text" href="./articulos.html">Personas del Medio</a>
+                                        </li>
                                     </ul>
                                 </nav>
                             </li>
-                            <li><a href="../pages/articulos.html">Plataforma</a>
+                            <li>
+                                <p class="menu_text menu_text_p">Plataforma</p>
+                                <input type="checkbox" class="cArrow" id="cArr4">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" fill="white"
+                                    class="iArrow" id="iArr4" viewBox="0 0 16 16">
+                                    <path fill-rule="evenodd"
+                                        d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708" />
+                                </svg>
                                 <nav class="alt_menu">
                                     <ul>
                                         <li>
-                                            <a href="../pages/articulos.html">
-                                                <svg class="iconC" xmlns="http://www.w3.org/2000/svg" version="1.1" width="20" height="20" style="float:left">
-													<defs>
-													  <filter id="colorMask1">
-														<feFlood flood-color="#ffffff" result="flood" />
-														<feComposite in="SourceGraphic" in2="flood" operator="arithmetic" k1="1" k2="0" k3="0" k4="0" />
-													  </filter>
-													</defs>
-													<image width="100%" height="100%" xlink:href="../svg/PC.svg" filter="url(#colorMask1)" />
-												  </svg>PC
+                                            <a class="menu_text" href="./articulos.html">
+                                                <svg class="iconC" xmlns="http://www.w3.org/2000/svg" version="1.1"
+                                                    width="25" height="25" style="float:left">
+                                                    <defs>
+                                                        <filter id="colorMask1">
+                                                            <feFlood flood-color="#ffffff" result="flood" />
+                                                            <feComposite in="SourceGraphic" in2="flood"
+                                                                operator="arithmetic" k1="1" k2="0" k3="0" k4="0" />
+                                                        </filter>
+                                                    </defs>
+                                                    <image width="100%" height="100%" xlink:href="../svg/PC.svg"
+                                                        filter="url(#colorMask1)" />
+                                                </svg>PC
                                             </a>
                                         </li>
                                         <li>
-                                            <a href="../pages/articulos.html">
-                                                <svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="20" height="20" style="float:left">
-													<defs>
-													  <filter id="colorMask2">
-														<feFlood flood-color="#ffffff" result="flood" />
-														<feComposite in="SourceGraphic" in2="flood" operator="arithmetic" k1="1" k2="0" k3="0" k4="0" />
-													  </filter>
-													</defs>
-													<image width="100%" height="100%" xlink:href="../svg/PS.svg" filter="url(#colorMask2)" />
-												  </svg>Playstation
+                                            <a class="menu_text" href="./articulos.html">
+                                                <svg class="iconC" xmlns="http://www.w3.org/2000/svg" version="1.1"
+                                                    width="23" height="23" style="float:left">
+                                                    <defs>
+                                                        <filter id="colorMask2">
+                                                            <feFlood flood-color="#ffffff" result="flood" />
+                                                            <feComposite in="SourceGraphic" in2="flood"
+                                                                operator="arithmetic" k1="1" k2="0" k3="0" k4="0" />
+                                                        </filter>
+                                                    </defs>
+                                                    <image width="100%" height="100%" xlink:href="../svg/PS.svg"
+                                                        filter="url(#colorMask2)" />
+                                                </svg>Playstation
                                             </a>
                                         </li>
                                         <li>
-                                            <a href="../pages/articulos.html">
-                                                <svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="20" height="20" style="float:left">
-												<defs>
-												  <filter id="colorMask3">
-													<feFlood flood-color="#ffffff" result="flood" />
-													<feComposite in="SourceGraphic" in2="flood" operator="arithmetic" k1="1" k2="0" k3="0" k4="0" />
-												  </filter>
-												</defs>
-												<image width="100%" height="100%" xlink:href="../svg/XBox.svg" filter="url(#colorMask3)" />
-											  </svg>XBox
+                                            <a class="menu_text" href="./articulos.html">
+                                                <svg class="iconC" xmlns="http://www.w3.org/2000/svg" version="1.1"
+                                                    width="25" height="25" style="float:left">
+                                                    <defs>
+                                                        <filter id="colorMask3">
+                                                            <feFlood flood-color="#ffffff" result="flood" />
+                                                            <feComposite in="SourceGraphic" in2="flood"
+                                                                operator="arithmetic" k1="1" k2="0" k3="0" k4="0" />
+                                                        </filter>
+                                                    </defs>
+                                                    <image width="100%" height="100%" xlink:href="../svg/XBox.svg"
+                                                        filter="url(#colorMask3)" />
+                                                </svg>XBox
                                             </a>
                                         </li>
                                         <li>
-                                            <a href="../pages/articulos.html">
-                                                <svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="20" height="20" style="float:left">
-													<defs>
-												  	<filter id="colorMask4">
-														<feFlood flood-color="#ffffff" result="flood" />
-														<feComposite in="SourceGraphic" in2="flood" operator="arithmetic" k1="1" k2="0" k3="0" k4="0" />
-												  	</filter>
-													</defs>
-													<image width="100%" height="100%" xlink:href="../svg/NSwitch.svg" filter="url(#colorMask4)" />
-											  	</svg>Nintendo
+                                            <a class="menu_text" href="./articulos.html">
+                                                <svg class="iconC" xmlns="http://www.w3.org/2000/svg" version="1.1"
+                                                    width="25" height="25" style="float:left">
+                                                    <defs>
+                                                        <filter id="colorMask4">
+                                                            <feFlood flood-color="#ffffff" result="flood" />
+                                                            <feComposite in="SourceGraphic" in2="flood"
+                                                                operator="arithmetic" k1="1" k2="0" k3="0" k4="0" />
+                                                        </filter>
+                                                    </defs>
+                                                    <image width="100%" height="100%" xlink:href="../svg/NSwitch.svg"
+                                                        filter="url(#colorMask4)" />
+                                                </svg>Nintendo
                                             </a>
                                         </li>
                                     </ul>
@@ -112,62 +161,92 @@
                     </nav>
                 </li>
                 <li>
-                    <img class="iconB" src="../svg/Star.svg" alt="News"><a href="../pages/articulos.html">Reseñas</a>
+                    <img class="iconB" src="../svg/Star.svg" alt="News">
+                    <p class="menu_text">Reseñas</p>
+                    <input type="checkbox" class="cArrow" id="cArr2">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" fill="white" class="iArrow"
+                        id="iArr2" viewBox="0 0 16 16">
+                        <path fill-rule="evenodd"
+                            d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708" />
+                    </svg>
                     <nav class="sub_menu">
                         <ul>
-                            <li><a href="../pages/articulos.html">Recientes</a></li>
-                            <li><a href="../pages/articulos.html">Categorías</a>
+                            <li><a class="menu_text" href="./articulos.html">Recientes</a></li>
+                            <li>
+                                <p class="menu_text">Categorías</p>
+                                <input type="checkbox" class="cArrow" id="cArr5">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" fill="white"
+                                    class="iArrow" id="iArr5" viewBox="0 0 16 16">
+                                    <path fill-rule="evenodd"
+                                        d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708" />
+                                </svg>
                                 <nav class="alt_menu">
                                     <ul>
-                                        <li><a href="#">Acción</a></li>
-                                        <li><a href="#">Aventura</a></li>
-                                        <li><a href="#">R.P.G</a></li>
-                                        <li><a href="#">Estrategia</a></li>
-                                        <li><a href="#">Deportes</a></li>
-                                        <li><a href="#">Realidad Virtual</a></li>
+                                        <li><a class="menu_text" href="#">Acción</a></li>
+                                        <li><a class="menu_text" href="#">Aventura</a></li>
+                                        <li><a class="menu_text" href="#">R.P.G</a></li>
+                                        <li><a class="menu_text" href="#">Estrategia</a></li>
+                                        <li><a class="menu_text" href="#">Deportes</a></li>
+                                        <li><a class="menu_text" href="#">Realidad Virtual</a></li>
                                     </ul>
                                 </nav>
                             </li>
-                            <li><a href="../pages/articulos.html">Plataforma</a>
+                            <li>
+                                <p class="menu_text">Plataforma</p>
+                                <input type="checkbox" class="cArrow" id="cArr6">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" fill="white"
+                                    class="iArrow" id="iArr6" viewBox="0 0 16 16">
+                                    <path fill-rule="evenodd"
+                                        d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708" />
+                                </svg>
                                 <nav class="alt_menu">
                                     <ul>
                                         <li>
-                                            <a href="../pages/articulos.html">
-                                                <svg class="iconC" xmlns="http://www.w3.org/2000/svg" version="1.1" width="20" height="20" style="float:left">
-													<defs>
-													  <filter id="colorMask1">
-														<feFlood flood-color="#ffffff" result="flood" />
-														<feComposite in="SourceGraphic" in2="flood" operator="arithmetic" k1="1" k2="0" k3="0" k4="0" />
-													  </filter>
-													</defs>
-													<image width="100%" height="100%" xlink:href="../svg/PC.svg" filter="url(#colorMask1)" />
-												  </svg>PC
+                                            <a class="menu_text" href="./articulos.html">
+                                                <svg class="iconC" xmlns="http://www.w3.org/2000/svg" version="1.1"
+                                                    width="25" height="25" style="float:left">
+                                                    <defs>
+                                                        <filter id="colorMask5">
+                                                            <feFlood flood-color="#ffffff" result="flood" />
+                                                            <feComposite in="SourceGraphic" in2="flood"
+                                                                operator="arithmetic" k1="1" k2="0" k3="0" k4="0" />
+                                                        </filter>
+                                                    </defs>
+                                                    <image width="100%" height="100%" xlink:href="../svg/PC.svg"
+                                                        filter="url(#colorMask5)" />
+                                                </svg>PC
                                             </a>
                                         </li>
                                         <li>
-                                            <a href="../pages/articulos.html">
-                                                <svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="20" height="20" style="float:left">
-													<defs>
-													  <filter id="colorMask2">
-														<feFlood flood-color="#ffffff" result="flood" />
-														<feComposite in="SourceGraphic" in2="flood" operator="arithmetic" k1="1" k2="0" k3="0" k4="0" />
-													  </filter>
-													</defs>
-													<image width="100%" height="100%" xlink:href="../svg/PS.svg" filter="url(#colorMask2)" />
-												  </svg>Playstation
+                                            <a class="menu_text" href="./articulos.html">
+                                                <svg class="iconC" xmlns="http://www.w3.org/2000/svg" version="1.1"
+                                                    width="23" height="23" style="float:left">
+                                                    <defs>
+                                                        <filter id="colorMask6">
+                                                            <feFlood flood-color="#ffffff" result="flood" />
+                                                            <feComposite in="SourceGraphic" in2="flood"
+                                                                operator="arithmetic" k1="1" k2="0" k3="0" k4="0" />
+                                                        </filter>
+                                                    </defs>
+                                                    <image width="100%" height="100%" xlink:href="../svg/PS.svg"
+                                                        filter="url(#colorMask6)" />
+                                                </svg>Playstation
                                             </a>
                                         </li>
                                         <li>
-                                            <a href="../pages/articulos.html">
-                                                <svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="20" height="20" style="float:left">
-													<defs>
-												  	<filter id="colorMask4">
-														<feFlood flood-color="#ffffff" result="flood" />
-														<feComposite in="SourceGraphic" in2="flood" operator="arithmetic" k1="1" k2="0" k3="0" k4="0" />
-												  	</filter>
-													</defs>
-													<image width="100%" height="100%" xlink:href="../svg/NSwitch.svg" filter="url(#colorMask4)" />
-											  	</svg>Nintendo
+                                            <a class="menu_text" href="./articulos.html">
+                                                <svg class="iconC" xmlns="http://www.w3.org/2000/svg" version="1.1"
+                                                    width="25" height="25" style="float:left">
+                                                    <defs>
+                                                        <filter id="colorMask7">
+                                                            <feFlood flood-color="#ffffff" result="flood" />
+                                                            <feComposite in="SourceGraphic" in2="flood"
+                                                                operator="arithmetic" k1="1" k2="0" k3="0" k4="0" />
+                                                        </filter>
+                                                    </defs>
+                                                    <image width="100%" height="100%" xlink:href="../svg/NSwitch.svg"
+                                                        filter="url(#colorMask7)" />
+                                                </svg>Nintendo
                                             </a>
                                         </li>
                                     </ul>
@@ -177,15 +256,16 @@
                     </nav>
                 </li>
                 <li>
-                    <img class="iconB" src="../svg/Us.svg" alt="News"><a href="../pages/nosotros.html">Nosotros</a>
+                    <img class="iconB" src="../svg/Us.svg" alt="News"><a class="menu_text"
+                        href="./nosotros.html">Nosotros</a>
                 </li>
             </ul>
-            <form class="buscador" action="#" method="get">
-                <input class="barra_busqueda" type="search" placeholder="Búsqueda..." name="buscador">
-                <input class="boton_busqueda" type="submit" value="Buscar">
+            <form class="search" action="#" method="get">
+                <input class="searchBar" type="search" placeholder="Búsqueda..." name="buscador">
+                <input class="searchButton" type="submit" value="Buscar">
             </form>
         </nav>
-    </div>
+    </header>
 
     <div class="artic">
         <img src="https://cdn.wccftech.com/wp-content/uploads/2018/03/God-of-War-gameplay.jpg" alt="Main Image">
