@@ -14,15 +14,17 @@ body {
 }
 
 header {
+    z-index: 96;
     width: 100%;
     height: 38%;
     display: grid;
+    grid-area: header;
     position: relative;
     grid-template-areas:
         "logo title media1"
         "menu menu menu";
     background-size: cover;
-    grid-template-rows: 100%;
+    grid-template-rows: 89.5% 10.5%;
     grid-template-columns: 13.5% 73% 13.5%;
     background-image: url('../images/HeaderBG.png');
 }
@@ -32,12 +34,15 @@ header {
     left: 5%;
     width: 75%;
     height: 75%;
+    grid-area: logo;
     position: relative;
 }
 
 .title {
     height: 60%;
     display: flex;
+    padding-left: 8%;
+    grid-area: title;
     align-self: center;
     justify-self: center;
 }
@@ -53,6 +58,7 @@ header {
     width: 11.5%;
     opacity: 0.5;
     display: block;
+    grid-area: media;
     position: absolute;
     border-radius: 18px;
     background-color: black;
@@ -82,11 +88,11 @@ header {
 }
 
 .menu {
-    bottom: 0%;
     width: 100%;
-    height: 11%;
+    height: 100%;
     opacity: 0.9;
     display: flex;
+    grid-area: menu;
     position: absolute;
     padding-bottom: 2%;
     background-color: black;
@@ -164,11 +170,11 @@ header {
 }
 
 .sub_menu {
+    z-index: 97;
     display: none;
 }
 
 .menu ul li:hover .sub_menu {
-    z-index: 2;
     width: auto;
     display: block;
     margin-top: 1.8%;
@@ -222,11 +228,11 @@ header {
 }
 
 .alt_menu {
+    z-index: 98;
     display: none;
 }
 
 .menu ul li:hover .sub_menu ul li:hover .alt_menu {
-    z-index: 3;
     display: block;
     margin-left: 102%;
     position: absolute;
@@ -279,8 +285,9 @@ header {
 
 .search {
     top: 12%;
-    width: 16.2%;
     right: 0.5%;
+    width: 16.2%;
+    margin-top: 0%;
     position: absolute;
 }
 
@@ -317,7 +324,135 @@ header {
     background-color: #0050c1;
 }
 
+content {
+    display: grid;
+    grid-area: content;
+    grid-template-areas:
+        ". cenCont ."
+        ". cenCont .";
+    grid-template-rows: 45% 55%;
+    grid-template-columns: 15% 70% 15%;
+}
+
+.cenCont {
+    display: grid;
+    grid-area: cenCont;
+    grid-template-areas:
+        "carousel carousel"
+        "recentCont otherCont";
+    grid-template-rows: 30% 70%;
+    grid-template-columns: 65% 35%;
+}
+
+.carousel {
+    top: 10%;
+    width: 153.8%;
+}
+
+.slidesCont {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    border-radius: 10px;
+    border: 3px solid silver;
+    background-color: #0050c1;
+}
+
+.slideText {
+    width: 100%;
+    display: flex;
+    color: white;
+    flex-direction: column;
+    border-right: 3px solid silver;
+}
+
+.slideTextTitle {
+    color: black;
+    font-size: 200%;
+    padding-top: 5%;
+    text-align: center;
+    text-decoration: underline;
+    border-bottom: 3px solid silver;
+    font-family: "Lucida Console", Monaco, monospace;
+    background-image: linear-gradient(silver, silver, #0050c1);
+}
+
+.slideTextData {
+    padding-top: 5%;
+    overflow: hidden;
+}
+
+.slideTextData p {
+    margin-left: 2%;
+    font-size: 120%;
+    margin-right: 3%;
+    text-align: justify;
+}
+
+.slideTextData a {
+    left: 23%;
+    bottom: 1%;
+    color: white;
+    font-size: 130%;
+    position: absolute;
+    text-decoration: none;
+}
+
+.slideTextData a:hover {
+    color: black;
+    cursor: pointer;
+}
+
+.slideImg {
+    width: 70%;
+    height: 100%;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+
+.carousel-control-prev {
+    width: 10%;
+    height: 332%;
+    margin-left: 30%;
+}
+
+.carousel-control-next {
+    width: 10%;
+    height: 332%;
+}
+
+.recentCont {
+    grid-area: recentCont;
+}
+
+.otherCont {
+    display: grid;
+    grid-template-areas:
+        "rNewsCont"
+        "rReviewsCont"
+        "adCont";
+    grid-area: otherCont;
+    grid-template-columns: 100%;
+    grid-template-rows: 35% 35% 30%;
+}
+
+.rNewsCont {
+    grid-area: rNewsCont;
+}
+
+.rReviewsCont {
+    grid-area: rReviewsCont;
+}
+
+.adCont {
+    grid-area: adCont;
+}
+
 @media (max-width: 1440px) {
+
+    header {
+        grid-template-rows: 85% 15%;
+    }
 
     .media {
         width: 15.5%;
@@ -350,6 +485,10 @@ header {
 
 @media (max-width: 768px) {
 
+    header {
+        grid-template-rows: 90% 10%;
+    }
+    
     .logo {
         width: 100%;
     }
@@ -361,7 +500,7 @@ header {
 
     .title {
         height: 33%;
-        padding-left: 17%;
+        padding-left: 6%;
     }
 
     .media {
@@ -388,7 +527,7 @@ header {
     }
 
     #menuTitle {
-        left: 3.1%;
+        left: 3.15%;
         display: block;
         padding-left: 1%;
         padding-right: 0.5%;
@@ -526,7 +665,7 @@ header {
     }
 
     .mBurger:checked~ul {
-        top: 90%;
+        top: 95%;
         left: 0%;
         width: 19%;
         display: flex;
@@ -566,43 +705,43 @@ header {
     #cArr1 {
         right: 1%;
         top: 34.5%;
-        z-index: 4;
         opacity: 0;
+        z-index: 99;
     }
 
     #cArr2 {
         right: 5%;
         top: 58.5%;
-        z-index: 4;
         opacity: 0;
+        z-index: 99;
     }
 
     #cArr3 {
         top: 45%;
-        z-index: 4;
         opacity: 0;
         right: -16%;
+        z-index: 99;
     }
 
     #cArr4 {
         top: 78%;
-        z-index: 4;
         opacity: 0;
         right: -16%;
+        z-index: 99;
     }
 
     #cArr5 {
         top: 45%;
-        z-index: 4;
         opacity: 0;
         right: -17%;
+        z-index: 99;
     }
 
     #cArr6 {
         top: 77%;
-        z-index: 4;
         opacity: 0;
         right: -17%;
+        z-index: 99;
     }
 
     #iArr1 {
@@ -957,18 +1096,8 @@ header {
 
 @media (max-width: 425px) {
 
-    header {
-        width: 100%;
-        height: 10%;
-        position: relative;
-        position: relative;
-        grid-template-areas:
-            "logo title"
-            "menu menu";
-        background-size: cover;
-        background-size: cover;
-        grid-template-rows: 75% 25%;
-        grid-template-columns: 15% 85%;
+    header{
+        grid-template-rows: 85% 15%;
     }
 
     .logo {
@@ -1001,6 +1130,7 @@ header {
     .searchBar {
         height: 10px;
         width: 100px;
+        margin-top: 0.5%;
         text-align: center;
         font-size: xx-small;
         border-radius: 20px;
@@ -1017,7 +1147,7 @@ header {
     .searchButton {
         width: 25px;
         height: 10px;
-        margin-top: 1%;
+        margin-top: 0.5%;
         color: transparent;
         border-radius: 20px;
         font-weight: initial;
@@ -1045,8 +1175,8 @@ header {
 
     .svgM {
         left: 0%;
-        width: 10px;
-        height: 10px;
+        width: 14px;
+        height: 14px;
         display: block;
         position: absolute;
         margin-bottom: 30%;
@@ -1058,8 +1188,8 @@ header {
 
     .mBurger:checked~.svgX {
         left: 0%;
-        width: 10px;
-        height: 10px;
+        width: 14px;
+        height: 14px;
         display: block;
         position: absolute;
         margin-bottom: 30%;
@@ -1074,8 +1204,8 @@ header {
     }
 
     #menuTitle {
-        left: 2.2%;
-        font-size: 50%;
+        left: 2.9%;
+        font-size: 60%;
         padding-left: 1%;
     }
 
@@ -1203,33 +1333,5 @@ header {
 
     #cArr5:checked~.alt_menu {
         left: 14%;
-    }
-
-    .content {
-        display: grid;
-        grid-template-areas:
-            ". cenCont ."
-            ". cenCont .";
-        grid-template-rows: 45% 55%;
-        grid-template-columns: 15% 70% 15%;
-    }
-
-    .cenCont {
-        display: grid;
-        grid-template-areas:
-            "mArticles mArticles"
-            "recentCont otherCont";
-        grid-template-rows: 45% 55%;
-        grid-template-columns: 65% 35%;
-    }
-    
-    .otherCont {
-        display: grid;
-        grid-template-areas:
-            "rNewsCont"
-            "rReviewsCont"
-            "adCont";
-        grid-template-columns: 100%;
-        grid-template-rows: 35% 35% 30%;
     }
 }
