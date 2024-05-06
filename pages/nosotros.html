@@ -35,65 +35,51 @@
             <a class="iconM" href="https://www.twitch.tv/"><img src="../images/Twitch.png" alt="Twitch"></a>
         </div>
         <nav class="menu">
-            <input type="checkbox" class="mBurger"></input>
-            <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="white" class="svgM"
+            <input type="checkbox" class="mBurger" id="mBurgerT"></input>
+            <label for="mBurgerT" class="menuTitle">Menú</label>
+            <svg xmlns="http://www.w3.org/2000/svg" width="35" height="100%" fill="white" class="svgM"
                 viewBox="0 0 16 16">
                 <path fill-rule="evenodd"
                     d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5" />
             </svg>
-            <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="white" class="svgX"
+            <svg xmlns="http://www.w3.org/2000/svg" width="35" height="100%" fill="white" class="svgX"
                 viewBox="0 0 16 16">
                 <path
                     d="M2.146 2.854a.5.5 0 1 1 .708-.708L8 7.293l5.146-5.147a.5.5 0 0 1 .708.708L8.707 8l5.147 5.146a.5.5 0 0 1-.708.708L8 8.707l-5.146 5.147a.5.5 0 0 1-.708-.708L7.293 8z" />
             </svg>
-            <p id="menuTitle">Menú</p>
+            <p ></p>
             <ul>
                 <li>
-                    <img class="iconB" src="../svg/Home.svg" alt="Home"><a class="menu_text"
+                    <img class="iconB" src="../svg/Home.svg" alt="Home"><a class="menuText"
                         href="../index.html">Inicio</a>
                 </li>
                 <li>
                     <img class="iconB" src="../svg/News.svg" alt="News">
-                    <p class="menu_text">Noticias</p>
-                    <input type="checkbox" class="cArrow" id="cArr1">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" fill="white" class="iArrow"
-                        id="iArr1" viewBox="0 0 16 16">
-                        <path fill-rule="evenodd"
-                            d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708" />
-                    </svg>
-                    <nav class="sub_menu">
+                    <input type="checkbox" class="selector" id="selector1">
+                    <label for="selector1" class="menuText">Noticias</label>
+                    <nav class="subMenu">
                         <ul>
-                            <li><a class="menu_text" href="./articulos.html">Recientes</a></li>
+                            <li><a class="menuText" href="./articulos.html">Recientes</a></li>
                             <li>
-                                <p class="menu_text menu_text_p">Categorías</p>
-                                <input type="checkbox" class="cArrow" id="cArr3">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" fill="white"
-                                    class="iArrow" id="iArr3" viewBox="0 0 16 16">
-                                    <path fill-rule="evenodd"
-                                        d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708" />
-                                </svg>
-                                <nav class="alt_menu">
+                                <input type="checkbox" class="selector" id="selector3">
+                                <label for="selector3" class="menuText">Categorías</label>
+                                <nav class="altMenu">
                                     <ul>
-                                        <li><a class="menu_text" href="./articulos.html">Lanzamientos</a></li>
-                                        <li><a class="menu_text" href="./articulos.html">Industria</a></li>
-                                        <li><a class="menu_text" href="./articulos.html">E-Sports</a></li>
-                                        <li><a class="menu_text" href="./articulos.html">Personas del Medio</a>
+                                        <li><a class="menuText" href="./articulos.html">Lanzamientos</a></li>
+                                        <li><a class="menuText" href="./articulos.html">Industria</a></li>
+                                        <li><a class="menuText" href="./articulos.html">E-Sports</a></li>
+                                        <li><a class="menuText" href="./articulos.html">Personas del Medio</a>
                                         </li>
                                     </ul>
                                 </nav>
                             </li>
                             <li>
-                                <p class="menu_text menu_text_p">Plataforma</p>
-                                <input type="checkbox" class="cArrow" id="cArr4">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" fill="white"
-                                    class="iArrow" id="iArr4" viewBox="0 0 16 16">
-                                    <path fill-rule="evenodd"
-                                        d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708" />
-                                </svg>
-                                <nav class="alt_menu">
+                                <input type="checkbox" class="selector" id="selector4">
+                                <label for="selector4" class="menuText">Plataforma</label>
+                                <nav class="altMenu">
                                     <ul>
                                         <li>
-                                            <a class="menu_text" href="./articulos.html">
+                                            <a class="menuText" href="./articulos.html">
                                                 <svg class="iconC" xmlns="http://www.w3.org/2000/svg" version="1.1"
                                                     width="25" height="25" style="float:left">
                                                     <defs>
@@ -109,7 +95,7 @@
                                             </a>
                                         </li>
                                         <li>
-                                            <a class="menu_text" href="./articulos.html">
+                                            <a class="menuText" href="./articulos.html">
                                                 <svg class="iconC" xmlns="http://www.w3.org/2000/svg" version="1.1"
                                                     width="23" height="23" style="float:left">
                                                     <defs>
@@ -125,7 +111,7 @@
                                             </a>
                                         </li>
                                         <li>
-                                            <a class="menu_text" href="./articulos.html">
+                                            <a class="menuText" href="./articulos.html">
                                                 <svg class="iconC" xmlns="http://www.w3.org/2000/svg" version="1.1"
                                                     width="25" height="25" style="float:left">
                                                     <defs>
@@ -141,7 +127,7 @@
                                             </a>
                                         </li>
                                         <li>
-                                            <a class="menu_text" href="./articulos.html">
+                                            <a class="menuText" href="./articulos.html">
                                                 <svg class="iconC" xmlns="http://www.w3.org/2000/svg" version="1.1"
                                                     width="25" height="25" style="float:left">
                                                     <defs>
@@ -164,47 +150,32 @@
                 </li>
                 <li>
                     <img class="iconB" src="../svg/Star.svg" alt="News">
-                    <p class="menu_text">Reseñas</p>
-                    <input type="checkbox" class="cArrow" id="cArr2">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" fill="white" class="iArrow"
-                        id="iArr2" viewBox="0 0 16 16">
-                        <path fill-rule="evenodd"
-                            d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708" />
-                    </svg>
-                    <nav class="sub_menu">
+                    <input type="checkbox" class="selector" id="selector2">
+                    <label for="selector2" class="menuText">Reseñas</label>
+                    <nav class="subMenu">
                         <ul>
-                            <li><a class="menu_text" href="./articulos.html">Recientes</a></li>
+                            <li><a class="menuText" href="./articulos.html">Recientes</a></li>
                             <li>
-                                <p class="menu_text">Categorías</p>
-                                <input type="checkbox" class="cArrow" id="cArr5">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" fill="white"
-                                    class="iArrow" id="iArr5" viewBox="0 0 16 16">
-                                    <path fill-rule="evenodd"
-                                        d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708" />
-                                </svg>
-                                <nav class="alt_menu">
+                                <input type="checkbox" class="selector" id="selector5">
+                                <label for="selector5" class="menuText">Categorías</label>
+                                <nav class="altMenu">
                                     <ul>
-                                        <li><a class="menu_text" href="#">Acción</a></li>
-                                        <li><a class="menu_text" href="#">Aventura</a></li>
-                                        <li><a class="menu_text" href="#">R.P.G</a></li>
-                                        <li><a class="menu_text" href="#">Estrategia</a></li>
-                                        <li><a class="menu_text" href="#">Deportes</a></li>
-                                        <li><a class="menu_text" href="#">Realidad Virtual</a></li>
+                                        <li><a class="menuText" href="#">Acción</a></li>
+                                        <li><a class="menuText" href="#">Aventura</a></li>
+                                        <li><a class="menuText" href="#">R.P.G</a></li>
+                                        <li><a class="menuText" href="#">Estrategia</a></li>
+                                        <li><a class="menuText" href="#">Deportes</a></li>
+                                        <li><a class="menuText" href="#">Realidad Virtual</a></li>
                                     </ul>
                                 </nav>
                             </li>
                             <li>
-                                <p class="menu_text">Plataforma</p>
-                                <input type="checkbox" class="cArrow" id="cArr6">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" fill="white"
-                                    class="iArrow" id="iArr6" viewBox="0 0 16 16">
-                                    <path fill-rule="evenodd"
-                                        d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708" />
-                                </svg>
-                                <nav class="alt_menu">
+                                <input type="checkbox" class="selector" id="selector6">
+                                <label for="selector6" class="menuText">Plataforma</label>
+                                <nav class="altMenu">
                                     <ul>
                                         <li>
-                                            <a class="menu_text" href="./articulos.html">
+                                            <a class="menuText" href="./articulos.html">
                                                 <svg class="iconC" xmlns="http://www.w3.org/2000/svg" version="1.1"
                                                     width="25" height="25" style="float:left">
                                                     <defs>
@@ -220,7 +191,7 @@
                                             </a>
                                         </li>
                                         <li>
-                                            <a class="menu_text" href="./articulos.html">
+                                            <a class="menuText" href="./articulos.html">
                                                 <svg class="iconC" xmlns="http://www.w3.org/2000/svg" version="1.1"
                                                     width="23" height="23" style="float:left">
                                                     <defs>
@@ -236,7 +207,7 @@
                                             </a>
                                         </li>
                                         <li>
-                                            <a class="menu_text" href="./articulos.html">
+                                            <a class="menuText" href="./articulos.html">
                                                 <svg class="iconC" xmlns="http://www.w3.org/2000/svg" version="1.1"
                                                     width="25" height="25" style="float:left">
                                                     <defs>
@@ -258,7 +229,7 @@
                     </nav>
                 </li>
                 <li>
-                    <img class="iconB" src="../svg/Us.svg" alt="News"><a class="menu_text"
+                    <img class="iconB" src="../svg/Us.svg" alt="News"><a class="menuText"
                         href="./nosotros.html">Nosotros</a>
                 </li>
             </ul>
@@ -292,7 +263,7 @@
                 incididunt ut labore et dolore magna aliqua.</p>
         </div>
         <div class="contactUs">
-            <a href="./pages/contactanos.html">Contáctanos</a>
+            <a href="./contactanos.html">Contáctanos</a>
         </div>
         <div class="mediaF">
             <a class="iconM" href="https://www.facebook.com/"><img src="../images/Facebook.png" alt="Facebook"></a>

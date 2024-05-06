@@ -546,33 +546,6 @@ content {
   margin-bottom: 2%;
   border-radius: 15px;
   background-color: #0050c1; }
-  .form p {
-    display: flex;
-    color: white;
-    margin-left: 2%;
-    margin-right: 2%;
-    font-weight: bolder;
-    flex-direction: column;
-    text-decoration: underline;
-    font-family: "Lucida Console", Monaco, monospace; }
-    .form p:first-child {
-      margin-top: 5%; }
-    .form p input {
-      margin-top: 1.5%;
-      margin-bottom: 2%;
-      border-radius: 8px;
-      text-align: center; }
-    .form p textarea {
-      margin-top: 1.5%;
-      margin-bottom: 2%;
-      border-radius: 5px; }
-
-#sendForm {
-  margin-left: 87%;
-  margin-bottom: 3%;
-  font-weight: bolder; }
-  #sendForm:hover {
-    cursor: pointer; }
 
 /*Media Queries*/
 @media (max-width: 1440px) {
@@ -1157,12 +1130,17 @@ content {
   #selector5:checked ~ .altMenu,
   #selector6:checked ~ .altMenu {
     left: 15%; }
+  .disclaimer {
+    font-size: 20%;
+    text-align: left;
+    overflow: hidden; }
+  .contactUs {
+    font-size: 75%; }
   .mediaF {
-    margin-top: 0%;
-    align-items: center; }
+    align-items: normal; }
     .mediaF a img {
-      width: 23px;
-      height: 23px; }
+      width: 15px;
+      height: 15px; }
   .cenCont {
     grid-template-rows: 20% 65% 10%; }
   .carousel .slidesCont .slideText .slideTextTitle {
@@ -1170,7 +1148,7 @@ content {
   .carousel .slidesCont .slideText .slideTextData p {
     font-size: 50%; }
   .carousel .slidesCont .slideText .slideTextData a {
-    left: 23%;
+    left: 18%;
     font-size: 65%; }
   .carousel-control-prev {
     height: 82%;
@@ -1179,20 +1157,20 @@ content {
     height: 82%;
     margin-top: 0%; }
   .recentCont {
-    margin-top: 10%; }
+    margin-top: 15%; }
   .rArtTitle {
-    font-size: 160%; }
+    font-size: 100%; }
   .rArtTxt a {
     font-size: 60%; }
   .rArtTxt p {
     font-size: 25%; }
   .otherCont {
-    margin-top: 20%; }
+    margin-top: 30%; }
   .newsList,
   .revList {
     font-size: 40%; }
   .rReviewsCont {
-    margin-top: 50%; }
+    margin-top: 70%; }
   .adCont {
     height: 85%;
-    margin-top: 70%; } }
+    margin-top: 150%; } }

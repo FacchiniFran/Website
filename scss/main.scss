@@ -741,44 +741,6 @@ content {
     margin-bottom: 2%;
     border-radius: 15px;
     background-color: #0050c1;
-
-    p {
-        display: flex;
-        color: white;
-        margin-left: 2%;
-        margin-right: 2%;
-        font-weight: bolder;
-        flex-direction: column;
-        text-decoration: underline;
-        font-family: "Lucida Console", Monaco, monospace;
-
-        &:first-child {
-            margin-top: 5%;
-        }
-
-        input {
-            margin-top: 1.5%;
-            margin-bottom: 2%;
-            border-radius: 8px;
-            text-align: center;
-        }
-
-        textarea {
-            margin-top: 1.5%;
-            margin-bottom: 2%;
-            border-radius: 5px;
-        }
-    }
-}
-
-#sendForm {
-    margin-left: 87%;
-    margin-bottom: 3%;
-    font-weight: bolder;
-
-    &:hover {
-        cursor: pointer;
-    }
 }
 
 /*Media Queries*/
@@ -1734,14 +1696,23 @@ content {
         left: 15%;
     }
 
+    .disclaimer {
+        font-size: 20%;
+        text-align: left;
+        overflow: hidden;
+    }
+
+    .contactUs {
+        font-size: 75%;
+    }
+
     .mediaF {
-        margin-top: 0%;
-        align-items: center;
+        align-items: normal;
 
         a {
             img {
-                width: 23px;
-                height: 23px;
+                width: 15px;
+                height: 15px;
             }
         }
     }
@@ -1763,7 +1734,7 @@ content {
                     }
 
                     a {
-                        left: 23%;
+                        left: 18%;
                         font-size: 65%;
                     }
                 }
@@ -1782,11 +1753,11 @@ content {
     }
 
     .recentCont {
-        margin-top: 10%;
+        margin-top: 15%;
     }
 
     .rArtTitle {
-        font-size: 160%;
+        font-size: 100%;
     }
 
     .rArtTxt {
@@ -1800,7 +1771,7 @@ content {
     }
 
     .otherCont {
-        margin-top: 20%;
+        margin-top: 30%;
     }
 
     .newsList,
@@ -1809,11 +1780,11 @@ content {
     }
 
     .rReviewsCont {
-        margin-top: 50%;
+        margin-top: 70%;
     }
 
     .adCont {
         height: 85%;
-        margin-top: 70%;
+        margin-top: 150%;
     }
 }
