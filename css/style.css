@@ -50,9 +50,9 @@ header {
   height: 100%; }
 
 .media {
-  top: 3%;
+  top: 4%;
   right: 1%;
-  width: 11.5%;
+  width: 100%;
   opacity: 0.5;
   display: block;
   grid-area: media;
@@ -61,12 +61,12 @@ header {
   background-color: black; }
 
 .iconM {
-  margin-top: 2%;
+  margin-top: 3%;
   margin-left: 1.5%;
   display: inline-flex; }
   .iconM img {
-    width: 35px;
-    height: 35px; }
+    width: 32px;
+    height: 32px; }
   .iconM:first-child {
     margin-left: 3%; }
 
@@ -143,7 +143,7 @@ header {
 .menu ul li:hover .subMenu {
   width: auto;
   display: block;
-  margin-top: 1.8%;
+  margin-top: 2.6%;
   position: absolute; }
   .menu ul li:hover .subMenu ul {
     width: 120%;
@@ -187,7 +187,7 @@ header {
 
 .menu ul li:hover .subMenu ul li:hover .altMenu {
   display: block;
-  margin-left: 102%;
+  margin-left: 110%;
   position: absolute; }
 
 .subMenu a,
@@ -201,7 +201,6 @@ header {
 
 .altMenu ul {
   width: 120%;
-  margin-left: 6%;
   background-color: black; }
   .altMenu ul li a:hover svg defs #colorMask1 feFlood,
   .altMenu ul li a:hover svg defs #colorMask2 feFlood,
@@ -213,16 +212,18 @@ header {
     flood-color: #0050c1; }
 
 .search {
-  top: 12%;
-  right: 0.5%;
-  width: 16.2%;
+  top: 15%;
+  right: 0%;
+  width: 100%;
+  display: flex;
   margin-top: 0%;
-  position: absolute; }
+  position: absolute;
+  align-content: center; }
 
 .searchBar {
-  height: 30px;
-  margin-right: 1%;
-  font-size: large;
+  height: 25px;
+  margin-right: 5%;
+  font-size: medium;
   text-align: center;
   border-radius: 20px;
   border-color: black;
@@ -233,10 +234,10 @@ header {
     color: #09062e; }
 
 .searchButton {
-  width: 75px;
-  height: 30px;
+  width: 65px;
+  height: 25px;
   color: black;
-  font-size: medium;
+  font-size: small;
   border-radius: 20px;
   font-weight: bolder;
   background-color: gray;
