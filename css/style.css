@@ -298,14 +298,14 @@ footer {
 content {
   display: grid;
   grid-area: content;
-  grid-template-areas: ". cenCont ." ". cenCont .";
-  grid-template-rows: 45% 55%;
+  grid-template-areas: ". cenCont ." ". cenCont ." "footer footer footer";
+  grid-template-rows: 40% 50% 10%;
   grid-template-columns: 15% 70% 15%; }
 
 .cenCont {
   display: grid;
   grid-area: cenCont;
-  grid-template-areas: "carousel carousel" "recentCont otherCont" "footer footer";
+  grid-template-areas: "carousel carousel" "recentCont otherCont";
   grid-template-columns: 65% 35%;
   grid-template-rows: 25% 65% 10%; }
 
@@ -385,7 +385,7 @@ content {
 
 .recentCont {
   display: flex;
-  margin-top: 5%;
+  margin-top: 10%;
   border-radius: 15px;
   height: fit-content;
   grid-area: recentCont;
@@ -446,7 +446,7 @@ content {
 
 .otherCont {
   display: grid;
-  margin-top: 10%;
+  margin-top: 20%;
   grid-template-areas: "rNewsCont" "rReviewsCont" "adCont";
   grid-area: otherCont;
   grid-template-columns: 100%;
@@ -481,7 +481,7 @@ content {
 
 .rReviewsCont {
   display: flex;
-  margin-top: 5%;
+  margin-top: 18%;
   flex-direction: column;
   grid-area: rReviewsCont; }
   .rReviewsCont .rArtTitle {
@@ -510,7 +510,7 @@ content {
 .adCont {
   width: 85%;
   height: 100%;
-  margin-top: 30%;
+  margin-top: 43%;
   margin-left: 15%;
   grid-area: adCont; }
   .adCont a img {
@@ -590,7 +590,10 @@ content {
     margin-top: 9%; }
   .mediaF {
     margin-top: 0%;
-    align-items: center; }
+    margin-left: 25%; }
+    .mediaF a img {
+      width: 40px;
+      height: 40px; }
   .cenCont {
     grid-template-rows: 15% 75% 10%; }
   .carousel .slidesCont .slideText .slideTextTitle {
@@ -600,19 +603,19 @@ content {
   .carousel .slidesCont .slideText .slideTextData a {
     left: 25%; }
   .carousel-control-prev {
-    height: 90%;
+    height: 148%;
     margin-top: 0%; }
   .carousel-control-next {
-    height: 90%;
+    height: 148%;
     margin-top: 0%; }
   .recentCont {
     margin-top: 20%; }
   .otherCont {
     margin-top: 38%; }
   .rReviewsCont {
-    margin-top: 15%; }
+    margin-top: 28%; }
   .adCont {
-    height: 95%; } }
+    height: 105%; } }
 
 @media (max-width: 1024px) {
   .logo {
@@ -627,6 +630,9 @@ content {
     height: 20px; }
   .menu ul li:hover .subMenu ul {
     margin-top: 15%; }
+  .disclaimer {
+    font-size: 75%;
+    align-items: center; }
   .mediaF {
     margin-left: 0%; }
     .mediaF a img {
@@ -642,20 +648,20 @@ content {
     left: 23%;
     font-size: 120%; }
   .carousel-control-prev {
-    height: 90%;
+    height: 112%;
     margin-top: 0%; }
   .carousel-control-next {
-    height: 90%;
+    height: 112%;
     margin-top: 0%; }
   .recentCont {
-    margin-top: 5%; }
+    margin-top: 15%; }
   .otherCont {
-    margin-top: 11%; }
+    margin-top: 28%; }
   .newsList,
   .revList {
     font-size: 85%; }
   .rReviewsCont {
-    margin-top: 0%; }
+    margin-top: 20%; }
   .adCont {
     height: 95%; } }
 
@@ -1016,10 +1022,9 @@ content {
           cursor: initial;
           color: white; }
   .disclaimer {
-    font-size: 55%; }
+    font-size: 65%; }
   .mediaF {
-    margin-left: 5%;
-    align-items: normal; }
+    margin-left: 5%; }
     .mediaF a img {
       width: 30px;
       height: 30px; }
@@ -1033,13 +1038,13 @@ content {
     left: 23%;
     font-size: 80%; }
   .carousel-control-prev {
-    height: 55%;
+    height: 122%;
     margin-top: 0%; }
   .carousel-control-next {
-    height: 55%;
+    height: 122%;
     margin-top: 0%; }
   .recentCont {
-    margin-top: 15%; }
+    margin-top: 25%; }
   .rArtTitle {
     font-size: 200%; }
   .rArtTxt a {
@@ -1047,15 +1052,15 @@ content {
   .rArtTxt p {
     font-size: 50%; }
   .otherCont {
-    margin-top: 30%; }
+    margin-top: 47%; }
   .newsList,
   .revList {
     font-size: 55%; }
   .rReviewsCont {
-    margin-top: 40%; }
+    margin-top: 55%; }
   .adCont {
     height: 95%;
-    margin-top: 70%; }
+    margin-top: 98%; }
   .formText {
     font-size: 75%; } }
 
@@ -1165,16 +1170,20 @@ content {
   #selector6:checked ~ .altMenu {
     left: 15%; }
   .disclaimer {
-    font-size: 20%;
+    font-size: 1.5%;
     text-align: left;
     overflow: hidden; }
   .contactUs {
     font-size: 75%; }
   .mediaF {
-    align-items: normal; }
+    align-items: center; }
     .mediaF a img {
       width: 15px;
       height: 15px; }
+  content {
+    grid-template-areas: "cenCont" "cenCont" "footer";
+    grid-template-rows: 40% 50% 10%;
+    grid-template-columns: 100%; }
   .cenCont {
     grid-template-rows: 20% 65% 10%; }
   .carousel .slidesCont .slideText .slideTextTitle {

@@ -381,8 +381,9 @@ content {
     grid-area: content;
     grid-template-areas:
         ". cenCont ."
-        ". cenCont .";
-    grid-template-rows: 45% 55%;
+        ". cenCont ."
+        "footer footer footer";
+    grid-template-rows: 40% 50% 10%;
     grid-template-columns: 15% 70% 15%;
 }
 
@@ -391,8 +392,7 @@ content {
     grid-area: cenCont;
     grid-template-areas:
         "carousel carousel"
-        "recentCont otherCont"
-        "footer footer";
+        "recentCont otherCont";
     grid-template-columns: 65% 35%;
     grid-template-rows: 25% 65% 10%;
 }
@@ -500,7 +500,7 @@ content {
 
 .recentCont {
     display: flex;
-    margin-top: 5%;
+    margin-top: 10%;
     border-radius: 15px;
     height: fit-content;
     grid-area: recentCont;
@@ -583,7 +583,7 @@ content {
 
 .otherCont {
     display: grid;
-    margin-top: 10%;
+    margin-top: 20%;
     grid-template-areas:
         "rNewsCont"
         "rReviewsCont"
@@ -642,7 +642,7 @@ content {
 
 .rReviewsCont {
     display: flex;
-    margin-top: 5%;
+    margin-top: 18%;
     flex-direction: column;
     grid-area: rReviewsCont;
 
@@ -691,7 +691,7 @@ content {
 .adCont {
     width: 85%;
     height: 100%;
-    margin-top: 30%;
+    margin-top: 43%;
     margin-left: 15%;
     grid-area: adCont;
 
@@ -743,7 +743,7 @@ content {
         "footer footer footer";
     grid-template-rows: 95% 5%;
     grid-template-columns: 15% 70% 15%;
-    
+
 }
 
 .form {
@@ -807,7 +807,14 @@ content {
 
     .mediaF {
         margin-top: 0%;
-        align-items: center;
+        margin-left: 25%;
+
+        a {
+            img {
+                width: 40px;
+                height: 40px;
+            }
+        }
     }
 
     .cenCont {
@@ -835,12 +842,12 @@ content {
     }
 
     .carousel-control-prev {
-        height: 90%;
+        height: 148%;
         margin-top: 0%;
     }
 
     .carousel-control-next {
-        height: 90%;
+        height: 148%;
         margin-top: 0%;
     }
 
@@ -853,11 +860,11 @@ content {
     }
 
     .rReviewsCont {
-        margin-top: 15%;
+        margin-top: 28%;
     }
 
     .adCont {
-        height: 95%;
+        height: 105%;
     }
 }
 
@@ -887,6 +894,11 @@ content {
         ul {
             margin-top: 15%;
         }
+    }
+
+    .disclaimer {
+        font-size: 75%;
+        align-items: center;
     }
 
     .mediaF {
@@ -926,21 +938,21 @@ content {
     }
 
     .carousel-control-prev {
-        height: 90%;
+        height: 112%;
         margin-top: 0%;
     }
 
     .carousel-control-next {
-        height: 90%;
+        height: 112%;
         margin-top: 0%;
     }
 
     .recentCont {
-        margin-top: 5%;
+        margin-top: 15%;
     }
 
     .otherCont {
-        margin-top: 11%;
+        margin-top: 28%;
     }
 
     .newsList,
@@ -949,7 +961,7 @@ content {
     }
 
     .rReviewsCont {
-        margin-top: 0%;
+        margin-top: 20%;
     }
 
     .adCont {
@@ -1493,12 +1505,11 @@ content {
     }
 
     .disclaimer {
-        font-size: 55%;
+        font-size: 65%;
     }
 
     .mediaF {
         margin-left: 5%;
-        align-items: normal;
 
         a {
             img {
@@ -1534,17 +1545,17 @@ content {
     }
 
     .carousel-control-prev {
-        height: 55%;
+        height: 122%;
         margin-top: 0%;
     }
 
     .carousel-control-next {
-        height: 55%;
+        height: 122%;
         margin-top: 0%;
     }
 
     .recentCont {
-        margin-top: 15%;
+        margin-top: 25%;
     }
 
     .rArtTitle {
@@ -1562,7 +1573,7 @@ content {
     }
 
     .otherCont {
-        margin-top: 30%;
+        margin-top: 47%;
     }
 
     .newsList,
@@ -1571,12 +1582,12 @@ content {
     }
 
     .rReviewsCont {
-        margin-top: 40%;
+        margin-top: 55%;
     }
 
     .adCont {
         height: 95%;
-        margin-top: 70%;
+        margin-top: 98%;
     }
 
     .formText {
@@ -1585,7 +1596,6 @@ content {
 }
 
 @media (max-width: 576px) {
-
     .logo {
         img {
             height: 100%;
@@ -1743,7 +1753,7 @@ content {
     }
 
     .disclaimer {
-        font-size: 20%;
+        font-size: 1.5%;
         text-align: left;
         overflow: hidden;
     }
@@ -1753,7 +1763,7 @@ content {
     }
 
     .mediaF {
-        align-items: normal;
+        align-items: center;
 
         a {
             img {
@@ -1761,6 +1771,15 @@ content {
                 height: 15px;
             }
         }
+    }
+
+    content {
+        grid-template-areas:
+            "cenCont"
+            "cenCont"
+            "footer";
+        grid-template-rows: 40% 50% 10%;
+        grid-template-columns: 100%;
     }
 
     .cenCont {
