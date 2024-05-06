@@ -47,7 +47,7 @@
                 <path
                     d="M2.146 2.854a.5.5 0 1 1 .708-.708L8 7.293l5.146-5.147a.5.5 0 0 1 .708.708L8.707 8l5.147 5.146a.5.5 0 0 1-.708.708L8 8.707l-5.146 5.147a.5.5 0 0 1-.708-.708L7.293 8z" />
             </svg>
-            <p ></p>
+            <p></p>
             <ul>
                 <li>
                     <img class="iconB" src="../svg/Home.svg" alt="Home"><a class="menuText"
@@ -240,8 +240,27 @@
         </nav>
     </header>
 
-    <div class="form">
-        
+    <div class="formCont">
+        <div class="form">
+            <div class="mb-3">
+                <label for="formInput1" class="formText form-label">E-mail:</label>
+                <input type="email" class="form-control" id="formInput1" placeholder="mailejemplo@gmail.com" name="mail">
+            </div>
+            <div class="mb-3">
+                <label for="formInput2" class="formText form-label">Nombre / Razón Social:</label>
+                <input type="text" class="form-control" id="formInput2" placeholder="Nombre Completo" name="nombre">
+            </div>
+            <p class="formText">Realize sus comentarios aquí:</p>
+            <div class="form-floating">
+                <textarea class="form-control" placeholder="Leave a comment here" id="formInput3"></textarea>
+                <label for="formInput3">Redacte....</label>
+              </div>
+            <div class="mb-3">
+                <label for="formInput4" class="formText form-label">Cargue sus archivos de ser necesarios:</label>
+                <input class="form-control" type="file" id="formInput4" multiple>
+              </div>
+            <button type="submit" class="formSend btn btn-primary">Submit</button>
+        </div>
     </div>
 
     <footer>

@@ -539,13 +539,45 @@ content {
     text-align: justify; }
 
 /*Formulario de sección de Contacto.*/
+.formCont {
+  display: grid;
+  margin-top: 2%;
+  grid-area: formCont;
+  grid-template-areas: ". form ." "footer footer footer";
+  grid-template-rows: 95% 5%;
+  grid-template-columns: 15% 70% 15%; }
+
 .form {
-  width: 25%;
-  display: block;
-  margin-left: 38%;
-  margin-bottom: 2%;
+  width: 50%;
+  height: 100%;
+  grid-area: form;
+  margin-left: 25%;
   border-radius: 15px;
   background-color: #0050c1; }
+
+.formText {
+  color: white;
+  margin-top: 1%;
+  margin-left: 2%;
+  font-size: 120%;
+  font-family: "Lucida Console", Monaco, monospace; }
+
+.formSend {
+  position: relative;
+  border-color: silver;
+  background-color: #2c2c2c; }
+  .formSend:hover {
+    border-color: black;
+    background-color: #0050c1; }
+
+#formInput1,
+#formInput2,
+#formInput3,
+#formInput4 {
+  font-size: 100%; }
+
+#formInput3 {
+  height: 200px; }
 
 /*Media Queries*/
 @media (max-width: 1440px) {
@@ -1023,7 +1055,9 @@ content {
     margin-top: 40%; }
   .adCont {
     height: 95%;
-    margin-top: 70%; } }
+    margin-top: 70%; }
+  .formText {
+    font-size: 75%; } }
 
 @media (max-width: 576px) {
   .logo img {
