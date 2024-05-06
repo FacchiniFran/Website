@@ -23,7 +23,7 @@ header {
   display: grid;
   grid-area: header;
   position: relative;
-  grid-template-areas: "logo title media1" "menu menu menu";
+  grid-template-areas: "logo title media" "menu menu menu";
   background-size: cover;
   grid-template-rows: 89.5% 10.5%;
   grid-template-columns: 13.5% 73% 13.5%;
@@ -52,7 +52,7 @@ header {
 .media {
   top: 4%;
   right: 1%;
-  width: 50%;
+  width: 87%;
   opacity: 0.5;
   display: block;
   grid-area: media;
@@ -65,8 +65,8 @@ header {
   margin-left: 1.5%;
   display: inline-flex; }
   .iconM img {
-    width: 32px;
-    height: 32px; }
+    width: 35px;
+    height: 35px; }
   .iconM:first-child {
     margin-left: 3%; }
 
@@ -143,7 +143,7 @@ header {
 .menu ul li:hover .subMenu {
   width: auto;
   display: block;
-  margin-top: 2.6%;
+  margin-top: 1.9%;
   position: absolute; }
   .menu ul li:hover .subMenu ul {
     width: 120%;
@@ -213,15 +213,15 @@ header {
 
 .search {
   top: 15%;
-  right: 0%;
+  right: 0.5%;
   display: flex;
   margin-top: 0%;
   position: absolute;
   align-content: center; }
 
 .searchBar {
-  height: 25px;
-  margin-right: 5%;
+  height: 27px;
+  margin-right: 3%;
   font-size: medium;
   text-align: center;
   border-radius: 20px;
@@ -233,8 +233,8 @@ header {
     color: #09062e; }
 
 .searchButton {
-  width: 65px;
-  height: 25px;
+  width: 75px;
+  height: 30px;
   color: black;
   font-size: small;
   border-radius: 20px;
