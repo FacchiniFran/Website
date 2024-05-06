@@ -62,7 +62,7 @@ header {
 .media {
     top: 4%;
     right: 1%;
-    width: 100%;
+    width: 50%;
     opacity: 0.5;
     display: block;
     grid-area: media;
@@ -271,17 +271,18 @@ header {
 }
 
 .search {
-    top: 12%;
-    right: 0.5%;
-    width: 16.2%;
+    top: 15%;
+    right: 0%;
+    display: flex;
     margin-top: 0%;
     position: absolute;
+    align-content: center;
 }
 
 .searchBar {
-    height: 30px;
-    margin-right: 1%;
-    font-size: large;
+    height: 25px;
+    margin-right: 5%;
+    font-size: medium;
     text-align: center;
     border-radius: 20px;
     border-color: black;
@@ -295,10 +296,10 @@ header {
 }
 
 .searchButton {
-    width: 75px;
-    height: 30px;
+    width: 65px;
+    height: 25px;
     color: black;
-    font-size: medium;
+    font-size: small;
     border-radius: 20px;
     font-weight: bolder;
     background-color: gray;
