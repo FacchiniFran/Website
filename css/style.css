@@ -578,23 +578,23 @@ content {
 
 @media (max-width: 768px) {
   header {
-    grid-template-rows: 90% 10%; }
+    grid-template-rows: 80% 20%; }
   .logo {
     width: 100%; }
     .logo img {
-      height: 85%;
-      margin-top: 25%; }
+      height: 90%;
+      margin-top: 20%; }
   .title {
-    height: 33%;
+    height: 40%;
     padding-left: 6%; }
   .media {
     opacity: 1;
-    width: 16%; }
+    width: 100%; }
   .iconM {
     margin-left: 0%; }
     .iconM img {
-      width: 18px;
-      height: 18px;
+      width: 15px;
+      height: 15px;
       margin-top: 15%; }
     .iconM:first-child {
       padding-left: 1.5%; }
@@ -603,9 +603,12 @@ content {
   .menu ul li:nth-child(2):hover .subMenu ul li {
     margin-left: 0; }
   .menuTitle {
+    height: 100%;
     display: block;
-    padding-left: 1%;
+    font-size: 150%;
+    padding-left: 3%;
     padding-right: 0.5%;
+    align-content: center;
     border-top-right-radius: 5px;
     border-bottom-right-radius: 5px; }
   .menu > ul > li:hover {
@@ -637,30 +640,14 @@ content {
   .altMenu ul li a:hover svg defs #colorMask6 feFlood,
   .altMenu ul li a:hover svg defs #colorMask7 feFlood {
     flood-color: initial; }
-  .search {
-    top: 15%;
-    width: auto;
-    display: flex; }
   .searchBar {
-    height: 20px;
-    font-size: medium;
-    text-align: center;
-    border-radius: 20px;
-    border-color: black;
-    background-color: silver;
-    font-family: "Lucida Console", Monaco, monospace; }
-    .searchBar::placeholder {
-      opacity: 0.8;
-      color: #09062e; }
+    height: 35px;
+    margin-right: 1%;
+    font-size: large; }
   .searchButton {
-    width: 65px;
-    height: 20px;
-    color: black;
-    font-size: small;
-    border-radius: 20px;
-    font-weight: bolder;
-    background-color: gray;
-    font-family: "Lucida Console", Monaco, monospace; }
+    width: 75px;
+    height: 35px;
+    font-size: medium; }
     .searchButton:hover {
       color: black;
       cursor: initial;
@@ -670,7 +657,7 @@ content {
     position: absolute; }
   #mBurgerT {
     left: 0%;
-    width: 4%;
+    width: 50px;
     opacity: 0;
     z-index: 1;
     height: 100%; }
@@ -692,7 +679,7 @@ content {
   .mBurger:checked ~ ul {
     top: 95%;
     left: 0%;
-    width: 19%;
+    width: 18%;
     display: flex;
     color: white;
     padding-left: 0.5%;
@@ -753,7 +740,7 @@ content {
     padding-bottom: 2%; }
   #selector1:checked ~ .subMenu {
     top: 29%;
-    left: 102%;
+    left: 100%;
     width: auto;
     margin-top: 0%;
     display: block;
@@ -783,7 +770,7 @@ content {
           color: white; }
   #selector2:checked ~ .subMenu {
     top: 51.5%;
-    left: 102%;
+    left: 100%;
     width: auto;
     margin-top: 0%;
     display: block;
@@ -811,7 +798,7 @@ content {
           cursor: initial; }
   #selector3:checked ~ .altMenu {
     top: 35%;
-    left: 12%;
+    left: 17%;
     width: auto;
     margin-top: 0%;
     display: block;
@@ -845,7 +832,7 @@ content {
           color: white; }
   #selector4:checked ~ .altMenu {
     top: 65%;
-    left: 12%;
+    left: 17%;
     width: auto;
     margin-top: 0%;
     display: block;
@@ -879,7 +866,7 @@ content {
           color: white; }
   #selector5:checked ~ .altMenu {
     top: 30%;
-    left: 12%;
+    left: 17%;
     width: auto;
     margin-top: 0%;
     display: block;
@@ -913,7 +900,7 @@ content {
           color: white; }
   #selector6:checked ~ .altMenu {
     top: 65%;
-    left: 12%;
+    left: 17%;
     width: auto;
     margin-top: 0%;
     display: block;
@@ -947,60 +934,43 @@ content {
           color: white; } }
 
 @media (max-width: 425px) {
-  header {
-    grid-template-rows: 85% 15%; }
-  .logo {
-    width: 100%; }
-    .logo img {
-      height: 100%;
-      margin-top: 20%;
-      margin-left: 10%; }
+  .logo img {
+    height: 100%;
+    margin-top: 10%;
+    margin-left: 10%; }
   .title {
     width: 95%;
-    margin-top: 5%;
-    padding-left: 0%;
-    margin-right: 11%; }
+    margin-top: 0%;
+    padding-left: 10%;
+    margin-right: 10%; }
   .media {
     display: none; }
   .search {
     top: 10%;
-    width: auto;
     display: flex; }
   .searchBar {
-    height: 10px;
+    height: 12px;
     width: 100px;
-    margin-top: 0.5%;
-    text-align: center;
-    font-size: xx-small;
-    border-radius: 20px;
-    border-color: black;
-    background-color: silver;
-    font-family: "Lucida Console", Monaco, monospace; }
-    .searchBar::placeholder {
-      opacity: 0.8;
-      color: #09062e; }
+    margin-top: 0%;
+    font-size: xx-small; }
   .searchButton {
     width: 25px;
-    height: 10px;
+    height: 12px;
     margin-top: 0.5%;
     color: transparent;
     border-radius: 20px;
     font-weight: initial;
-    background-color: gray;
     background-size: 100% 100%;
-    background-image: url("../svg/Search.svg");
-    font-family: "Lucida Console", Monaco, monospace; }
-    .searchButton:hover {
-      color: black;
-      cursor: initial;
-      background-color: gray; }
+    background-image: url("../svg/Search.svg"); }
+  .menuTitle {
+    font-size: 80%;
+    padding-left: 2%; }
   .mBurger {
     display: flex;
     position: absolute; }
   .svgM {
     left: 0%;
-    width: 14px;
-    height: 14px;
+    width: 17px;
     display: block;
     position: absolute;
     margin-bottom: 30%; }
@@ -1008,39 +978,22 @@ content {
     opacity: 0; }
   .mBurger:checked ~ .svgX {
     left: 0%;
-    width: 14px;
-    height: 14px;
+    width: 17px;
     display: block;
     position: absolute;
     margin-bottom: 30%;
     background-color: #0050c1; }
+  .mBurger:checked ~ ul {
+    top: 100%;
+    width: 17%; }
   .menuText {
     color: white;
     font-size: 75%;
     padding-top: 4%;
     font-family: "Lucida Console", Monaco, monospace; }
-  #menuTitle {
-    left: 2.9%;
-    font-size: 60%;
-    padding-left: 1%; }
   .iconB {
     width: 10%;
     margin-right: 10%; }
-  .mBurger:checked ~ ul {
-    top: 90%;
-    left: 0%;
-    width: 18%;
-    display: flex;
-    color: white;
-    padding-left: 0.5%;
-    position: absolute;
-    flex-direction: column;
-    background-color: #0050c1;
-    border-top-right-radius: 10px;
-    border-top: 2px solid silver;
-    border-bottom-right-radius: 10px;
-    border-right: 2px solid silver;
-    border-bottom: 2px solid silver; }
   #selector1 {
     right: 1%;
     top: 32%;
@@ -1075,11 +1028,13 @@ content {
     width: 12px;
     height: 12px;
     margin-right: 4%; }
-  #selector1:checked ~ .subMenu {
-    top: 23%;
-    left: 105%; }
+  #selector1:checked ~ .subMenu,
   #selector2:checked ~ .subMenu {
-    top: 51.5%;
-    left: 105%; }
-  #selector5:checked ~ .altMenu {
-    left: 14%; } }
+    left: 100%; }
+  #selector3:checked ~ .altMenu {
+    top: 30%;
+    left: 15%; }
+  #selector4:checked ~ .altMenu,
+  #selector5:checked ~ .altMenu,
+  #selector6:checked ~ .altMenu {
+    left: 15%; } }
