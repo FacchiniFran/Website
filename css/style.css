@@ -1212,8 +1212,5 @@ content {
   .newsList,
   .revList {
     font-size: 40%; }
-  .rReviewsCont {
-    margin-top: 20%; }
   .adCont {
-    height: 85%;
-    margin-top: 20%; } }
+    height: 85%; } }
