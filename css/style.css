@@ -608,6 +608,10 @@ content {
   .carousel-control-next {
     height: 148%;
     margin-top: 0%; }
+  .recentCont {
+    margin-top: 20%; }
+  .otherCont {
+    margin-top: 38%; }
   .adCont {
     height: 105%; } }
 
@@ -647,6 +651,10 @@ content {
   .carousel-control-next {
     height: 112%;
     margin-top: 0%; }
+  .recentCont {
+    margin-top: 15%; }
+  .otherCont {
+    margin-top: 28%; }
   .newsList,
   .revList {
     font-size: 85%; }
@@ -1031,12 +1039,16 @@ content {
   .carousel-control-next {
     height: 122%;
     margin-top: 0%; }
+  .recentCont {
+    margin-top: 25%; }
   .rArtTitle {
     font-size: 200%; }
   .rArtTxt a {
     font-size: 100%; }
   .rArtTxt p {
     font-size: 50%; }
+  .otherCont {
+    margin-top: 47%; }
   .newsList,
   .revList {
     font-size: 55%; }
@@ -1180,12 +1192,16 @@ content {
   .carousel-control-next {
     height: 82%;
     margin-top: 0%; }
+  .recentCont {
+    margin-top: 30%; }
   .rArtTitle {
     font-size: 100%; }
   .rArtTxt a {
     font-size: 60%; }
   .rArtTxt p {
     font-size: 25%; }
+  .otherCont {
+    margin-top: 55%; }
   .newsList,
   .revList {
     font-size: 40%; }
