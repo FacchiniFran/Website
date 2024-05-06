@@ -101,16 +101,14 @@ header {
   padding-top: 4%;
   font-family: "Lucida Console", Monaco, monospace; }
 
-#menuTitle {
+.menuTitle {
+  left: 3%;
   display: none;
   color: white;
   font-size: 120%;
   padding-top: 0%;
   position: absolute;
   font-family: "Lucida Console", Monaco, monospace; }
-
-.menuTextP {
-  margin-left: -3%; }
 
 .menu ul li:first-child {
   margin-left: 0.5%; }
@@ -138,16 +136,16 @@ header {
   border-radius: 5px;
   background-color: #0050c1; }
 
-.sub_menu {
+.subMenu {
   z-index: 97;
   display: none; }
 
-.menu ul li:hover .sub_menu {
+.menu ul li:hover .subMenu {
   width: auto;
   display: block;
   margin-top: 1.8%;
   position: absolute; }
-  .menu ul li:hover .sub_menu ul {
+  .menu ul li:hover .subMenu ul {
     width: 120%;
     display: flex;
     margin-top: 5%;
@@ -156,38 +154,44 @@ header {
     background-color: black; }
 
 .selector {
-  display: none; }
+  opacity: 0;
+  position: absolute; }
 
-.menu ul li:hover .sub_menu ul li {
+#selector1 + label {
+  display: flex;
+  cursor: pointer; }
+  #selector1 + label::before {
+    width: 100%;
+    height: 100%; }
+
+.menu ul li:hover .subMenu ul li {
   margin-top: 0.5%;
   align-self: center;
   margin-bottom: 0.5%;
   border-bottom: 1px dotted white; }
 
-.menu ul li:nth-child(2):hover .sub_menu ul li {
+.menu ul li:nth-child(2):hover .subMenu ul li {
   margin-left: -4%; }
-  .menu ul li:nth-child(2):hover .sub_menu ul li p {
-    padding-left: 5%; }
 
-.menu ul li:hover .sub_menu ul li:last-child {
+.menu ul li:hover .subMenu ul li:last-child {
   border-bottom: none; }
 
-.menu ul li:hover .sub_menu ul li a:hover,
-.menu ul li:hover .sub_menu ul li p:hover {
+.menu ul li:hover .subMenu ul li a:hover,
+.menu ul li:hover .subMenu ul li label:hover {
   cursor: pointer;
   color: #0050c1; }
 
-.alt_menu {
+.altMenu {
   z-index: 98;
   display: none; }
 
-.menu ul li:hover .sub_menu ul li:hover .alt_menu {
+.menu ul li:hover .subMenu ul li:hover .altMenu {
   display: block;
   margin-left: 102%;
   position: absolute; }
 
-.sub_menu a,
-.alt_menu a {
+.subMenu a,
+.altMenu a {
   display: flex; }
 
 .iconC {
@@ -195,17 +199,17 @@ header {
   margin-top: 3%;
   margin-right: 3%; }
 
-.alt_menu ul {
+.altMenu ul {
   width: 120%;
   margin-left: 6%;
   background-color: black; }
-  .alt_menu ul li a:hover svg defs #colorMask1 feFlood,
-  .alt_menu ul li a:hover svg defs #colorMask2 feFlood,
-  .alt_menu ul li a:hover svg defs #colorMask3 feFlood,
-  .alt_menu ul li a:hover svg defs #colorMask4 feFlood,
-  .alt_menu ul li a:hover svg defs #colorMask5 feFlood,
-  .alt_menu ul li a:hover svg defs #colorMask6 feFlood,
-  .alt_menu ul li a:hover svg defs #colorMask7 feFlood {
+  .altMenu ul li a:hover svg defs #colorMask1 feFlood,
+  .altMenu ul li a:hover svg defs #colorMask2 feFlood,
+  .altMenu ul li a:hover svg defs #colorMask3 feFlood,
+  .altMenu ul li a:hover svg defs #colorMask4 feFlood,
+  .altMenu ul li a:hover svg defs #colorMask5 feFlood,
+  .altMenu ul li a:hover svg defs #colorMask6 feFlood,
+  .altMenu ul li a:hover svg defs #colorMask7 feFlood {
     flood-color: #0050c1; }
 
 .search {
@@ -590,8 +594,9 @@ content {
       padding-left: 1.5%; }
   .menu ul {
     display: none; }
-  #menuTitle {
-    left: 3.15%;
+  .menu ul li:nth-child(2):hover .subMenu ul li {
+    margin-left: 0; }
+  .menuTitle {
     display: block;
     padding-left: 1%;
     padding-right: 0.5%;
@@ -601,25 +606,30 @@ content {
     cursor: initial;
     border-radius: initial;
     background-color: initial; }
-  .menu ul li:hover .sub_menu {
+  .menu ul li:hover .subMenu {
     display: none; }
-    .menu ul li:hover .sub_menu ul {
+    .menu ul li:hover .subMenu ul {
       display: none; }
-      .menu ul li:hover .sub_menu ul li {
+      .menu ul li:hover .subMenu ul li {
         display: none; }
-        .menu ul li:hover .sub_menu ul li:hover .alt_menu {
+        .menu ul li:hover .subMenu ul li:hover .altMenu {
           display: none; }
-          .menu ul li:hover .sub_menu ul li:hover .alt_menu ul {
+          .menu ul li:hover .subMenu ul li:hover .altMenu ul {
             display: none; }
-            .menu ul li:hover .sub_menu ul li:hover .alt_menu ul li {
+            .menu ul li:hover .subMenu ul li:hover .altMenu ul li {
               display: none; }
-  .alt_menu ul li a:hover svg defs #colorMask1 feFlood,
-  .alt_menu ul li a:hover svg defs #colorMask2 feFlood,
-  .alt_menu ul li a:hover svg defs #colorMask3 feFlood,
-  .alt_menu ul li a:hover svg defs #colorMask4 feFlood,
-  .alt_menu ul li a:hover svg defs #colorMask5 feFlood,
-  .alt_menu ul li a:hover svg defs #colorMask6 feFlood,
-  .alt_menu ul li a:hover svg defs #colorMask7 feFlood {
+            .menu ul li:hover .subMenu ul li:hover .altMenu ul a:hover {
+              color: white !important; }
+        .menu ul li:hover .subMenu ul li a:hover,
+        .menu ul li:hover .subMenu ul li label:hover {
+          color: white !important; }
+  .altMenu ul li a:hover svg defs #colorMask1 feFlood,
+  .altMenu ul li a:hover svg defs #colorMask2 feFlood,
+  .altMenu ul li a:hover svg defs #colorMask3 feFlood,
+  .altMenu ul li a:hover svg defs #colorMask4 feFlood,
+  .altMenu ul li a:hover svg defs #colorMask5 feFlood,
+  .altMenu ul li a:hover svg defs #colorMask6 feFlood,
+  .altMenu ul li a:hover svg defs #colorMask7 feFlood {
     flood-color: initial; }
   .search {
     top: 15%;
@@ -650,13 +660,14 @@ content {
       cursor: initial;
       background-color: gray; }
   .mBurger {
+    display: flex;
+    position: absolute; }
+  #mBurgerT {
     left: 0%;
     width: 4%;
+    opacity: 0;
     z-index: 1;
-    height: 100%;
-    display: block;
-    appearance: none;
-    position: absolute; }
+    height: 100%; }
   .svgM {
     left: 0%;
     display: block;
@@ -670,7 +681,7 @@ content {
     position: absolute;
     margin-bottom: 30%;
     background-color: #0050c1; }
-  .mBurger:checked ~ #menuTitle {
+  .mBurger:checked ~ .menuTitle {
     background-color: #0050c1; }
   .mBurger:checked ~ ul {
     top: 95%;
@@ -734,14 +745,14 @@ content {
     margin-top: 3%;
     margin-right: 3%;
     padding-bottom: 2%; }
-  #selector1:checked ~ .sub_menu {
+  #selector1:checked ~ .subMenu {
     top: 29%;
     left: 102%;
     width: auto;
     margin-top: 0%;
     display: block;
     position: absolute; }
-    #selector1:checked ~ .sub_menu ul {
+    #selector1:checked ~ .subMenu ul {
       width: 120%;
       display: flex;
       margin-top: 0%;
@@ -749,29 +760,29 @@ content {
       flex-direction: column;
       border: 2px solid silver;
       background-color: #0050c1; }
-      #selector1:checked ~ .sub_menu ul li {
+      #selector1:checked ~ .subMenu ul li {
         display: block;
         margin-top: 0.5%;
         align-self: center;
         margin-bottom: 0.5%; }
-        #selector1:checked ~ .sub_menu ul li p {
+        #selector1:checked ~ .subMenu ul li p {
           padding-left: 5%; }
-        #selector1:checked ~ .sub_menu ul li a {
+        #selector1:checked ~ .subMenu ul li a {
           margin-left: -5%; }
-          #selector1:checked ~ .sub_menu ul li a:hover {
+          #selector1:checked ~ .subMenu ul li a:hover {
             cursor: initial;
             color: white; }
-        #selector1:checked ~ .sub_menu ul li p:hover {
+        #selector1:checked ~ .subMenu ul li p:hover {
           cursor: initial;
           color: white; }
-  #selector2:checked ~ .sub_menu {
+  #selector2:checked ~ .subMenu {
     top: 51.5%;
     left: 102%;
     width: auto;
     margin-top: 0%;
     display: block;
     position: absolute; }
-    #selector2:checked ~ .sub_menu ul {
+    #selector2:checked ~ .subMenu ul {
       width: 120%;
       display: flex;
       margin-top: 0%;
@@ -779,20 +790,20 @@ content {
       flex-direction: column;
       border: 2px solid silver;
       background-color: #0050c1; }
-      #selector2:checked ~ .sub_menu ul li {
+      #selector2:checked ~ .subMenu ul li {
         display: block;
         margin-top: 0.5%;
         align-self: center;
         margin-bottom: 0.5%; }
-        #selector2:checked ~ .sub_menu ul li a {
+        #selector2:checked ~ .subMenu ul li a {
           margin-left: -5%; }
-          #selector2:checked ~ .sub_menu ul li a:hover {
+          #selector2:checked ~ .subMenu ul li a:hover {
             color: white;
             cursor: initial; }
-        #selector2:checked ~ .sub_menu ul li p:hover {
+        #selector2:checked ~ .subMenu ul li p:hover {
           color: white;
           cursor: initial; }
-  #selector3:checked ~ .alt_menu {
+  #selector3:checked ~ .altMenu {
     top: 35%;
     left: 12%;
     width: auto;
@@ -800,7 +811,7 @@ content {
     display: block;
     margin-left: 102%;
     position: absolute; }
-    #selector3:checked ~ .alt_menu ul {
+    #selector3:checked ~ .altMenu ul {
       width: 120%;
       display: flex;
       margin-top: 0%;
@@ -808,25 +819,25 @@ content {
       flex-direction: column;
       border: 2px solid silver;
       background-color: #0050c1; }
-      #selector3:checked ~ .alt_menu ul li {
+      #selector3:checked ~ .altMenu ul li {
         display: block;
         margin-top: 0.5%;
         margin-left: 5.5%;
         align-self: center;
         margin-bottom: 0.5%; }
-        #selector3:checked ~ .alt_menu ul li a,
-        #selector3:checked ~ .alt_menu ul li:first-child a,
-        #selector3:checked ~ .alt_menu ul li:last-child a {
+        #selector3:checked ~ .altMenu ul li a,
+        #selector3:checked ~ .altMenu ul li:first-child a,
+        #selector3:checked ~ .altMenu ul li:last-child a {
           padding-left: 5%; }
-        #selector3:checked ~ .alt_menu ul li a {
+        #selector3:checked ~ .altMenu ul li a {
           margin-left: -5%; }
-          #selector3:checked ~ .alt_menu ul li a:hover {
+          #selector3:checked ~ .altMenu ul li a:hover {
             cursor: initial;
             color: white; }
-        #selector3:checked ~ .alt_menu ul li p:hover {
+        #selector3:checked ~ .altMenu ul li p:hover {
           cursor: initial;
           color: white; }
-  #selector4:checked ~ .alt_menu {
+  #selector4:checked ~ .altMenu {
     top: 65%;
     left: 12%;
     width: auto;
@@ -834,7 +845,7 @@ content {
     display: block;
     margin-left: 102%;
     position: absolute; }
-    #selector4:checked ~ .alt_menu ul {
+    #selector4:checked ~ .altMenu ul {
       width: 120%;
       display: flex;
       margin-top: 0%;
@@ -842,25 +853,25 @@ content {
       flex-direction: column;
       border: 2px solid silver;
       background-color: #0050c1; }
-      #selector4:checked ~ .alt_menu ul li {
+      #selector4:checked ~ .altMenu ul li {
         display: block;
         margin-top: 0.5%;
         margin-left: 5.5%;
         align-self: center;
         margin-bottom: 0.5%; }
-        #selector4:checked ~ .alt_menu ul li a,
-        #selector4:checked ~ .alt_menu ul li:first-child a,
-        #selector4:checked ~ .alt_menu ul li:last-child a {
+        #selector4:checked ~ .altMenu ul li a,
+        #selector4:checked ~ .altMenu ul li:first-child a,
+        #selector4:checked ~ .altMenu ul li:last-child a {
           padding-left: 5%; }
-        #selector4:checked ~ .alt_menu ul li a {
+        #selector4:checked ~ .altMenu ul li a {
           margin-left: -5%; }
-          #selector4:checked ~ .alt_menu ul li a:hover {
+          #selector4:checked ~ .altMenu ul li a:hover {
             cursor: initial;
             color: white; }
-        #selector4:checked ~ .alt_menu ul li p:hover {
+        #selector4:checked ~ .altMenu ul li p:hover {
           cursor: initial;
           color: white; }
-  #selector5:checked ~ .alt_menu {
+  #selector5:checked ~ .altMenu {
     top: 30%;
     left: 12%;
     width: auto;
@@ -868,7 +879,7 @@ content {
     display: block;
     margin-left: 102%;
     position: absolute; }
-    #selector5:checked ~ .alt_menu ul {
+    #selector5:checked ~ .altMenu ul {
       width: 120%;
       display: flex;
       margin-top: 0%;
@@ -876,25 +887,25 @@ content {
       flex-direction: column;
       border: 2px solid silver;
       background-color: #0050c1; }
-      #selector5:checked ~ .alt_menu ul li {
+      #selector5:checked ~ .altMenu ul li {
         display: block;
         margin-top: 0.5%;
         margin-left: 5.5%;
         align-self: center;
         margin-bottom: 0.5%; }
-        #selector5:checked ~ .alt_menu ul li a,
-        #selector5:checked ~ .alt_menu ul li:first-child a,
-        #selector5:checked ~ .alt_menu ul li:last-child a {
+        #selector5:checked ~ .altMenu ul li a,
+        #selector5:checked ~ .altMenu ul li:first-child a,
+        #selector5:checked ~ .altMenu ul li:last-child a {
           padding-left: 5%; }
-        #selector5:checked ~ .alt_menu ul li a {
+        #selector5:checked ~ .altMenu ul li a {
           margin-left: -5%; }
-          #selector5:checked ~ .alt_menu ul li a:hover {
+          #selector5:checked ~ .altMenu ul li a:hover {
             cursor: initial;
             color: white; }
-        #selector5:checked ~ .alt_menu ul li p:hover {
+        #selector5:checked ~ .altMenu ul li p:hover {
           cursor: initial;
           color: white; }
-  #selector6:checked ~ .alt_menu {
+  #selector6:checked ~ .altMenu {
     top: 65%;
     left: 12%;
     width: auto;
@@ -902,7 +913,7 @@ content {
     display: block;
     margin-left: 102%;
     position: absolute; }
-    #selector6:checked ~ .alt_menu ul {
+    #selector6:checked ~ .altMenu ul {
       width: 120%;
       display: flex;
       margin-top: 0%;
@@ -910,22 +921,22 @@ content {
       flex-direction: column;
       border: 2px solid silver;
       background-color: #0050c1; }
-      #selector6:checked ~ .alt_menu ul li {
+      #selector6:checked ~ .altMenu ul li {
         display: block;
         margin-top: 0.5%;
         margin-left: 5.5%;
         align-self: center;
         margin-bottom: 0.5%; }
-        #selector6:checked ~ .alt_menu ul li a,
-        #selector6:checked ~ .alt_menu ul li:first-child a,
-        #selector6:checked ~ .alt_menu ul li:last-child a {
+        #selector6:checked ~ .altMenu ul li a,
+        #selector6:checked ~ .altMenu ul li:first-child a,
+        #selector6:checked ~ .altMenu ul li:last-child a {
           padding-left: 5%; }
-        #selector6:checked ~ .alt_menu ul li a {
+        #selector6:checked ~ .altMenu ul li a {
           margin-left: -5%; }
-          #selector6:checked ~ .alt_menu ul li a:hover {
+          #selector6:checked ~ .altMenu ul li a:hover {
             cursor: initial;
             color: white; }
-        #selector6:checked ~ .alt_menu ul li p:hover {
+        #selector6:checked ~ .altMenu ul li p:hover {
           cursor: initial;
           color: white; } }
 
@@ -978,12 +989,7 @@ content {
       cursor: initial;
       background-color: gray; }
   .mBurger {
-    left: 0%;
-    width: 4%;
-    z-index: 1;
-    height: 100%;
-    display: block;
-    appearance: none;
+    display: flex;
     position: absolute; }
   .svgM {
     left: 0%;
@@ -1063,11 +1069,11 @@ content {
     width: 12px;
     height: 12px;
     margin-right: 4%; }
-  #selector1:checked ~ .sub_menu {
+  #selector1:checked ~ .subMenu {
     top: 23%;
     left: 105%; }
-  #selector2:checked ~ .sub_menu {
+  #selector2:checked ~ .subMenu {
     top: 51.5%;
     left: 105%; }
-  #selector5:checked ~ .alt_menu {
+  #selector5:checked ~ .altMenu {
     left: 14%; } }

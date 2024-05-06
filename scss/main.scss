@@ -125,17 +125,14 @@ header {
     font-family: "Lucida Console", Monaco, monospace;
 }
 
-#menuTitle {
+.menuTitle {
+    left: 3%;
     display: none;
     color: white;
     font-size: 120%;
     padding-top: 0%;
     position: absolute;
     font-family: "Lucida Console", Monaco, monospace;
-}
-
-.menuTextP {
-    margin-left: -3%;
 }
 
 .menu ul li {
@@ -172,12 +169,12 @@ header {
     background-color: #0050c1;
 }
 
-.sub_menu {
+.subMenu {
     z-index: 97;
     display: none;
 }
 
-.menu ul li:hover .sub_menu {
+.menu ul li:hover .subMenu {
     width: auto;
     display: block;
     margin-top: 1.8%;
@@ -194,51 +191,58 @@ header {
 }
 
 .selector {
-    display: none;
+    opacity: 0;
+    position: absolute;
+}
+
+#selector1+label {
+    display: flex;
+    cursor: pointer;
+
+    &::before {
+        width: 100%;
+        height: 100%;
+    }
 }
 
 .menu ul li {
-    &:hover .sub_menu ul li {
+    &:hover .subMenu ul li {
         margin-top: 0.5%;
         align-self: center;
         margin-bottom: 0.5%;
         border-bottom: 1px dotted white;
     }
 
-    &:nth-child(2):hover .sub_menu ul li {
-        p {
-            padding-left: 5%;
-        }
-
+    &:nth-child(2):hover .subMenu ul li {
         margin-left: -4%;
     }
 
-    &:hover .sub_menu ul li {
+    &:hover .subMenu ul li {
         &:last-child {
             border-bottom: none;
         }
 
         a:hover,
-        p:hover {
+        label:hover {
             cursor: pointer;
             color: #0050c1;
         }
     }
 }
 
-.alt_menu {
+.altMenu {
     z-index: 98;
     display: none;
 }
 
-.menu ul li:hover .sub_menu ul li:hover .alt_menu {
+.menu ul li:hover .subMenu ul li:hover .altMenu {
     display: block;
     margin-left: 102%;
     position: absolute;
 }
 
-.sub_menu a,
-.alt_menu a {
+.subMenu a,
+.altMenu a {
     display: flex;
 }
 
@@ -248,7 +252,7 @@ header {
     margin-right: 3%;
 }
 
-.alt_menu ul {
+.altMenu ul {
     width: 120%;
     margin-left: 6%;
     background-color: black;
@@ -814,8 +818,17 @@ content {
         display: none;
     }
 
-    #menuTitle {
-        left: 3.15%;
+    .menu {
+        ul {
+            li {
+                &:nth-child(2):hover .subMenu ul li {
+                    margin-left: 0;
+                }
+            }
+        }
+    }
+
+    .menuTitle {
         display: block;
         padding-left: 1%;
         padding-right: 0.5%;
@@ -830,7 +843,7 @@ content {
             background-color: initial;
         }
 
-        ul li:hover .sub_menu {
+        ul li:hover .subMenu {
             display: none;
 
             ul {
@@ -839,7 +852,7 @@ content {
                 li {
                     display: none;
 
-                    &:hover .alt_menu {
+                    &:hover .altMenu {
                         display: none;
 
                         ul {
@@ -848,14 +861,23 @@ content {
                             li {
                                 display: none;
                             }
+
+                            a:hover {
+                                color: white !important;
+                            }
                         }
+                    }
+
+                    a:hover,
+                    label:hover {
+                        color: white !important;
                     }
                 }
             }
         }
     }
 
-    .alt_menu ul li a:hover svg defs {
+    .altMenu ul li a:hover svg defs {
 
         #colorMask1 feFlood,
         #colorMask2 feFlood,
@@ -907,13 +929,16 @@ content {
     }
 
     .mBurger {
+        display: flex;
+        position: absolute;
+    }
+
+    #mBurgerT {
         left: 0%;
         width: 4%;
+        opacity: 0;
         z-index: 1;
         height: 100%;
-        display: block;
-        appearance: none;
-        position: absolute;
     }
 
     .svgM {
@@ -936,7 +961,7 @@ content {
             background-color: #0050c1;
         }
 
-        #menuTitle {
+        .menuTitle {
             background-color: #0050c1;
         }
 
@@ -1027,7 +1052,7 @@ content {
         padding-bottom: 2%;
     }
 
-    #selector1:checked~.sub_menu {
+    #selector1:checked~.subMenu {
         top: 29%;
         left: 102%;
         width: auto;
@@ -1071,7 +1096,7 @@ content {
         }
     }
 
-    #selector2:checked~.sub_menu {
+    #selector2:checked~.subMenu {
         top: 51.5%;
         left: 102%;
         width: auto;
@@ -1111,7 +1136,7 @@ content {
         }
     }
 
-    #selector3:checked~.alt_menu {
+    #selector3:checked~.altMenu {
         top: 35%;
         left: 12%;
         width: auto;
@@ -1159,7 +1184,7 @@ content {
         }
     }
 
-    #selector4:checked~.alt_menu {
+    #selector4:checked~.altMenu {
         top: 65%;
         left: 12%;
         width: auto;
@@ -1207,7 +1232,7 @@ content {
         }
     }
 
-    #selector5:checked~.alt_menu {
+    #selector5:checked~.altMenu {
         top: 30%;
         left: 12%;
         width: auto;
@@ -1255,7 +1280,7 @@ content {
         }
     }
 
-    #selector6:checked~.alt_menu {
+    #selector6:checked~.altMenu {
         top: 65%;
         left: 12%;
         width: auto;
@@ -1373,12 +1398,7 @@ content {
     }
 
     .mBurger {
-        left: 0%;
-        width: 4%;
-        z-index: 1;
-        height: 100%;
-        display: block;
-        appearance: none;
+        display: flex;
         position: absolute;
     }
 
@@ -1490,17 +1510,17 @@ content {
         margin-right: 4%;
     }
 
-    #selector1:checked~.sub_menu {
+    #selector1:checked~.subMenu {
         top: 23%;
         left: 105%;
     }
 
-    #selector2:checked~.sub_menu {
+    #selector2:checked~.subMenu {
         top: 51.5%;
         left: 105%;
     }
 
-    #selector5:checked~.alt_menu {
+    #selector5:checked~.altMenu {
         left: 14%;
     }
 }
