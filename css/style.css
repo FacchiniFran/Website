@@ -612,8 +612,6 @@ content {
     margin-top: 20%; }
   .otherCont {
     margin-top: 38%; }
-  .rReviewsCont {
-    margin-top: 28%; }
   .adCont {
     height: 105%; } }
 
@@ -660,8 +658,6 @@ content {
   .newsList,
   .revList {
     font-size: 85%; }
-  .rReviewsCont {
-    margin-top: 20%; }
   .adCont {
     height: 95%; } }
 
@@ -1056,11 +1052,8 @@ content {
   .newsList,
   .revList {
     font-size: 55%; }
-  .rReviewsCont {
-    margin-top: 55%; }
   .adCont {
-    height: 95%;
-    margin-top: 98%; }
+    height: 95%; }
   .formText {
     font-size: 75%; } }
 
@@ -1200,7 +1193,7 @@ content {
     height: 82%;
     margin-top: 0%; }
   .recentCont {
-    margin-top: 25%; }
+    margin-top: 30%; }
   .rArtTitle {
     font-size: 100%; }
   .rArtTxt a {
@@ -1208,7 +1201,7 @@ content {
   .rArtTxt p {
     font-size: 25%; }
   .otherCont {
-    margin-top: 40%; }
+    margin-top: 55%; }
   .newsList,
   .revList {
     font-size: 40%; }
