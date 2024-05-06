@@ -1049,11 +1049,14 @@ content {
     font-size: 50%; }
   .otherCont {
     margin-top: 47%; }
+  .rReviewsCont {
+    margin-top: 48%; }
   .newsList,
   .revList {
     font-size: 55%; }
   .adCont {
-    height: 95%; }
+    height: 95%;
+    margin-top: 88%; }
   .formText {
     font-size: 75%; } }
 
@@ -1202,8 +1205,11 @@ content {
     font-size: 25%; }
   .otherCont {
     margin-top: 55%; }
+  .rReviewsCont {
+    margin-top: 78%; }
   .newsList,
   .revList {
     font-size: 40%; }
   .adCont {
-    height: 85%; } }
+    height: 85%;
+    margin-top: 118%; } }
