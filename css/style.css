@@ -1170,7 +1170,7 @@ content {
   #selector6:checked ~ .altMenu {
     left: 15%; }
   .disclaimer {
-    font-size: 1.5%;
+    font-size: 10%;
     text-align: left;
     overflow: hidden; }
   .contactUs {
@@ -1200,7 +1200,7 @@ content {
     height: 82%;
     margin-top: 0%; }
   .recentCont {
-    margin-top: 15%; }
+    margin-top: 25%; }
   .rArtTitle {
     font-size: 100%; }
   .rArtTxt a {
@@ -1208,12 +1208,12 @@ content {
   .rArtTxt p {
     font-size: 25%; }
   .otherCont {
-    margin-top: 30%; }
+    margin-top: 40%; }
   .newsList,
   .revList {
     font-size: 40%; }
   .rReviewsCont {
-    margin-top: 70%; }
+    margin-top: 20%; }
   .adCont {
     height: 85%;
     margin-top: 150%; } }
