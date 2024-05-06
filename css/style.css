@@ -50,8 +50,8 @@ header {
   height: 100%; }
 
 .media {
-  top: 4%;
-  right: 1%;
+  top: 2%;
+  right: 2%;
   width: 87%;
   opacity: 0.5;
   display: block;
@@ -189,6 +189,8 @@ header {
   display: block;
   margin-left: 110%;
   position: absolute; }
+  .menu ul li:hover .subMenu ul li:hover .altMenu ul {
+    margin-top: 0%; }
 
 .subMenu a,
 .altMenu a {
@@ -554,21 +556,25 @@ content {
 @media (max-width: 1440px) {
   header {
     grid-template-rows: 85% 15%; }
-  .media {
-    width: 15.5%; }
-  .search {
-    width: 21.5%; } }
+  .iconM img {
+    width: 25px;
+    height: 25px; }
+  .menu ul li:hover .subMenu ul {
+    margin-top: 9%; } }
 
 @media (max-width: 1024px) {
   .logo {
     width: 100%; }
   .title {
     height: 45%;
-    margin-left: 15%; }
+    margin-left: 13%; }
   .media {
-    width: 21.5%; }
-  .search {
-    width: 30%; } }
+    width: 100%; }
+  .iconM img {
+    width: 20px;
+    height: 20px; }
+  .menu ul li:hover .subMenu ul {
+    margin-top: 15%; } }
 
 @media (max-width: 768px) {
   header {
