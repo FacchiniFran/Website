@@ -567,7 +567,7 @@ content {
 #formInput3 {
   height: 200px; }
 
-/*Media Queries*/
+/*Reestructuración por tamaños*/
 @media (max-width: 1440px) {
   header {
     grid-template-rows: 85% 15%; }
