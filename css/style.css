@@ -1,21 +1,21 @@
 @charset "UTF-8";
-/*Sección general del CSS.*/
-/*Eliminando todos los efectos y espaciados.*/
+/*Importamos las variables principales y el Reset*/
 * {
   margin: 0;
   padding: 0;
   list-style: none;
-  text-decoration: none; }
+  text-decoration: none;
+  box-sizing: border-box; }
 
-/*Estructura base del cuerpo del sitio.*/
+/*Estructura base del cuerpo del sitio*/
 body {
   background-size: cover;
   background-color: black;
   background-attachment: fixed;
   background-position: center center;
-  background: url("../images/Background2.png") repeat; }
+  background: url("../images/background.png") repeat; }
 
-/*Se crea el Header que estará en todo el sitio.*/
+/*Se crea el Header que estará en todo el sitio*/
 header {
   z-index: 96;
   width: 100%;
@@ -27,7 +27,7 @@ header {
   background-size: cover;
   grid-template-rows: 89.5% 10.5%;
   grid-template-columns: 13.5% 73% 13.5%;
-  background-image: url("../images/HeaderBG.png"); }
+  background-image: url("../images/headerBG.png"); }
 
 .logo {
   top: 5%;
@@ -110,9 +110,6 @@ header {
   position: absolute;
   font-family: "Lucida Console", Monaco, monospace; }
 
-.menu ul li:first-child {
-  margin-left: 0.5%; }
-
 .menu ul li a {
   text-align: center;
   font-weight: lighter;
@@ -165,13 +162,8 @@ header {
     height: 100%; }
 
 .menu ul li:hover .subMenu ul li {
-  margin-top: 0.5%;
   align-self: center;
-  margin-bottom: 0.5%;
   border-bottom: 1px dotted white; }
-
-.menu ul li:nth-child(2):hover .subMenu ul li {
-  margin-left: -4%; }
 
 .menu ul li:hover .subMenu ul li:last-child {
   border-bottom: none; }
@@ -186,8 +178,8 @@ header {
   display: none; }
 
 .menu ul li:hover .subMenu ul li:hover .altMenu {
+  left: 119%;
   display: block;
-  margin-left: 110%;
   position: absolute; }
   .menu ul li:hover .subMenu ul li:hover .altMenu ul {
     margin-top: 0%; }
@@ -294,20 +286,20 @@ footer {
   .mediaF a {
     padding-right: 5%; }
 
-/*Generando la estructura de la página principal.*/
+/*Estructura de la página principal*/
 content {
   display: grid;
   grid-area: content;
-  grid-template-areas: ". cenCont ." ". cenCont ." "footer footer footer";
-  grid-template-rows: 40% 50% 10%;
+  grid-template-areas: ". cenCont ." ". cenCont .";
+  grid-template-rows: 50% 50%;
   grid-template-columns: 15% 70% 15%; }
 
 .cenCont {
   display: grid;
   grid-area: cenCont;
   grid-template-areas: "carousel carousel" "recentCont otherCont";
-  grid-template-columns: 65% 35%;
-  grid-template-rows: 25% 65% 10%; }
+  grid-template-rows: 25% 75%;
+  grid-template-columns: 65% 35%; }
 
 .carousel {
   top: 5%;
@@ -363,7 +355,7 @@ content {
           .carousel .slidesCont .slideText .slideTextData a:hover {
             color: black;
             cursor: pointer;
-            text-shadow: 0 0 10px #fff, 0 0 21px #fff, 0 0 42px #0050c1, 0 0 82px #0050c1, 0 0 92px #0050c1, 0 0 102px #0050c1, 0 0 151px #0050c1; }
+            text-shadow: 0 0 10px white, 0 0 21px white, 0 0 42px #0050c1, 0 0 82px #0050c1, 0 0 92px #0050c1, 0 0 102px #0050c1, 0 0 151px #0050c1; }
     .carousel .slidesCont .slideImg {
       width: 100%;
       height: 100%;
@@ -372,14 +364,14 @@ content {
       border-bottom-right-radius: 10px; }
 
 .carousel-control-prev {
+  left: 35%;
   width: 10%;
-  height: 100%;
-  margin-top: 0.5%;
-  margin-left: 35%; }
+  height: 97%;
+  margin-top: 0.5%; }
 
 .carousel-control-next {
   width: 10%;
-  height: 100%;
+  height: 97%;
   margin-top: 0.5%;
   margin-right: 0.2%; }
 
@@ -393,18 +385,16 @@ content {
 
 .rArtTitle {
   color: white;
-  padding-top: 2%;
   font-size: 260%;
   text-align: center;
   text-decoration: underline;
-  text-shadow: 0 0 7px #fff, 0 0 10px #fff, 0 0 21px #fff, 0 0 42px #0050c1, 0 0 82px #0050c1, 0 0 92px #0050c1, 0 0 102px #0050c1, 0 0 151px #0050c1;
+  text-shadow: 0 0 7px white, 0 0 10px white, 0 0 21px white, 0 0 42px #0050c1, 0 0 82px #0050c1, 0 0 92px #0050c1, 0 0 102px #0050c1, 0 0 151px #0050c1;
   font-family: "Lucida Console", Monaco, monospace; }
 
 .rArt {
   width: 100%;
   display: grid;
   margin-top: 2%;
-  margin-left: 1%;
   border-radius: 8px;
   flex-direction: row;
   grid-template-areas: "rArtImg rArtTxt";
@@ -413,7 +403,7 @@ content {
   background-color: #0050c1;
   grid-template-columns: 60% 40%; }
   .rArt:last-child {
-    margin-bottom: 2%; }
+    margin-bottom: 5%; }
 
 .rArtImg {
   width: 100%;
@@ -446,7 +436,7 @@ content {
 
 .otherCont {
   display: grid;
-  margin-top: 20%;
+  margin-top: 18%;
   grid-template-areas: "rNewsCont" "rReviewsCont" "adCont";
   grid-area: otherCont;
   grid-template-columns: 100%;
@@ -477,11 +467,10 @@ content {
       font-weight: bold;
       text-decoration: none; }
       .newsList ul li a:hover {
-        text-shadow: 0 0 7px #fff, 0 0 10px #fff, 0 0 21px #fff, 0 0 42px #0050c1, 0 0 82px #0050c1, 0 0 92px #0050c1, 0 0 102px #0050c1, 0 0 151px #0050c1; }
+        text-shadow: 0 0 7px white, 0 0 10px white, 0 0 21px white, 0 0 42px #0050c1, 0 0 82px #0050c1, 0 0 92px #0050c1, 0 0 102px #0050c1, 0 0 151px #0050c1; }
 
 .rReviewsCont {
   display: flex;
-  margin-top: 18%;
   flex-direction: column;
   grid-area: rReviewsCont; }
   .rReviewsCont .rArtTitle {
@@ -505,19 +494,18 @@ content {
       font-weight: bold;
       text-decoration: none; }
       .revList ul li a:hover {
-        text-shadow: 0 0 7px #fff, 0 0 10px #fff, 0 0 21px #fff, 0 0 42px #0050c1, 0 0 82px #0050c1, 0 0 92px #0050c1, 0 0 102px #0050c1, 0 0 151px #0050c1; }
+        text-shadow: 0 0 7px white, 0 0 10px white, 0 0 21px white, 0 0 42px #0050c1, 0 0 82px #0050c1, 0 0 92px #0050c1, 0 0 102px #0050c1, 0 0 151px #0050c1; }
 
 .adCont {
   width: 85%;
   height: 100%;
-  margin-top: 43%;
   margin-left: 15%;
   grid-area: adCont; }
   .adCont a img {
     width: 100%;
     height: 100%; }
 
-/*Sección de Nosotros.*/
+/*Estructura de la sección 'Nosotros'*/
 .usPage {
   display: flex;
   margin-top: 2%;
@@ -538,13 +526,13 @@ content {
     padding-right: 1%;
     text-align: justify; }
 
-/*Formulario de sección de Contacto.*/
+/*Estructura de la sección 'Contacto'*/
 .formCont {
   display: grid;
   margin-top: 2%;
   grid-area: formCont;
-  grid-template-areas: ". form ." "footer footer footer";
-  grid-template-rows: 95% 5%;
+  grid-template-areas: ". form .";
+  grid-template-rows: 100%;
   grid-template-columns: 15% 70% 15%; }
 
 .form {
@@ -595,7 +583,7 @@ content {
       width: 40px;
       height: 40px; }
   .cenCont {
-    grid-template-rows: 15% 75% 10%; }
+    grid-template-rows: 25% 75%; }
   .carousel .slidesCont .slideText .slideTextTitle {
     font-size: 170%; }
   .carousel .slidesCont .slideText .slideTextData p {
@@ -603,17 +591,21 @@ content {
   .carousel .slidesCont .slideText .slideTextData a {
     left: 25%; }
   .carousel-control-prev {
-    height: 148%;
+    height: 85%;
     margin-top: 0%; }
   .carousel-control-next {
-    height: 148%;
+    height: 85%;
     margin-top: 0%; }
   .recentCont {
-    margin-top: 20%; }
+    margin-top: 0%; }
   .otherCont {
-    margin-top: 38%; }
+    margin-top: 0%; }
+  .rReviewsCont {
+    margin-top: 20%; }
   .adCont {
-    height: 105%; } }
+    margin-top: 20%; }
+    .adCont a img {
+      height: 85%; } }
 
 @media (max-width: 1024px) {
   .logo {
@@ -636,8 +628,10 @@ content {
     .mediaF a img {
       width: 40px;
       height: 40px; }
-  .cenCont {
-    grid-template-rows: 20% 65% 10%; }
+  content {
+    grid-template-columns: 10% 80% 10%; }
+    content .cenCont {
+      grid-template-rows: 22% 78%; }
   .carousel .slidesCont .slideText .slideTextTitle {
     font-size: 170%; }
   .carousel .slidesCont .slideText .slideTextData p {
@@ -646,20 +640,26 @@ content {
     left: 23%;
     font-size: 120%; }
   .carousel-control-prev {
-    height: 112%;
-    margin-top: 0%; }
+    height: 90%; }
   .carousel-control-next {
-    height: 112%;
-    margin-top: 0%; }
+    height: 90%; }
   .recentCont {
-    margin-top: 15%; }
+    margin-top: 5%; }
   .otherCont {
-    margin-top: 28%; }
+    margin-top: 8%; }
+  .rReviewsCont {
+    margin-top: 0%; }
   .newsList,
   .revList {
     font-size: 85%; }
   .adCont {
-    height: 95%; } }
+    height: 85%;
+    margin-top: 0%; }
+  .formCont {
+    grid-template-columns: 10% 80% 10%; }
+    .formCont .form {
+      width: 75%;
+      margin-left: 15%; } }
 
 @media (max-width: 768px) {
   header {
@@ -1025,7 +1025,7 @@ content {
       width: 30px;
       height: 30px; }
   .cenCont {
-    grid-template-rows: 20% 65% 10%; }
+    grid-template-rows: 25% 75%; }
   .carousel .slidesCont .slideText .slideTextTitle {
     font-size: 130%; }
   .carousel .slidesCont .slideText .slideTextData p {
@@ -1034,13 +1034,11 @@ content {
     left: 23%;
     font-size: 80%; }
   .carousel-control-prev {
-    height: 122%;
-    margin-top: 0%; }
+    height: 100%; }
   .carousel-control-next {
-    height: 122%;
-    margin-top: 0%; }
+    height: 100%; }
   .recentCont {
-    margin-top: 25%; }
+    margin-top: 10%; }
   .rArtTitle {
     font-size: 200%; }
   .rArtTxt a {
@@ -1048,15 +1046,12 @@ content {
   .rArtTxt p {
     font-size: 50%; }
   .otherCont {
-    margin-top: 47%; }
-  .rReviewsCont {
-    margin-top: 48%; }
+    margin-top: 17%; }
   .newsList,
   .revList {
     font-size: 55%; }
   .adCont {
-    height: 95%;
-    margin-top: 88%; }
+    height: 95%; }
   .formText {
     font-size: 75%; } }
 
@@ -1177,11 +1172,11 @@ content {
       width: 15px;
       height: 15px; }
   content {
-    grid-template-areas: "cenCont" "cenCont" "footer";
-    grid-template-rows: 40% 50% 10%;
+    grid-template-areas: "cenCont" "cenCont";
+    grid-template-rows: 50% 50%;
     grid-template-columns: 100%; }
   .cenCont {
-    grid-template-rows: 20% 65% 10%; }
+    grid-template-rows: 25% 75%; }
   .carousel .slidesCont .slideText .slideTextTitle {
     font-size: 100%; }
   .carousel .slidesCont .slideText .slideTextData p {
@@ -1190,13 +1185,11 @@ content {
     left: 18%;
     font-size: 65%; }
   .carousel-control-prev {
-    height: 82%;
-    margin-top: 0%; }
+    height: 90%; }
   .carousel-control-next {
-    height: 82%;
-    margin-top: 0%; }
+    height: 90%; }
   .recentCont {
-    margin-top: 30%; }
+    margin-top: 10%; }
   .rArtTitle {
     font-size: 100%; }
   .rArtTxt a {
@@ -1204,12 +1197,18 @@ content {
   .rArtTxt p {
     font-size: 25%; }
   .otherCont {
-    margin-top: 55%; }
+    margin-top: 18%; }
   .rReviewsCont {
-    margin-top: 78%; }
+    margin-top: 40%; }
   .newsList,
   .revList {
     font-size: 40%; }
   .adCont {
-    height: 85%;
-    margin-top: 118%; } }
+    height: 75%;
+    margin-top: 10%; }
+  .formCont {
+    grid-template-areas: "form";
+    grid-template-columns: 100%; }
+    .formCont .form {
+      width: 75%;
+      margin-left: 15%; } }

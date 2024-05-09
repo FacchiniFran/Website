@@ -1,0 +1,48 @@
+.formCont {
+    display: grid;
+    margin-top: 2%;
+    grid-area: formCont;
+    grid-template-areas:
+        ". form .";
+    grid-template-rows: 100%;
+    grid-template-columns: 15% 70% 15%;
+}
+
+.form {
+    width: 50%;
+    height: 100%;
+    grid-area: form;
+    margin-left: 25%;
+    border-radius: 15px;
+    background-color: $manaBlue;
+}
+
+.formText {
+    color: white;
+    margin-top: 1%;
+    margin-left: 2%;
+    font-size: 120%;
+    font-family: $mainFont;
+}
+
+.formSend {
+    position: relative;
+    border-color: silver;
+    background-color: $footerBlack;
+
+    &:hover {
+        border-color: black;
+        background-color: $manaBlue;
+    }
+}
+
+#formInput1,
+#formInput2,
+#formInput3,
+#formInput4 {
+    font-size: 100%;
+}
+
+#formInput3 {
+    height: 200px;
+}

@@ -1,0 +1,26 @@
+.usPage {
+    display: flex;
+    margin-top: 2%;
+    color: white;
+    align-items: center;
+    flex-direction: column;
+    font-family: $mainFont;
+
+    img {
+        border-style: inset;
+        border-radius: 15px;
+        border-color: silver;
+    }
+
+    h1 {
+        font-size: xx-large;
+        text-decoration: underline;
+    }
+
+    p {
+        padding-left: 1%;
+        font-size: large;
+        padding-right: 1%;
+        text-align: justify;
+    }
+}

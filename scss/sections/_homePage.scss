@@ -1,0 +1,321 @@
+content {
+    display: grid;
+    grid-area: content;
+    grid-template-areas:
+        ". cenCont ."
+        ". cenCont .";
+    grid-template-rows: 50% 50%;
+    grid-template-columns: 15% 70% 15%;
+}
+
+.cenCont {
+    display: grid;
+    grid-area: cenCont;
+    grid-template-areas:
+        "carousel carousel"
+        "recentCont otherCont";
+    grid-template-rows: 25% 75%;
+    grid-template-columns: 65% 35%;
+}
+
+.carousel {
+    top: 5%;
+    width: 100%;
+    height: 100%;
+    grid-area: carousel;
+
+    .slidesCont {
+        width: 100%;
+        height: 100%;
+        display: grid;
+        flex-direction: row;
+        border-radius: 10px;
+        grid-template-areas:
+            "slideText slideImg";
+        grid-template-rows: 100%;
+        border: 3px solid silver;
+        background-color: $manaBlue;
+        grid-template-columns: 35% 65%;
+
+        .slideText {
+            width: 100%;
+            height: 100%;
+            display: flex;
+            color: white;
+            grid-area: slideText;
+            flex-direction: column;
+            border-right: 3px solid silver;
+
+            .slideTextTitle {
+                color: black;
+                cursor: default;
+                font-size: 200%;
+                padding-top: 5%;
+                text-align: center;
+                text-decoration: underline;
+                border-bottom: 3px solid silver;
+                font-family: $mainFont;
+                background-image: linear-gradient(silver, silver, $manaBlue);
+            }
+
+            .slideTextData {
+                padding-top: 5%;
+                overflow: hidden;
+
+                p {
+                    cursor: default;
+                    margin-left: 2%;
+                    font-size: 120%;
+                    margin-right: 3%;
+                    text-align: justify;
+                }
+
+                a {
+                    left: 28%;
+                    bottom: 1%;
+                    color: gray;
+                    font-size: 130%;
+                    position: absolute;
+                    font-weight: bolder;
+                    text-decoration: none;
+
+                    &:hover {
+                        color: black;
+                        cursor: pointer;
+                        text-shadow:
+                            0 0 10px white,
+                            0 0 21px white,
+                            0 0 42px $manaBlue,
+                            0 0 82px $manaBlue,
+                            0 0 92px $manaBlue,
+                            0 0 102px $manaBlue,
+                            0 0 151px $manaBlue;
+                    }
+                }
+            }
+        }
+
+        .slideImg {
+            width: 100%;
+            height: 100%;
+            grid-area: slideImg;
+            border-top-right-radius: 10px;
+            border-bottom-right-radius: 10px;
+        }
+    }
+}
+
+.carousel-control-prev {
+    left: 35%;
+    width: 10%;
+    height: 97%;
+    margin-top: 0.5%;
+}
+
+.carousel-control-next {
+    width: 10%;
+    height: 97%;
+    margin-top: 0.5%;
+    margin-right: 0.2%;
+}
+
+.recentCont {
+    display: flex;
+    margin-top: 10%;
+    border-radius: 15px;
+    height: fit-content;
+    grid-area: recentCont;
+    flex-direction: column;
+}
+
+.rArtTitle {
+    color: white;
+    font-size: 260%;
+    text-align: center;
+    text-decoration: underline;
+    text-shadow:
+        0 0 7px white,
+        0 0 10px white,
+        0 0 21px white,
+        0 0 42px $manaBlue,
+        0 0 82px $manaBlue,
+        0 0 92px $manaBlue,
+        0 0 102px $manaBlue,
+        0 0 151px $manaBlue;
+    font-family: $mainFont;
+}
+
+.rArt {
+    width: 100%;
+    display: grid;
+    margin-top: 2%;
+    border-radius: 8px;
+    flex-direction: row;
+    grid-template-areas:
+        "rArtImg rArtTxt";
+    grid-template-rows: 100%;
+    border: 3px solid white;
+    background-color: $manaBlue;
+    grid-template-columns: 60% 40%;
+
+    &:last-child {
+        margin-bottom: 5%;
+    }
+}
+
+.rArtImg {
+    width: 100%;
+    height: 100%;
+    grid-area: rArtImg;
+}
+
+.rArtTxt {
+    display: flex;
+    grid-area: rArtTxt;
+    flex-direction: column;
+    border-left: 2px solid white;
+    font-family: $mainFont;
+
+    a {
+        color: white;
+        font-size: 160%;
+        padding-top: 2%;
+        padding-bottom: 2%;
+        text-align: center;
+        text-decoration: underline;
+        border-bottom: 2px solid white;
+
+        &:hover {
+            color: black;
+        }
+    }
+
+    p {
+        color: white;
+        font-size: 85%;
+        padding-top: 5%;
+        padding-left: 2%;
+        padding-right: 2%;
+        text-align: justify;
+    }
+}
+
+.otherCont {
+    display: grid;
+    margin-top: 18%;
+    grid-template-areas:
+        "rNewsCont"
+        "rReviewsCont"
+        "adCont";
+    grid-area: otherCont;
+    grid-template-columns: 100%;
+    grid-template-rows: 35% 35% 30%;
+}
+
+.rNewsCont {
+    display: flex;
+    grid-area: rNewsCont;
+    flex-direction: column;
+
+    .rArtTitle {
+        margin-left: 14%;
+    }
+}
+
+.newsList {
+    width: 85%;
+    margin-top: 4%;
+    margin-left: 15%;
+    border-radius: 10px;
+    border: 3px solid $manaBlue;
+    background-image: linear-gradient(silver, silver, $manaBlue);
+
+    ul li {
+        margin-top: 2%;
+        padding-right: 1%;
+        list-style-type: disc;
+
+        &::marker {
+            color: darkblue;
+        }
+
+        a {
+            color: black;
+            font-weight: bold;
+            text-decoration: none;
+
+            &:hover {
+                text-shadow:
+                    0 0 7px white,
+                    0 0 10px white,
+                    0 0 21px white,
+                    0 0 42px $manaBlue,
+                    0 0 82px $manaBlue,
+                    0 0 92px $manaBlue,
+                    0 0 102px $manaBlue,
+                    0 0 151px $manaBlue;
+            }
+        }
+    }
+}
+
+.rReviewsCont {
+    display: flex;
+    flex-direction: column;
+    grid-area: rReviewsCont;
+
+    .rArtTitle {
+        margin-left: 12%;
+    }
+}
+
+.revList {
+    width: 85%;
+    margin-top: 4%;
+    margin-left: 15%;
+    border-radius: 10px;
+    border: 3px solid $manaBlue;
+    background-image: linear-gradient(silver, silver, $manaBlue);
+
+    ul li {
+        margin-top: 2%;
+        padding-right: 1%;
+        list-style-type: disc;
+
+        &::marker {
+            color: darkblue;
+        }
+
+        a {
+            color: black;
+            font-weight: bold;
+            text-decoration: none;
+
+            &:hover {
+                text-shadow:
+                    0 0 7px white,
+                    0 0 10px white,
+                    0 0 21px white,
+                    0 0 42px $manaBlue,
+                    0 0 82px $manaBlue,
+                    0 0 92px $manaBlue,
+                    0 0 102px $manaBlue,
+                    0 0 151px $manaBlue;
+            }
+        }
+    }
+}
+
+.adCont {
+    width: 85%;
+    height: 100%;
+    margin-left: 15%;
+    grid-area: adCont;
+
+    a {
+        img {
+            width: 100%;
+            height: 100%;
+        }
+    }
+}

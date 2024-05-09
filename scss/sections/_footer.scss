@@ -1,0 +1,55 @@
+footer {
+    display: grid;
+    margin-top: 5%;
+    grid-area: footer;
+    grid-template-areas:
+        "disclaimer contactUs mediaF";
+    grid-template-rows: 100%;
+    background-color: $footerBlack;
+    border-top: 5px solid $footerBorder;
+    grid-template-columns: 30% 40% 30%;
+}
+
+.disclaimer {
+    opacity: 0.3;
+    font-size: 85%;
+    margin-left: 2%;
+    color: silver;
+    cursor: default;
+    text-align: justify;
+    grid-area: disclaimer;
+    font-family: $mainFont;
+}
+
+.contactUs {
+    margin-top: 1%;
+    font-size: 150%;
+    text-align: center;
+    grid-area: contactUs;
+    font-family: $mainFont;
+
+    a {
+        opacity: 0.7;
+        color: silver;
+        text-decoration: none;
+
+        &:hover {
+            color: white;
+            opacity: 1;
+        }
+    }
+}
+
+.mediaF {
+    opacity: 0.5;
+    display: flex;
+    margin-top: 1.5%;
+    margin-left: 53%;
+    grid-area: mediaF;
+    flex-direction: row;
+    border-radius: 18px;
+
+    a {
+        padding-right: 5%;
+    }
+}

@@ -1,0 +1,286 @@
+header {
+    z-index: 96;
+    width: 100%;
+    height: 38%;
+    display: grid;
+    grid-area: header;
+    position: relative;
+    grid-template-areas:
+        "logo title media"
+        "menu menu menu";
+    background-size: cover;
+    grid-template-rows: 89.5% 10.5%;
+    grid-template-columns: 13.5% 73% 13.5%;
+    background-image: url('../images/headerBG.png');
+}
+
+.logo {
+    top: 5%;
+    left: 5%;
+    width: 75%;
+    height: 75%;
+    grid-area: logo;
+    position: relative;
+}
+
+.title {
+    height: 60%;
+    display: flex;
+    padding-left: 8%;
+    grid-area: title;
+    align-self: center;
+    justify-self: center;
+}
+
+.logo img {
+    width: 100%;
+    height: 100%;
+}
+
+.media {
+    top: 2%;
+    right: 2%;
+    width: 87%;
+    opacity: 0.5;
+    display: block;
+    grid-area: media;
+    position: absolute;
+    border-radius: 18px;
+    background-color: black;
+}
+
+.iconM {
+    margin-top: 3%;
+    margin-left: 1.5%;
+    display: inline-flex;
+
+    img {
+        width: 35px;
+        height: 35px;
+    }
+
+    &:first-child {
+        margin-left: 3%;
+    }
+}
+
+.media:hover {
+    opacity: 1;
+}
+
+.iconM:hover {
+    filter: invert(79%) sepia(70%) saturate(2972%) hue-rotate(207deg) brightness(91%) contrast(103%);
+}
+
+.menu {
+    width: 100%;
+    height: 100%;
+    opacity: 0.9;
+    display: flex;
+    grid-area: menu;
+    position: absolute;
+    padding-bottom: 2%;
+    background-color: black;
+    justify-content: space-around;
+
+    ul {
+        width: 100%;
+        color: white;
+        padding-left: 0%;
+
+        li {
+            padding-left: 0.3%;
+            padding-right: 1.5%;
+            display: inline-flex;
+        }
+    }
+}
+
+.menuText {
+    color: white;
+    font-size: 150%;
+    padding-top: 4%;
+    font-family: $mainFont;
+}
+
+.menuTitle {
+    left: 3%;
+    display: none;
+    color: white;
+    font-size: 120%;
+    padding-top: 0%;
+    position: absolute;
+    font-family: $mainFont;
+}
+
+.menu ul li {
+
+    a {
+        text-align: center;
+        font-weight: lighter;
+        text-decoration: none;
+        vertical-align: bottom;
+    }
+
+    p {
+        margin-bottom: 0%;
+    }
+}
+
+.iconB {
+    width: 30%;
+    margin-right: 10%;
+}
+
+.mBurger,
+.svgM,
+.svgX {
+    display: none;
+}
+
+.menu>ul>li:hover {
+    cursor: pointer;
+    border-radius: 5px;
+    background-color: $manaBlue;
+}
+
+.subMenu {
+    z-index: 97;
+    display: none;
+}
+
+.menu ul li:hover .subMenu {
+    width: auto;
+    display: block;
+    margin-top: 1.9%;
+    position: absolute;
+
+    ul {
+        width: 120%;
+        display: flex;
+        margin-top: 5%;
+        border-radius: 8px;
+        flex-direction: column;
+        background-color: black;
+    }
+}
+
+.selector {
+    opacity: 0;
+    position: absolute;
+}
+
+#selector1+label {
+    display: flex;
+    cursor: pointer;
+
+    &::before {
+        width: 100%;
+        height: 100%;
+    }
+}
+
+.menu ul li {
+    &:hover .subMenu ul li {
+        align-self: center;
+        border-bottom: 1px dotted white;
+    }
+
+    &:hover .subMenu ul li {
+        &:last-child {
+            border-bottom: none;
+        }
+
+        a:hover,
+        label:hover {
+            cursor: pointer;
+            color: $manaBlue;
+        }
+    }
+}
+
+.altMenu {
+    z-index: 98;
+    display: none;
+}
+
+.menu ul li:hover .subMenu ul li:hover .altMenu {
+    left: 119%;
+    display: block;
+    position: absolute;
+
+    ul {
+        margin-top: 0%;
+    }
+}
+
+.subMenu a,
+.altMenu a {
+    display: flex;
+}
+
+.iconC {
+    min-width: 15%;
+    margin-top: 3%;
+    margin-right: 3%;
+}
+
+.altMenu ul {
+    width: 120%;
+    background-color: black;
+
+    li a:hover svg defs {
+
+        #colorMask1 feFlood,
+        #colorMask2 feFlood,
+        #colorMask3 feFlood,
+        #colorMask4 feFlood,
+        #colorMask5 feFlood,
+        #colorMask6 feFlood,
+        #colorMask7 feFlood {
+            flood-color: $manaBlue;
+        }
+    }
+}
+
+.search {
+    top: 15%;
+    right: 0.5%;
+    display: flex;
+    margin-top: 0%;
+    position: absolute;
+    align-content: center;
+}
+
+.searchBar {
+    height: 27px;
+    margin-right: 3%;
+    font-size: medium;
+    text-align: center;
+    border-radius: 20px;
+    border-color: black;
+    background-color: silver;
+    font-family: $mainFont;
+
+    &::placeholder {
+        opacity: 0.8;
+        color: rgb(9, 6, 46);
+    }
+}
+
+.searchButton {
+    width: 75px;
+    height: 30px;
+    color: black;
+    font-size: small;
+    border-radius: 20px;
+    font-weight: bolder;
+    background-color: gray;
+    font-family: $mainFont;
+
+    &:hover {
+        color: white;
+        cursor: pointer;
+        background-color: $manaBlue;
+    }
+}
