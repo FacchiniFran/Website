@@ -105,6 +105,10 @@
             }
         }
     }
+
+    .formSend {
+        left: 40%;
+    }
 }
 
 @media (max-width: 1024px) {
@@ -226,6 +230,7 @@
     }
 
     .logo {
+        top: 5%;
         width: 100%;
 
         img {
@@ -1103,5 +1108,9 @@
             width: 75%;
             margin-left: 15%;
         }
+    }
+
+    .formSend {
+        left: 37%;
     }
 }

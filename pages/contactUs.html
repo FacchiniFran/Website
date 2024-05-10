@@ -20,12 +20,13 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
     <link href="../css/style.css" type="text/css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
     <meta charset="UTF-8" name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 
 <body>
     <header>
-        <a class="logo" href="../index.html"><img src="../images/logoMG.png" alt="Logo"></a>
+        <a class="logo" href="../index.html"><img class="animate__animated animate__heartBeat animate__delay-4s animate__repeat-2" src="../images/logoMG.png" alt="Logo"></a>
         <img class="title" src="../images/manaGamersTitle.png" alt="Title">
         <div class="media">
             <a class="iconM" href="https://www.facebook.com/"><img src="../images/facebook.png" alt="Facebook"></a>
@@ -47,7 +48,7 @@
                 <path
                     d="M2.146 2.854a.5.5 0 1 1 .708-.708L8 7.293l5.146-5.147a.5.5 0 0 1 .708.708L8.707 8l5.147 5.146a.5.5 0 0 1-.708.708L8 8.707l-5.146 5.147a.5.5 0 0 1-.708-.708L7.293 8z" />
             </svg>
-            <p ></p>
+            <p></p>
             <ul>
                 <li>
                     <img class="iconB" src="../svg/home.svg" alt="Home"><a class="menuText"
@@ -229,8 +230,7 @@
                     </nav>
                 </li>
                 <li>
-                    <img class="iconB" src="../svg/us.svg" alt="News"><a class="menuText"
-                        href="./us.html">Nosotros</a>
+                    <img class="iconB" src="../svg/us.svg" alt="News"><a class="menuText" href="./us.html">Nosotros</a>
                 </li>
             </ul>
             <form class="search" action="#" method="get">
@@ -244,7 +244,8 @@
         <div class="form">
             <div class="mb-3">
                 <label for="formInput1" class="formText form-label">E-mail:</label>
-                <input type="email" class="form-control" id="formInput1" placeholder="mailejemplo@gmail.com" name="mail">
+                <input type="email" class="form-control" id="formInput1" placeholder="mailejemplo@gmail.com"
+                    name="mail">
             </div>
             <div class="mb-3">
                 <label for="formInput2" class="formText form-label">Nombre / Razón Social:</label>
@@ -254,12 +255,12 @@
             <div class="form-floating">
                 <textarea class="form-control" placeholder="Leave a comment here" id="formInput3"></textarea>
                 <label for="formInput3">Redacte....</label>
-              </div>
+            </div>
             <div class="mb-3">
                 <label for="formInput4" class="formText form-label">Cargue sus archivos de ser necesarios:</label>
                 <input class="form-control" type="file" id="formInput4" multiple>
-              </div>
-            <button type="submit" class="formSend btn btn-primary">Submit</button>
+            </div>
+            <button type="submit" class="formSend btn btn-primary animate__animated animate__tada animate__delay-3s animate__repeat-3">Submit</button>
         </div>
     </div>
 
