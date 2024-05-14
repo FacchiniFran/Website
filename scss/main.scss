@@ -13,6 +13,8 @@
 @import './sections/footer';
 /*Estructura de la página principal*/
 @import './sections/homePage';
+/*Estructura de la sección de Artículos*/
+@import './sections/articlesPage';
 /*Estructura de la sección 'Nosotros'*/
 @import './sections/usPage';
 /*Estructura de la sección 'Contacto'*/
@@ -212,6 +214,14 @@
     .adCont {
         height: 85%;
         margin-top: 0%;
+    }
+
+    .usPage {
+        .usText {
+            p {
+                font-size: 105%;
+            }
+        }
     }
 
     .formCont {
@@ -839,6 +849,18 @@
         height: 95%;
     }
 
+    .usPage {
+        .usText {
+            h1 {
+                font-size: 200%;
+            }
+
+            p {
+                font-size: 80%;
+            }
+        }
+    }
+
     .formText {
         font-size: 75%;
     }
@@ -1099,9 +1121,35 @@
         margin-top: 10%;
     }
 
+    .usPage {
+        grid-template-areas:
+            "usImage"
+            "usText";
+        grid-template-columns: 100%;
+
+        .usImage {
+            width: 95%;
+            height: 95%;
+            margin-left: 2.5%;
+        }
+
+        .usText {
+            margin-top: 2%;
+            margin-bottom: 5%;
+
+            h1 {
+                font-size: 150%;
+            }
+
+            p {
+                font-size: 60%;
+            }
+        }
+    }
+
     .formCont {
         grid-template-areas:
-        "form";
+            "form";
         grid-template-columns: 100%;
 
         .form {
