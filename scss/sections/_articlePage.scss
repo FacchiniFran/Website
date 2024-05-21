@@ -1,0 +1,78 @@
+.articleCont {
+    display: grid;
+    grid-area: articlesCont;
+    grid-template-areas:
+        ". mainArt otherCont ."
+        ". mainArt otherCont .";
+    grid-template-rows: 50% 50%;
+    grid-template-columns: 10% 50% 30% 10%;
+}
+
+.mainArt {
+    display: grid;
+    margin-top: 3%;
+    grid-area: mainArt;
+    border-radius: 10px;
+    grid-template-areas:
+        "mainArtImg"
+        "mainArtTitle"
+        "mainArtTxt";
+    border: 3px solid white;
+    background-color: $manaBlue;
+    grid-template-columns: 100%;
+    grid-template-rows: 35% 5% 60%;
+}
+
+.mainArtImg {
+    width: 100%;
+    height: 100%;
+    grid-area: mainArtImg;
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+    border-bottom: 3px solid white;
+}
+
+.mainArtTitle {
+    margin-top: 1.5%;
+    text-align: center;
+    font-family: $mainFont;
+    grid-area: mainArtTitle;
+    text-decoration: underline;
+    text-shadow:
+        0 0 10px white,
+        0 0 21px white;
+}
+
+.mainArtTxt {
+    margin-top: 2%;
+    font-size: 90%;
+    color: silver;
+    padding-left: 1%;
+    padding-right: 1%;
+    text-align: justify;
+    grid-area: mainArtTxt;
+    font-family: $mainFont;
+}
+
+.articleCont {
+    .otherCont {
+        margin-top: 5%;
+
+        .newsList {
+            width: 70%;
+            margin-left: 22.5%;
+        }
+
+        .revList {
+            width: 70%;
+            margin-left: 22.5%;
+        }
+
+        .adCont {
+            width: 75%;
+            height: 90%;
+            margin-top: 5%;
+            margin-left: 20%;
+        }
+    }
+}

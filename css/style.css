@@ -287,9 +287,9 @@ footer {
     padding-right: 5%; }
 
 /*Estructura de la página principal*/
-content {
+main {
   display: grid;
-  grid-area: content;
+  grid-area: main;
   grid-template-areas: ". cenCont ." ". cenCont .";
   grid-template-rows: 50% 50%;
   grid-template-columns: 15% 70% 15%; }
@@ -515,7 +515,7 @@ content {
 .articlesCont {
   display: grid;
   grid-area: articlesCont;
-  grid-template-areas: ". leftCont rightCont ." ". leftCont rightCont .";
+  grid-template-areas: ". leftCont otherCont ." ". leftCont otherCont .";
   grid-template-rows: 50% 50%;
   grid-template-columns: 10% 50% 30% 10%; }
 
@@ -579,6 +579,79 @@ content {
       padding-right: 2%;
       text-align: justify;
       grid-area: textPost; }
+
+.articlesCont .otherCont {
+  margin-top: 5%; }
+  .articlesCont .otherCont .newsList {
+    width: 70%;
+    margin-left: 22.5%; }
+  .articlesCont .otherCont .revList {
+    width: 70%;
+    margin-left: 22.5%; }
+  .articlesCont .otherCont .adCont {
+    width: 75%;
+    height: 75%;
+    margin-top: 2%;
+    margin-left: 20%; }
+
+/*Estructura de la sección de Artículo*/
+.articleCont {
+  display: grid;
+  grid-area: articlesCont;
+  grid-template-areas: ". mainArt otherCont ." ". mainArt otherCont .";
+  grid-template-rows: 50% 50%;
+  grid-template-columns: 10% 50% 30% 10%; }
+
+.mainArt {
+  display: grid;
+  margin-top: 3%;
+  grid-area: mainArt;
+  border-radius: 10px;
+  grid-template-areas: "mainArtImg" "mainArtTitle" "mainArtTxt";
+  border: 3px solid white;
+  background-color: #0050c1;
+  grid-template-columns: 100%;
+  grid-template-rows: 35% 5% 60%; }
+
+.mainArtImg {
+  width: 100%;
+  height: 100%;
+  grid-area: mainArtImg;
+  border-top-left-radius: 8px;
+  border-top-right-radius: 8px;
+  border-bottom: 3px solid white; }
+
+.mainArtTitle {
+  margin-top: 1.5%;
+  text-align: center;
+  font-family: "Lucida Console", Monaco, monospace;
+  grid-area: mainArtTitle;
+  text-decoration: underline;
+  text-shadow: 0 0 10px white, 0 0 21px white; }
+
+.mainArtTxt {
+  margin-top: 2%;
+  font-size: 90%;
+  color: silver;
+  padding-left: 1%;
+  padding-right: 1%;
+  text-align: justify;
+  grid-area: mainArtTxt;
+  font-family: "Lucida Console", Monaco, monospace; }
+
+.articleCont .otherCont {
+  margin-top: 5%; }
+  .articleCont .otherCont .newsList {
+    width: 70%;
+    margin-left: 22.5%; }
+  .articleCont .otherCont .revList {
+    width: 70%;
+    margin-left: 22.5%; }
+  .articleCont .otherCont .adCont {
+    width: 75%;
+    height: 90%;
+    margin-top: 5%;
+    margin-left: 20%; }
 
 /*Estructura de la sección 'Nosotros'*/
 .usPage {
@@ -693,8 +766,18 @@ content {
     margin-top: 20%; }
     .adCont a img {
       height: 85%; }
+  .articlesCont .rReviewsCont {
+    margin-top: 12%; }
+  .articlesCont .adCont {
+    margin-top: 10% !important; }
   .formSend {
-    left: 40%; } }
+    left: 40%; }
+  .articleCont .mainArt .mainArtTxt {
+    font-size: 73%; }
+  .articleCont .otherCont .rReviewsCont {
+    margin-top: 15%; }
+  .articleCont .otherCont .adCont {
+    margin-top: 15%; } }
 
 @media (max-width: 1024px) {
   .logo {
@@ -717,9 +800,9 @@ content {
     .mediaF a img {
       width: 40px;
       height: 40px; }
-  content {
+  main {
     grid-template-columns: 10% 80% 10%; }
-    content .cenCont {
+    main .cenCont {
       grid-template-rows: 22% 78%; }
   .carousel .slidesCont .slideText .slideTextTitle {
     font-size: 170%; }
@@ -744,6 +827,14 @@ content {
   .adCont {
     height: 85%;
     margin-top: 0%; }
+  .articleCont .mainArt .mainArtTitle {
+    font-size: 200%; }
+  .articleCont .mainArt .mainArtTxt {
+    font-size: 60%; }
+  .articleCont .otherCont .rReviewsCont {
+    margin-top: 30%; }
+  .articleCont .otherCont .adCont {
+    margin-top: 25%; }
   .usPage .usText p {
     font-size: 105%; }
   .formCont {
@@ -1142,12 +1233,33 @@ content {
   .newsList,
   .revList {
     font-size: 55%; }
+  .rReviewsCont {
+    margin-top: 13%; }
   .adCont {
-    height: 95%; }
+    height: 85%;
+    margin-top: 10%; }
+  .articleCont .mainArt {
+    grid-template-rows: 30% 5% 65%; }
+    .articleCont .mainArt .mainArtTitle {
+      font-size: 150%; }
+    .articleCont .mainArt .mainArtTxt {
+      font-size: 50%; }
+      .articleCont .mainArt .mainArtTxt p {
+        margin-bottom: 0%; }
+  .articleCont .otherCont .rReviewsCont {
+    margin-top: 30%; }
+  .articleCont .otherCont .adCont {
+    margin-top: 25%; }
   .usPage .usText h1 {
     font-size: 200%; }
   .usPage .usText p {
     font-size: 80%; }
+  .articlesCont {
+    grid-template-areas: ". leftCont ." ". leftCont .";
+    grid-template-rows: 50% 50%;
+    grid-template-columns: 10% 80% 10%; }
+    .articlesCont .otherCont {
+      display: none; }
   .formText {
     font-size: 75%; } }
 
@@ -1267,12 +1379,14 @@ content {
     .mediaF a img {
       width: 15px;
       height: 15px; }
-  content {
+  main {
     grid-template-areas: "cenCont" "cenCont";
     grid-template-rows: 50% 50%;
     grid-template-columns: 100%; }
   .cenCont {
-    grid-template-rows: 25% 75%; }
+    grid-template-areas: "carousel" "recentCont";
+    grid-template-rows: 30% 70% !important;
+    grid-template-columns: 100%; }
   .carousel .slidesCont .slideText .slideTextTitle {
     font-size: 100%; }
   .carousel .slidesCont .slideText .slideTextData p {
@@ -1285,7 +1399,7 @@ content {
   .carousel-control-next {
     height: 90%; }
   .recentCont {
-    margin-top: 10%; }
+    margin-top: 0%; }
   .rArtTitle {
     font-size: 100%; }
   .rArtTxt a {
@@ -1293,15 +1407,17 @@ content {
   .rArtTxt p {
     font-size: 25%; }
   .otherCont {
-    margin-top: 18%; }
-  .rReviewsCont {
-    margin-top: 40%; }
-  .newsList,
-  .revList {
-    font-size: 40%; }
-  .adCont {
-    height: 75%;
-    margin-top: 10%; }
+    display: none; }
+  .recentPost a {
+    text-decoration: none; }
+    .recentPost a h3 {
+      font-size: 70% !important; }
+  .recentPost p {
+    font-size: 50%; }
+  .articleCont {
+    grid-template-areas: "mainArt";
+    grid-template-rows: 100%;
+    grid-template-columns: 100%; }
   .usPage {
     grid-template-areas: "usImage" "usText";
     grid-template-columns: 100%; }

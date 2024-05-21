@@ -2,8 +2,8 @@
     display: grid;
     grid-area: articlesCont;
     grid-template-areas:
-        ". leftCont rightCont ."
-        ". leftCont rightCont .";
+        ". leftCont otherCont ."
+        ". leftCont otherCont .";
     grid-template-rows: 50% 50%;
     grid-template-columns: 10% 50% 30% 10%;
 }
@@ -102,6 +102,29 @@
             padding-right: 2%;
             text-align: justify;
             grid-area: textPost;
+        }
+    }
+}
+
+.articlesCont {
+    .otherCont {
+        margin-top: 5%;
+
+        .newsList {
+            width: 70%;
+            margin-left: 22.5%;
+        }
+
+        .revList {
+            width: 70%;
+            margin-left: 22.5%;
+        }
+
+        .adCont {
+            width: 75%;
+            height: 75%;
+            margin-top: 2%;
+            margin-left: 20%;
         }
     }
 }

@@ -15,6 +15,8 @@
 @import './sections/homePage';
 /*Estructura de la sección de Artículos*/
 @import './sections/articlesPage';
+/*Estructura de la sección de Artículo*/
+@import './sections/articlePage';
 /*Estructura de la sección 'Nosotros'*/
 @import './sections/usPage';
 /*Estructura de la sección 'Contacto'*/
@@ -108,8 +110,37 @@
         }
     }
 
+    .articlesCont {
+
+        .rReviewsCont {
+            margin-top: 12%;
+        }
+
+        .adCont {
+            margin-top: 10% !important;
+        }
+    }
+
     .formSend {
         left: 40%;
+    }
+
+    .articleCont {
+        .mainArt {
+            .mainArtTxt {
+                font-size: 73%;
+            }
+        }
+
+        .otherCont {
+            .rReviewsCont {
+                margin-top: 15%;
+            }
+
+            .adCont {
+                margin-top: 15%;
+            }
+        }
     }
 }
 
@@ -157,7 +188,7 @@
         }
     }
 
-    content {
+    main {
         grid-template-columns: 10% 80% 10%;
 
         .cenCont {
@@ -214,6 +245,28 @@
     .adCont {
         height: 85%;
         margin-top: 0%;
+    }
+
+    .articleCont {
+        .mainArt {
+            .mainArtTitle {
+                font-size: 200%;
+            }
+
+            .mainArtTxt {
+                font-size: 60%;
+            }
+        }
+
+        .otherCont {
+            .rReviewsCont {
+                margin-top: 30%;
+            }
+
+            .adCont {
+                margin-top: 25%;
+            }
+        }
     }
 
     .usPage {
@@ -845,8 +898,41 @@
         font-size: 55%;
     }
 
+    .rReviewsCont {
+        margin-top: 13%;
+    }
+
     .adCont {
-        height: 95%;
+        height: 85%;
+        margin-top: 10%;
+    }
+
+    .articleCont {
+        .mainArt {
+            grid-template-rows: 30% 5% 65%;
+
+            .mainArtTitle {
+                font-size: 150%;
+            }
+
+            .mainArtTxt {
+                font-size: 50%;
+
+                p {
+                    margin-bottom: 0%;
+                }
+            }
+        }
+
+        .otherCont {
+            .rReviewsCont {
+                margin-top: 30%;
+            }
+
+            .adCont {
+                margin-top: 25%;
+            }
+        }
     }
 
     .usPage {
@@ -858,6 +944,19 @@
             p {
                 font-size: 80%;
             }
+        }
+    }
+
+    .articlesCont {
+
+        grid-template-areas:
+            ". leftCont ."
+            ". leftCont .";
+        grid-template-rows: 50% 50%;
+        grid-template-columns: 10% 80% 10%;
+
+        .otherCont {
+            display: none;
         }
     }
 
@@ -1044,7 +1143,7 @@
         }
     }
 
-    content {
+    main {
         grid-template-areas:
             "cenCont"
             "cenCont";
@@ -1053,7 +1152,11 @@
     }
 
     .cenCont {
-        grid-template-rows: 25% 75%;
+        grid-template-areas:
+            "carousel"
+            "recentCont";
+        grid-template-rows: 30% 70% !important;
+        grid-template-columns: 100%;
     }
 
     .carousel {
@@ -1086,7 +1189,7 @@
     }
 
     .recentCont {
-        margin-top: 10%;
+        margin-top: 0%;
     }
 
     .rArtTitle {
@@ -1104,21 +1207,29 @@
     }
 
     .otherCont {
-        margin-top: 18%;
+        display: none;
     }
 
-    .rReviewsCont {
-        margin-top: 40%;
+    .recentPost {
+
+        a {
+            text-decoration: none;
+
+            h3 {
+                font-size: 70% !important;
+            }
+        }
+
+        p {
+            font-size: 50%;
+        }
     }
 
-    .newsList,
-    .revList {
-        font-size: 40%;
-    }
-
-    .adCont {
-        height: 75%;
-        margin-top: 10%;
+    .articleCont {
+        grid-template-areas:
+            "mainArt";
+        grid-template-rows: 100%;
+        grid-template-columns: 100%;
     }
 
     .usPage {
