@@ -4,7 +4,7 @@ window.onload = function() {
         checkbox.checked = false;
     });
 
-    var burger = document.querySelector('.mBurger');
+    var burger = document.querySelector(".mBurger");
     if (burger) {
         burger.checked = false;
     }
